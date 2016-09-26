@@ -1,0 +1,121 @@
+\documentclass[aspectratio=1610]{beamer}
+\usetheme{bjeldbak}
+\usepackage{xspace}
+\usepackage{graphicx}
+\usepackage{textpos}
+\usepackage{subfigure}
+\usepackage{pifont}
+\usepackage[super]{nth}
+\usepackage{relsize}
+\usepackage{amsmath}
+
+\setbeamertemplate{section page}{
+  \begin{centering}
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+      \huge
+      \insertsection
+    \end{beamercolorbox}
+  \end{centering}
+}
+
+\definecolor{anti-flashwhite}{rgb}{0.95, 0.95, 0.96}
+
+\setbeamercolor{section in toc}{fg=anti-flashwhite}
+
+\setbeamertemplate{section page}{
+  \begin{centering}
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+      \huge
+      \insertsection
+    \end{beamercolorbox}
+  \end{centering}
+}
+
+\usepackage{ifthen}
+\usepackage{mciteplus} 
+\newboolean{uprightparticles}
+\setboolean{uprightparticles}{false} %Set true for upright particle symbols
+\usepackage{xspace} 
+\usepackage{upgreek}
+
+\input{lhcb-symbols-def}
+\input{spd-symbols-def}
+
+\def \Cseven {\ensuremath{\mathcal{C}_{7}^{(\ensuremath{\prime})}}\xspace}
+\def \Cnine {\ensuremath{\mathcal{C}_{9}^{(\ensuremath{\prime})}}\xspace}
+\def \Cten {\ensuremath{\mathcal{C}_{10}^{(\ensuremath{\prime})}}\xspace}
+\def \Cnineten {\ensuremath{\mathcal{C}_{9,10}^{(\ensuremath{\prime})}}\xspace}
+
+\usepackage{appendixnumberbeamer}
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+  \insertshorttitle\hfill\insertframenumber\,/\,\inserttotalframenumber}
+
+\usepackage[linewidth=1pt]{mdframed}
+\newenvironment{myenv}[1]
+{\mdfsetup{
+  frametitle={\colorbox{white}{\space#1\space}},
+  innertopmargin=3pt,
+  frametitleaboveskip=-\ht\strutbox,
+  frametitlealignment=\center
+}
+\begin{mdframed}%
+}
+{\end{mdframed}}
+
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamercolor{block body}{bg=barcolor!40,fg=black}
+\setbeamercolor{block title}{bg=barcolor!20,fg=black}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Begin document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\title[]{Upstream Tracking and the Decay $\B^{0} \to K^{+}\pi^{-}\mu^{+}\mu^{-}$\\ at the LHCb Experiment}
+\author[Espen Eie Bowen]{Espen Eie Bowen} 
+\institute[]{}
+\date{\today}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[plain]
+\titlepage
+\begin{textblock*}{2cm}(12.5cm,0.0cm)
+  \includegraphics[width=2cm]{figs/lhcb-logo.pdf}
+\end{textblock*}
+\begin{textblock*}{5cm}(0.0cm,0.0cm)
+  \includegraphics[width=3.0cm]{figs/uzh.jpg}
+\end{textblock*}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Section
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Introduction}
+% {\usebackgroundtemplate{\includegraphics[height=\paperheight]{figs/apostles.JPG}}
+  
+%   \begin{frame}[plain]
+%   \vspace{70 mm}
+%   \Huge \color{anti-flashwhite}{Introduction}
+%   \end{frame}
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Backup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           END OF DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+
+
