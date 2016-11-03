@@ -1,2 +1,2 @@
-# phd-thesis-presentation
-Presentation for PhD viva
+# phd-defense
+Presentation for PhD defense
