@@ -83,6 +83,7 @@
 \definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
 \definecolor{palatinatepurple}{rgb}{0.41, 0.16, 0.38}
 \definecolor{cadmiumorange}{rgb}{0.93, 0.53, 0.18}
+\definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Begin document
@@ -116,7 +117,7 @@
     \begin{enumerate}
     \item Excellent tracking 
       \begin{itemize}
-      \item momentum resolution($\Delta p/p \sim 0.4\% - 0.6\%$)
+      \item momentum resolution($\delta p/p \sim 0.4\% - 0.6\%$)
       \item impact parameter resolution ($\sigma_{IP} \sim 20~\mu$m)
       \item primary vertex resolution (13 $\mu$m in $x$ and $y$ and 71 $\mu$m in $z$)
       \end{itemize}
@@ -178,7 +179,7 @@
         \node[draw=none,babyblue] at (0.7,0.05) {Calorimeters};
         \draw[ultra thick,->,babyblue] (0.7,0.1) -- (0.75,0.55);
         
-        \node[draw=none,green] at (0.9,0.7) {Muon system};
+        \node[draw=none,green!90!black] at (0.9,0.7) {Muon system};
         
       \end{scope}
     \end{tikzpicture}
@@ -196,7 +197,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}\frametitle{VeloTT in Run 1}
+\begin{frame}\frametitle{Upstream tracking in Run 1}
   \begin{itemize}
   \item Linearly extrapolate VELO track to TT
   \item Open search windows in each layer and find $\Delta x$ between track and hits
@@ -218,7 +219,7 @@
 \begin{frame}{Novel idea: Upstream tracking for the Upgrade}
 \begin{itemize}
   \item Upstream tracks could the speed up the tracking sequence of the Upgrade software trigger
-  \item Advantages over using VELO tracks:
+  \item Advantages over using VELO tracks
     \begin{itemize}
       \item Charge and momentum of track segment ($\delta \ptot/\ptot \sim 15 \%$)
       \begin{itemize}
@@ -241,7 +242,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Title}
+\begin{frame}{VeloUT: Initial peformance}
 
 \begin{columns}
 \begin{column}{0.65\textwidth}
@@ -262,7 +263,6 @@ v1r2  & 93.94  & 7.21  &  27.20  \\
 \end{figure}
 \end{column}
 \end{columns}
-
 
 \end{frame}
 
@@ -287,6 +287,34 @@ v1r2  & 93.94  & 7.21  &  27.20  \\
 \input{figs/tikz/upstream-tracking-upgrade-clustering}
 \end{column}
 \end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{VeloUT: Optimised peformance}
+
+\begin{columns}
+\begin{column}{0.65\textwidth}
+\resizebox{1.0\textwidth}{!}{
+\begin{tabular}{c|c|c|c}
+\velout & Efficiency [\%] & Ghost rate [\%] & Timing [ms] \\ 
+\hline
+v1r2  & 93.94  & 7.21  &  27.20  \\
+v2r2  & 98.69  & 8.00 &  \hphantom{0}0.81  \\
+\end{tabular}
+}
+\end{column}
+\begin{column}{0.35\textwidth}
+\centering
+\begin{figure}
+\vspace*{-1cm}
+\includegraphics[height=0.475\textheight]{figs/upstream-tracking-upgrade/eff_p_comp.pdf}\\
+\includegraphics[height=0.475\textheight]{figs/upstream-tracking-upgrade/gr_p_comp.pdf}
+\end{figure}
+\end{column}
+\end{columns}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
