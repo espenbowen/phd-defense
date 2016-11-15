@@ -40,6 +40,7 @@
 
 \input{lhcb-symbols-def}
 \input{spd-symbols-def}
+\input{tracking-symbols-def}
 
 \def \Cseven {\ensuremath{\mathcal{C}_{7}^{(\ensuremath{\prime})}}\xspace}
 \def \Cnine {\ensuremath{\mathcal{C}_{9}^{(\ensuremath{\prime})}}\xspace}
@@ -102,13 +103,6 @@
 \begin{textblock*}{5cm}(0.0cm,0.0cm)
   \includegraphics[width=3.0cm]{figs/uzh.jpg}
 \end{textblock*}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Slide
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Introduction to Flavour Physics}
-
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -197,6 +191,102 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Track reconstruction at \lhcb}
 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}\frametitle{VeloTT in Run 1}
+  \begin{itemize}
+  \item Linearly extrapolate VELO track to TT
+  \item Open search windows in each layer and find $\Delta x$ between track and hits
+  \item Scale $\Delta x$ to reference plane at center of TT
+  \item Choose clusters of hits consistent with coming from the same VELO track
+  \begin{itemize}
+    \item[\ding{72}] Each hit must be on the same side of the linear extrapolation
+  \end{itemize}
+  \item Fit each track candidate with a simple $\chi^{2}$ fit
+  \item Choose best candidate track based on \# layers fired and $\chi^{2}$
+  \item Fit track with \underline{full Kalman filter}
+  \end{itemize}
+  \input{figs/tikz/tracking-velott}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Novel idea: Upstream tracking for the Upgrade}
+\begin{itemize}
+  \item Upstream tracks could the speed up the tracking sequence of the Upgrade software trigger
+  \item Advantages over using VELO tracks:
+    \begin{itemize}
+      \item Charge and momentum of track segment ($\delta \ptot/\ptot \sim 15 \%$)
+      \begin{itemize}
+        \item[\ding{212}] Preselect on track \pt
+        \item[\ding{212}] Open smaller search windows
+        \item[\ding{72}] Greatly reduce execution time and ghost rate!
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+
+  \begin{center}
+  \input{figs/tikz/upstream-tracking-upgrade-search-window}
+  \end{center}
+
+  \begin{itemize}
+  \item Upstream tracking algorithm needs to be optimised for speed/efficiency
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Title}
+
+\begin{columns}
+\begin{column}{0.65\textwidth}
+\resizebox{1.0\textwidth}{!}{
+\begin{tabular}{c|c|c|c}
+\velout & Efficiency [\%] & Ghost rate [\%] & Timing [ms] \\ 
+\hline
+v1r2  & 93.94  & 7.21  &  27.20  \\ 
+\end{tabular}
+}
+\end{column}
+\begin{column}{0.35\textwidth}
+\centering
+\begin{figure}
+\vspace*{-1cm}
+\includegraphics[height=0.475\textheight]{figs/upstream-tracking-upgrade/eff_p_v1r2.pdf}\\
+\includegraphics[height=0.475\textheight]{figs/upstream-tracking-upgrade/gr_p_v1r2.pdf}
+\end{figure}
+\end{column}
+\end{columns}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Optimised upstream algorithm}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+  \item[$\blacktriangleright$] Linearly extrapolate VELO track to TT
+  \item[\ding{72}] Select hits within a search window around the extrapolated track
+  \item[\ding{72}] Form doublets of hits in the first two layers
+  \item[\ding{72}] Extrapolate doublets to third/fourth layers and search for compatible hits
+  \item[\ding{72}] If no four hit candidates found, repeat in starting from last two layers
+  \item[$\blacktriangleright$] Fit each track candidate with a $\chi^{2}$ fit and estimate $q/p$ ($\delta p/p \sim 15 \%$)
+  \item[$\blacktriangleright$] Choose best candidate track based on \# layers fired and $\chi^{2}$
+  \end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\centering
+\input{figs/tikz/upstream-tracking-upgrade-clustering}
+\end{column}
+\end{columns}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
