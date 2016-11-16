@@ -83,14 +83,18 @@
 \definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
 \definecolor{palatinatepurple}{rgb}{0.41, 0.16, 0.38}
 \definecolor{cadmiumorange}{rgb}{0.93, 0.53, 0.18}
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
 \definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
+\definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
+\definecolor{antiquebrass}{rgb}{0.8, 0.58, 0.46}
+\definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Begin document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \title[]{Upstream Tracking and the Decay $\B^{0} \to K^{+}\pi^{-}\mu^{+}\mu^{-}$\\ at the LHCb Experiment}
-\author[Espen Eie Bowen]{{\bf Espen Eie Bowen} \\ {\small PhD defense presentation}} 
+\author[Espen Eie Bowen]{{\bf Espen Eie Bowen} \\ {\small PhD defense}} 
 \institute[]{}
 \date{\nth{19} January 2017}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -118,38 +122,38 @@
     \item Excellent tracking 
       \begin{itemize}
       \item momentum resolution ($\delta p/p \sim 0.4\% - 0.6\%$)
-      \item impact parameter resolution ($\sigma_{IP} \sim 20~\mu$m)
-      \item primary vertex resolution (13 $\mu$m in $x$ and $y$ and 71 $\mu$m in $z$)
+      \item impact parameter resolution ($\sigma_{\rm IP} \sim 20~\mum$)
+      \item primary vertex resolution (13 \mum in $x$ and $y$ and 71~\mum in $z$)
       \end{itemize}
-    \item Excellent decay time resolution ($\sigma_{\tau}$ $\sim$ 45~fs)
+    \item Excellent decay time resolution ($\sigma_{\tau}$ $\sim$ 45~\fs)
     \item Excellent particle identification
     \end{enumerate}
   \end{itemize}
 
-    \bigskip
+  \bigskip
     
-    \begin{columns}
-      \begin{column}{0.29\textwidth}
-        \centering
-        \begin{tikzpicture}
-          \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[height=3.5cm]{figs/lhcb/massres.pdf}};
-          \node[draw=none,barcolor!80!black] at (1.4,0.15) {\tiny \href{http://link.springer.com/article/10.1007\%2FJHEP06(2013)064}{JHEP 06 (2013) 064}};
+  \begin{columns}
+    \begin{column}{0.29\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[height=3.5cm]{figs/lhcb/massres.pdf}};
+        \node[draw=none,barcolor!80!black] at (1.4,0.15) {\tiny \href{http://link.springer.com/article/10.1007\%2FJHEP06(2013)064}{JHEP 06 (2013) 064}};
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.36\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[height=3.5cm]{figs/lhcb/bsmix.pdf}};
+        \node[draw=none,barcolor!80!black] at (2.2,0.15) {\tiny \href{http://iopscience.iop.org/1367-2630/15/5/053021/}{New~J.~Phys. 15 (2013) 053021}};
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.36\textwidth}
+      \begin{tikzpicture}
+        \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[height=3.5cm]{figs/lhcb/RICH.png}};
+        \node[draw=none,barcolor!80!black] at (1.4,0.15) {\tiny \href{http://epjc.epj.org/articles/epjc/abs/2013/05/10052_2013_Article_2431/10052_2013_Article_2431.html}{Eur. Phys. J. C (2013) 73}};
         \end{tikzpicture}
-      \end{column}
-      \begin{column}{0.36\textwidth}
-        \centering
-        \begin{tikzpicture}
-          \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[height=3.5cm]{figs/lhcb/bsmix.pdf}};
-          \node[draw=none,barcolor!80!black] at (2.2,0.15) {\tiny \href{http://iopscience.iop.org/1367-2630/15/5/053021/}{New~J.~Phys. 15 (2013) 053021}};
-        \end{tikzpicture}
-      \end{column}
-      \begin{column}{0.36\textwidth}
-        \begin{tikzpicture}
-          \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[height=3.5cm]{figs/lhcb/RICH.png}};
-          \node[draw=none,barcolor!80!black] at (1.4,0.15) {\tiny \href{http://epjc.epj.org/articles/epjc/abs/2013/05/10052_2013_Article_2431/10052_2013_Article_2431.html}{Eur. Phys. J. C (2013) 73}};
-          \end{tikzpicture}
-      \end{column}
-    \end{columns}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -190,14 +194,46 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{The \lhcb Upgrade}
+\begin{frame}{Track reconstruction at \lhcb}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item Track reconstruction in \lhcb is performed by several different algorithms
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[trim={1cm 0 2cm 0},clip,width=\textwidth]{figs/tracking/trackTypes.pdf}};
+\begin{scope}[x={(image.south east)},y={(image.north west)}]
+%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+\fill[white] (0.22,0.58) rectangle (0.29,0.62);
+\node at (0.25,0.6) {\footnotesize {\fontfamily{cmss}\selectfont TT}};
+\end{scope}
+\end{tikzpicture} 
+\end{column}
+\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{The \lhcb trigger}
+
+\begin{columns}
+\begin{column}{0.3\textwidth}
+\includegraphics[width=\textwidth]{figs/detector/trigger-run1.pdf}
+\end{column}
+\begin{column}{0.7\textwidth}
+\end{column}
+\end{columns}
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Track reconstruction at \lhcb}
+\begin{frame}{The \lhcb Upgrade}
 
 \end{frame}
 
@@ -258,7 +294,6 @@
   \item Initial version of VeloUT a replication of VeloTT algorithm from Run 1
 \end{itemize}
 
-
 \begin{itemize}
   \item Execution time of 27.20\ms far too slow use in the software trigger
   \begin{itemize}
@@ -303,12 +338,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{VeloUT: Improvements}
 
+\begin{myenv}{Efficiency too low/falls off with increasing \ptot}[linecolor=barcolor]
+  \begin{itemize}
+    \setlength{\itemindent}{1em}
+    \item Due to assumptions made in cluster
+    \item New hit clustering sequence 
+  \end{itemize}
+\end{myenv}
+
+\begin{myenv}{Execution time much too slow for use in trigger}[linecolor=barcolor]
+  \begin{itemize}
+    \setlength{\itemindent}{1em}
+    \item Replace `detector regions' with hit sorting and binary searches
+    \item Remove Kalman filter, simple $\chi^{2}$ fit is sufficient
+    \item Numerous \cpp optimisations/changes to the logic
+  \end{itemize}
+\end{myenv}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{VeloUT: Hit clustering}
+\begin{frame}{VeloUT: Optimised algorithm}
 \begin{columns}
 \begin{column}{0.5\textwidth}
 \begin{itemize}
@@ -338,7 +390,7 @@
 \begin{itemize}
   \item Large improvement in the efficiency ($+5$\%)
   \begin{itemize}
-    \item[$\blacktriangleright$] Now flat in \ptot
+    \item[\ding{70}] Now flat in \ptot
   \end{itemize}
   \item Huge reduction in the execution time ($\times$33!)
   \item Slight increase in the ghost rate ($+0.8$\%)
@@ -464,26 +516,26 @@
       \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.3\textwidth]{figs/theory/btosll_penguin.eps}};
       \begin{scope}[x={(image.south east)},y={(image.north west)}]
       %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
-      \node[draw=none,bostonuniversityred] at (0.5,0.96) {\scriptsize $\tilde{g}$};
-      \node[draw=none,bostonuniversityred] at (0.3,0.6) {\scriptsize $\tilde{d}_{i}$};
-      \node[draw=none,bostonuniversityred] at (0.58,0.27) {\scriptsize $\H$};
+      \node[draw=none,bostonuniversityred] at (0.5,0.96) {\small ?};
+      \node[draw=none,bostonuniversityred] at (0.3,0.6) {\small ?};
+      \node[draw=none,bostonuniversityred] at (0.58,0.27) {\small ?};
       \end{scope}
       \end{tikzpicture}
       \begin{tikzpicture}
       \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.3\textwidth]{figs/theory/btosll_box.eps}};
       \begin{scope}[x={(image.south east)},y={(image.north west)}]
       %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
-      \node[draw=none,bleudefrance] at (0.5,0.95) {\scriptsize \tquark};
-      \node[draw=none,bostonuniversityred] at (0.25,0.6) {\scriptsize \Hm};
-      \node[draw=none,bostonuniversityred] at (0.8,0.6) {\scriptsize \Hp};
-      \node[draw=none,bleudefrance] at (0.5,0.45) {\scriptsize \Pnu};
+      \node[draw=none,bostonuniversityred] at (0.5,0.97) {\small ?};
+      \node[draw=none,bostonuniversityred] at (0.25,0.6) {\small ?};
+      \node[draw=none,bostonuniversityred] at (0.8,0.6) {\small ?};
+      \node[draw=none,bostonuniversityred] at (0.5,0.47) {\small ?};
       \end{scope}
       \end{tikzpicture}
     \begin{tikzpicture}
       \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.3\textwidth]{figs/theory/btosll_zprime.eps}};
       \begin{scope}[x={(image.south east)},y={(image.north west)}]
       %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
-      \node[draw=none,bostonuniversityred] at (0.55,0.45) {\scriptsize $Z^{'}$};
+      \node[draw=none,bostonuniversityred] at (0.55,0.45) {\small ?};
       \end{scope}
       \end{tikzpicture}
     \end{myenv}
@@ -511,6 +563,8 @@
 \item \btosll transitions sensitive to $\mathcal{C}_{7}$, $\mathcal{C}_{9}$, $\mathcal{C}_{10}$
 \end{itemize}
 
+\medskip
+
 \centering
 \begin{tikzpicture}
 \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.3\textwidth]{figs/theory/btosll_penguin.eps}};
@@ -518,7 +572,7 @@
 %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
 \node[draw=none] at (0.53,0.96) {\scriptsize \Wm};
 \node[draw=none] at (0.3,0.6) {\scriptsize \tquark};
-\node[draw=none] at (0.56,0.27) {\scriptsize \color{bleudefrance}{\Pgamma}\color{black}{,} \color{bostonuniversityred}{$\Z^{0}$}};
+\node[draw=none] at (0.56,0.27) {\scriptsize {\small\color{bleudefrance}{\Pgamma}}\color{black}{,} \color{bostonuniversityred}{$\Z^{0}$}};
 \end{scope}
 \end{tikzpicture}
 \begin{tikzpicture}
@@ -528,6 +582,43 @@
 \node[draw=none] at (0.53,0.58) {\scriptsize \color{bleudefrance}{$\mathcal{C}_{7}$}\color{black}{,} \color{bostonuniversityred}{$\mathcal{C}_{9,10}$}};
 \end{scope}
 \end{tikzpicture}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Intepretation}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+
+\begin{tikzpicture}
+ \centering
+ \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[trim={2.5cm 20cm 10.7cm 2.4cm},clip,width=1.0\textwidth]{figs/kpimm/introduction/c9c10.pdf}};
+ \begin{scope}[x={(image.south east)},y={(image.north west)}]
+ %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+  \node[draw=none] at (0.32,0.94) {\bf \scriptsize [arXiv:1503.06199]};
+\end{scope}
+\end{tikzpicture}
+\centering
+
+{\color{applegreen}{Branching fractions}}, {\color{antiquebrass}{angular observables}}, {\color{airforceblue}{combined}} 
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item Several attempts to interpret LHCb data by performing global fits
+\item Consistent picture, data favours modified vector coupling ($\mathcal{C}_{9}^{\rm NP}$) at $\sim[3,4]\sigma$
+\end{itemize}
+
+\bigskip
+
+{\bf Possible intepretation}
+\begin{itemize}
+\item NP physics scenario, e.g. new vector $Z^{'}$, leptoquarks, etc
+\item Problem with our understanding of QCD, e.g. not properly estimating contribution from charm loops
+\end{itemize}
+
+\end{column}
+\end{columns}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -555,8 +646,9 @@
 {\usebackgroundtemplate{\includegraphics[width=1.05\paperwidth]{figs/cavern.jpg}}
  
  \begin{frame}[plain]
- \vspace{8.5cm}
-     \Huge\color{anti-flashwhite}{Backup Slides}
+ \vspace{8.75cm}
+ \hspace{-0.75cm}
+ \Huge\color{anti-flashwhite}{Backup}
  \end{frame}
 }
 
@@ -622,6 +714,13 @@
 \end{columns}
 \end{frame}
 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %Slide
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}\frametitle{VeloUT: Wrong side tracks}
+\centering
+\includegraphics[width=0.5\textwidth]{figs/upstream-tracking-upgrade/wrong_side_hits.pdf}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %           END OF DOCUMENT
