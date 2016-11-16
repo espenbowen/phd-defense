@@ -89,6 +89,8 @@
 \definecolor{antiquebrass}{rgb}{0.8, 0.58, 0.46}
 \definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
 
+\def\Kstarfourteenthirty  {{\ensuremath{\kaon^{*}_{0,2}(1430)^{0}}}\xspace}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Begin document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -118,7 +120,7 @@
   \item LHCb is the dedicated heavy flavour physics experiment at the LHC
   \item Its primary goal is to look for indirect evidence of new physics in \CP violation and rare decays of beauty and charm hadrons
   \item This requires:
-    \begin{enumerate}
+    \begin{itemize}
     \item Excellent tracking 
       \begin{itemize}
       \item momentum resolution ($\delta p/p \sim 0.4\% - 0.6\%$)
@@ -127,7 +129,7 @@
       \end{itemize}
     \item Excellent decay time resolution ($\sigma_{\tau}$ $\sim$ 45~\fs)
     \item Excellent particle identification
-    \end{enumerate}
+    \end{itemize}
   \end{itemize}
 
   \bigskip
@@ -266,7 +268,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}\frametitle{Upstream tracking in Run 1}
+\begin{frame}\frametitle{Upstream tracking (VeloTT) in Run 1}
   \begin{itemize}
   \item[$\blacktriangleright$] Linearly extrapolate VELO track to TT
   \item[$\blacktriangleright$] Open search windows in each layer and find $\Delta x$ between track and hits
@@ -340,18 +342,18 @@
 
 \begin{myenv}{Efficiency too low/falls off with increasing \ptot}[linecolor=barcolor]
   \begin{itemize}
-    \setlength{\itemindent}{1em}
-    \item Due to assumptions made in cluster
-    \item New hit clustering sequence 
+    \setlength{\itemindent}{0.5em}
+    \item[$\blacktriangleright$] Tracked down to poor assumptions made when associating hits to \velo tracks
+    \item[\ding{70}] Developed new hit clustering sequence 
   \end{itemize}
 \end{myenv}
 
 \begin{myenv}{Execution time much too slow for use in trigger}[linecolor=barcolor]
   \begin{itemize}
-    \setlength{\itemindent}{1em}
-    \item Replace `detector regions' with hit sorting and binary searches
-    \item Remove Kalman filter, simple $\chi^{2}$ fit is sufficient
-    \item Numerous \cpp optimisations/changes to the logic
+    \setlength{\itemindent}{0.5em}
+    \item[\ding{70}] Replaced `detector regions' with hit sorting and binary searches
+    \item[\ding{70}] Removed Kalman filter, simple $\chi^{2}$ fit is sufficient
+    \item[\ding{70}] Numerous \cpp optimisations/changes to the logic
   \end{itemize}
 \end{myenv}
 
@@ -624,8 +626,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\BdToKpimm}
+\begin{frame}{\BdToKpimm in the \Kstarfourteenthirty regionn}
+\begin{itemize}
+\item Analyses of \BdToKpimm at \lhcb have focused on the \KstP
+\item Region of \mkpi $\sim$1430\mevcc contains contributions from $K^\ast(1410)^0$, $K^\ast_0(1430)^0$ and $K^\ast_2(1430)^0$
+\item Allows for a complementary measurement of $\decay{\bquark}{\squark\mup\mun}$ transitions
+\end{itemize}
 
+\bigskip
+\centering
+\includegraphics[width=0.5\textwidth]{figs/kpimm/introduction/full-mkpi.pdf}
+\begin{tikzpicture}[font=\boldmath]
+ \centering
+ \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.5\textwidth]{figs/kpimm/massfit/fitKpimumu_q2_1p1_6p0.pdf}};
+ \begin{scope}[x={(image.south east)},y={(image.north west)}]
+  %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+  \node[draw=none] at (0.5,0.97) {\tiny $1330<\mkpi<1530\mevcc$};
+ \end{scope}
+\end{tikzpicture}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -718,9 +736,22 @@
 % %Slide
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}\frametitle{VeloUT: Wrong side tracks}
+\medskip
 \centering
 \includegraphics[width=0.5\textwidth]{figs/upstream-tracking-upgrade/wrong_side_hits.pdf}
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\BdToKpimm: Decay angle convention}
+
+\begin{mdframed}[linecolor=barcolor]
+\includegraphics[width=0.5\textwidth]{figs/kpimm/angular-distribution/angles_bzb.pdf}
+\includegraphics[width=0.5\textwidth]{figs/kpimm/angular-distribution/angles_bz.pdf}
+\end{mdframed}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %           END OF DOCUMENT
