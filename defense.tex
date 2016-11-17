@@ -88,8 +88,12 @@
 \definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
 \definecolor{antiquebrass}{rgb}{0.8, 0.58, 0.46}
 \definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
+\definecolor{darkorchid}{rgb}{0.6, 0.2, 0.8}
+\definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
+\definecolor{darkpastelred}{rgb}{0.76, 0.23, 0.13}
 
 \def\Kstarfourteenthirty  {{\ensuremath{\kaon^{*}_{0,2}(1430)^{0}}}\xspace}
+\DeclareRobustCommand{\orderof}{\ensuremath{\mathcal{O}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Begin document
@@ -120,7 +124,7 @@
   \item LHCb is the dedicated heavy flavour physics experiment at the LHC
   \item Its primary goal is to look for indirect evidence of new physics in \CP violation and rare decays of beauty and charm hadrons
   \item This requires:
-    \begin{itemize}
+    \begin{enumerate}
     \item Excellent tracking 
       \begin{itemize}
       \item momentum resolution ($\delta p/p \sim 0.4\% - 0.6\%$)
@@ -129,7 +133,7 @@
       \end{itemize}
     \item Excellent decay time resolution ($\sigma_{\tau}$ $\sim$ 45~\fs)
     \item Excellent particle identification
-    \end{itemize}
+    \end{enumerate}
   \end{itemize}
 
   \bigskip
@@ -202,6 +206,16 @@
 \begin{column}{0.5\textwidth}
 \begin{itemize}
 \item Track reconstruction in \lhcb is performed by several different algorithms
+\item Two standalone algorithms 
+  \begin{itemize}
+    \item[\ding{70}] \velo tracking and T track seeding
+  \end{itemize}
+\item Other algorithms use input from these to perform further track reconstruction
+\item Long tracks used for majority of \lhcb analyses
+  \begin{itemize}
+    \item[\ding{70}] Traverse the full tracking system
+    \item[\ding{70}] Best momentum resolution
+  \end{itemize}
 \end{itemize}
 \end{column}
 \begin{column}{0.5\textwidth}
@@ -220,13 +234,40 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{The \lhcb trigger}
+\begin{frame}{The \lhcb trigger in Run 1}
 
 \begin{columns}
 \begin{column}{0.3\textwidth}
 \includegraphics[width=\textwidth]{figs/detector/trigger-run1.pdf}
 \end{column}
 \begin{column}{0.7\textwidth}
+  % \begin{itemize}
+  %   \item Plays important role in selecting interesting events and rejecting background
+  % \end{itemize}
+%\vspace{-0.4cm}
+\begin{myenv}{Level 0 Trigger}[linecolor=barcolor]
+  \begin{itemize}
+    \setlength{\itemindent}{0.5em}
+    \item Implemented in hardware
+    \item High $p_{T}$ and $E_{T}$ signatures in muon and calorimeter systems
+    \item 1 MHz detector readout
+  \end{itemize}
+\end{myenv}
+%\vspace{-0.3cm}
+\begin{myenv}{Higher Level Trigger}[linecolor=barcolor]
+  \begin{itemize}
+    \setlength{\itemindent}{0.5em}
+      \item Flexible software triggers
+      \item Two stages (HLT1 and HLT2)
+      \item Track reconstruction and PV finding performed
+        \begin{itemize}
+        \item[\ding{70}] Simplified reconstruction w.r.t offline 
+        \item[\ding{70}] Preliminary alignment and calibration
+        \item[\ding{70}] No RICH PID used
+        \end{itemize}
+      \item Combination of inclusive and exclusive selections
+      \end{itemize}
+\end{myenv}
 \end{column}
 \end{columns}
 
@@ -236,6 +277,17 @@
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{The \lhcb Upgrade}
+
+\begin{columns}
+\begin{column}{0.3\textwidth}
+\includegraphics[width=\textwidth]{figs/detector/trigger-run3.pdf}
+\end{column}
+\begin{column}{0.7\textwidth}
+  \begin{itemize}
+    \item 
+  \end{itemize}
+\end{column}
+\end{columns}
 
 \end{frame}
 
@@ -278,7 +330,7 @@
     \item[\ding{72}] Each hit must be on the same side of the linear extrapolation
   \end{itemize}
   \item[$\blacktriangleright$] Fit each track candidate with a simple $\chi^{2}$ fit
-  \item[$\blacktriangleright$] Choose best candidate track based on \# layers fired and $\chi^{2}$
+  \item[$\blacktriangleright$] Choose best candidate track based on \mbox{\# layers} fired and $\chi^{2}$
   \item[\ding{72}] Fit track with full Kalman filter
   \end{itemize}
   \input{figs/tikz/tracking-velott}
@@ -366,13 +418,13 @@
 \begin{columns}
 \begin{column}{0.5\textwidth}
 \begin{itemize}
-  \item[$\blacktriangleright$] Linearly extrapolate VELO track to TT
+  \item[$\blacktriangleright$] Linearly extrapolate VELO track to UT
   \item[\ding{72}] Select hits within a search window around the extrapolated track
   \item[\ding{72}] Form doublets of hits in the first two layers
   \item[\ding{72}] Extrapolate doublets to third/fourth layers and search for compatible hits
   \item[\ding{72}] If no four hit candidates found, repeat in starting from last two layers
   \item[$\blacktriangleright$] Fit each track candidate with a $\chi^{2}$ fit and estimate $q/p$ ($\delta p/p \sim 15 \%$)
-  \item[$\blacktriangleright$] Choose best candidate track based on \# layers fired and $\chi^{2}$
+  \item[$\blacktriangleright$] Choose best candidate track based on \mbox{\# layers} fired and $\chi^{2}$
   \end{itemize}
 \end{column}
 \begin{column}{0.5\textwidth}
@@ -495,7 +547,7 @@
       %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
       \node[draw=none,bleudefrance] at (0.53,0.96) {\scriptsize \Wm};
       \node[draw=none,bleudefrance] at (0.3,0.6) {\scriptsize \tquark};
-      \node[draw=none,bleudefrance] at (0.56,0.27) {\scriptsize \Pgamma,$\Z^{0}$};
+      \node[draw=none,bleudefrance] at (0.56,0.27) {\scriptsize {\small\Pgamma},$\Z^{0}$};
       \end{scope}
       \end{tikzpicture}
       \begin{tikzpicture}
@@ -626,7 +678,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\BdToKpimm in the \Kstarfourteenthirty regionn}
+\begin{frame}{\BdToKpimm in the \Kstarfourteenthirty region}
 \begin{itemize}
 \item Analyses of \BdToKpimm at \lhcb have focused on the \KstP
 \item Region of \mkpi $\sim$1430\mevcc contains contributions from $K^\ast(1410)^0$, $K^\ast_0(1430)^0$ and $K^\ast_2(1430)^0$
@@ -669,6 +721,103 @@
  \Huge\color{anti-flashwhite}{Backup}
  \end{frame}
 }
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %Slide
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}\frametitle{\bquark\bquarkbar pair production in \proton\proton collisions}
+
+\includegraphics[width=0.45\paperwidth]{figs/detector/gluon_fusion.eps}
+\includegraphics[width=0.45\paperwidth]{figs/detector/quark_antiquark_annihilation.eps}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}\frametitle{}
+
+  \begin{center}
+  \resizebox{\columnwidth}{!}{
+    \begin{tikzpicture}
+      %\draw[step=1cm,gray,very thin] (0,0) grid (15,4);
+      
+      \node[draw=none] at (2,3.5) {Beauty hadrons};
+        
+      \node[draw=none,blue] at (3,1.75) {L};
+      \draw[ultra thick,dashed,blue] (2,1) -- (4,2);
+      \draw[thick] (4,2) -- (5,3.8);
+      %\node[draw=none,darkpastelgreen] at (5.3,4.05) {$\mu^{+}$};
+      \draw[thick] (4,2) -- (5.5,3.5);
+      %\node[draw=none,darkpastelgreen] at (5.75,3.75) {$\mu^{-}$};
+      \draw[thick] (4,2) -- (6,3.2);
+      \draw[thick] (4,2) -- (6.2,3.);
+      \draw[thick] (4,2) -- (6.2,2.6);
+      
+      \node[draw=none] at (4.2,1.8) {SV};
+        
+      \draw[ultra thick,densely dotted,darkorchid] (4,2) -- (2,0.2);
+      \draw[ultra thick,densely dotted,darkorchid] (2,1) -- (2.35,0.5);
+      \node[draw=none,darkorchid] at (2,0.5) {IP};
+      
+      \node[draw=none,darkpastelred] at (2,1.6) {PV};
+      \node[draw, fill, orange, star, star points=11,scale=1.0] at (2,1){};
+      \node[draw, fill, darkpastelred, star, star points=11,scale=0.5] at (2,1){};
+      
+      \draw[ultra thick,->] (0,1) -- (1.8,1);
+      \draw[ultra thick,->] (7,1) -- (2.2,1);
+      \node[draw=none] at (0.2,0.8) {p};
+      \node[draw=none] at (6.8,0.8) {p};
+      
+      \node[draw=none] at (10,3.5) {Charm hadrons};
+      
+      \node[draw=none,blue] at (10.5,1.5) {L};
+      \draw[ultra thick,dashed,blue] (10,1) -- (11,1.5);
+      \draw[thick] (11,1.5) -- (12.5,3.8);
+      \draw[thick] (11,1.5) -- (14,3);
+        
+      \node[draw=none] at (11.3,1.35) {SV};
+        
+      \draw[ultra thick,densely dotted,darkorchid] (11,1.5) -- (10,0.4);
+      \draw[ultra thick,densely dotted,darkorchid] (10,1) -- (10.3,0.7);
+      \node[draw=none,darkorchid] at (10.5,0.5) {IP};
+      
+      \node[draw=none,darkpastelred] at (10,1.6) {PV};
+      \node[draw, fill, orange, star, star points=11,scale=1.0] at (10,1){};
+      \node[draw, fill, darkpastelred, star, star points=11,scale=0.5] at (10,1){};
+      
+      \draw[ultra thick,->] (8,1) -- (9.8,1);
+      \draw[ultra thick,->] (15,1) -- (10.2,1);
+      \node[draw=none] at (8.2,0.8) {\proton};
+      \node[draw=none] at (14.8,0.8) {\proton};
+      
+    \end{tikzpicture}
+    }
+    \bigskip
+    
+    \begin{columns}
+      \begin{column}{0.49\textwidth}
+        \begin{myenv}{Beauty signatures}[linecolor=barcolor]
+          \begin{itemize}
+          \item B$^{\pm}$ mass 5.28 GeV, daughter $p_{T}$ \orderof(1 GeV)
+          \item $\tau \sim $1.6 ps $\to$ L $\sim$ 1 cm $\to$ large IP
+          %\item Common signature: displaced muon pair
+          \end{itemize}
+        \end{myenv}
+      \end{column}
+      \begin{column}{0.49\textwidth}
+        \begin{myenv}{Charm signatures}[linecolor=barcolor]
+          \begin{itemize}
+          \item D$^{0}$ mass 1.86 GeV, large daughter $p_{T}$ 
+          \item $\tau \sim $0.4 ps $\to$ L $\sim$ 0.4 cm $\to$ smaller IP
+          %\item Can also come from `secondary' B decays
+          \end{itemize}
+        \end{myenv}
+      \end{column}
+    \end{columns}
+    
+  \end{center}
+\end{frame}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %Slide
