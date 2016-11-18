@@ -94,6 +94,7 @@
 
 \def\Kstarfourteenthirty  {{\ensuremath{\kaon^{*}_{0,2}(1430)^{0}}}\xspace}
 \DeclareRobustCommand{\orderof}{\ensuremath{\mathcal{O}}}
+\usepackage[export]{adjustbox}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Begin document
@@ -128,10 +129,10 @@
     \item Excellent tracking 
       \begin{itemize}
       \item momentum resolution ($\delta p/p \sim 0.4\% - 0.6\%$)
-      \item impact parameter resolution ($\sigma_{\rm IP} \sim 20~\mum$)
-      \item primary vertex resolution (13 \mum in $x$ and $y$ and 71~\mum in $z$)
+      \item impact parameter resolution ($\sigma_{\rm IP} \sim 20\mum$)
+      \item primary vertex resolution (13 \mum in $x$ and $y$ and 71\mum in $z$)
       \end{itemize}
-    \item Excellent decay time resolution ($\sigma_{\tau}$ $\sim$ 45~\fs)
+    \item Excellent decay time resolution ($\sigma_{\tau}$ $\sim$ 45\fs)
     \item Excellent particle identification
     \end{enumerate}
   \end{itemize}
@@ -214,7 +215,9 @@
 \item Long tracks used for majority of \lhcb analyses
   \begin{itemize}
     \item[\ding{70}] Traverse the full tracking system
-    \item[\ding{70}] Best momentum resolution
+    \begin{itemize}
+    \item[$\blacktriangleright$] Best momentum resolution
+    \end{itemize}
   \end{itemize}
 \end{itemize}
 \end{column}
@@ -276,17 +279,91 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{The \lhcb Upgrade}
+\begin{frame}{\lhcb Run 2 (2015-2018)}
 
 \begin{columns}
 \begin{column}{0.7\textwidth}
+\begin{itemize}
+  \item \lhcb taking data at $\sqs=13\tev$ and $\lum=4\times10^{32}\cm^{-2}\sec^{-1}$
+\end{itemize}
+
+\begin{itemize}
+  \item Trigger redesigned with two key objectives
+  \begin{enumerate}
+      \item Perform full event reconstruction within the trigger
+      \item Achieve offline-quality alignment and calibration online
+    \end{enumerate}
+\end{itemize}
+
+\begin{itemize}
+  \item Can perform physics analysis directly on trigger output
   \begin{itemize}
-    \item 
-  \end{itemize}
+      \item[\ding{70}] Large saving in storage space
+      \begin{itemize}
+        \item Ideal for analysis of channels with large yield 
+      \end{itemize}
+      \item[\ding{70}] Allows rapid turn around from data taking to physics analysis
+      \begin{itemize}
+        \item \orderof(few weeks)
+      \end{itemize}
+    \end{itemize}
+\end{itemize}
+
 \end{column}
 \begin{column}{0.3\textwidth}
-\includegraphics[width=\textwidth]{figs/detector/trigger-run3.pdf}
+\includegraphics[width=\textwidth]{figs/detector/trigger-run2.pdf}
 \end{column}
+\end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{The \lhcb Upgrade (2020+)}
+
+\begin{columns}
+\begin{column}{0.6\textwidth}
+  \begin{itemize}
+    \item \lhcb  will undergo upgrade during LS1 (2018-2019)
+    \begin{itemize}
+      \item[\ding{70}] $\sqs=14\tev$ and $\lum=2\times10^{33}\cm^{-2}\sec^{-1}$
+    \end{itemize}
+  \end{itemize}
+
+  \begin{itemize}
+    \item Two key features
+    \begin{enumerate}
+      \item Triggerless readout
+      \begin{itemize}
+        \item[\ding{70}] Remove L0 trigger bottleneck
+        \item[\ding{70}] Read out detector at 40\mhz
+      \end{itemize}
+      \item Full software trigger
+      \begin{itemize}
+        \item[\ding{70}] Offers great flexibility for designing selections
+        \item[\ding{70}] Increases trigger efficiency for many physics channels
+        \item[\ding{80}] Strict requirements on execution time of tracking algorithms
+      \end{itemize}
+    \end{enumerate}
+  \end{itemize}
+
+  \begin{itemize}
+    \item Front end electronics need to be replaced
+    \item Many existing sub-detectors will be upgraded
+    \begin{itemize}
+        \item[\ding{70}] e.g. TT replaced by UT
+      \end{itemize}
+  \end{itemize}
+
+\end{column}
+\begin{column}{0.4\textwidth}
+\centering
+\vspace{-1cm}
+\adjincludegraphics[width=\textwidth,trim={{.3\width} {.575\height} {.28\width} {.1\height}},clip]{figs/detector/upgrade-motivation.pdf}
+\includegraphics[width=0.8\textwidth]{figs/detector/UT.pdf}
+\end{column}
+
 \end{columns}
 
 \end{frame}
@@ -448,6 +525,9 @@
   \end{itemize}
   \item Huge reduction in the execution time ($\times$33!)
   \item Slight increase in the ghost rate ($+0.8$\%)
+  \begin{itemize}
+    \item[\ding{70}] Can be reduced in offline analysis
+  \end{itemize}
 \end{itemize}
 
 \bigskip
@@ -517,6 +597,18 @@
 \end{column}
 \end{columns}
 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{VeloUT: Summary}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Upstream tracking for Run 2}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -727,8 +819,9 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}\frametitle{\bquark\bquarkbar pair production in \proton\proton collisions}
 
-\includegraphics[width=0.45\paperwidth]{figs/detector/gluon_fusion.eps}
-\includegraphics[width=0.45\paperwidth]{figs/detector/quark_antiquark_annihilation.eps}
+\centering
+\includegraphics[width=0.4\paperwidth]{figs/detector/gluon_fusion.eps}
+\includegraphics[width=0.4\paperwidth]{figs/detector/quark_antiquark_annihilation.eps}
 
 \end{frame}
 
@@ -803,9 +896,9 @@
 %           \begin{itemize}
 %           \item[\ding{70}] daughter \pt \orderof(1 GeV)
 %           \end{itemize}
-%           \item $\tau \sim 1.6~\ps$
+%           \item $\tau \sim 1.6\ps$
 %           \begin{itemize}
-%           \item[\ding{70}] L $\sim 1~\cm$ $\to$ large IP
+%           \item[\ding{70}] L $\sim 1\cm$ $\to$ large IP
 %           \end{itemize}
 %           %\item Common signature: displaced muon pair
 %           \end{itemize}
@@ -818,7 +911,7 @@
 %           \begin{itemize}
 %           \item[\ding{70}] large daughter \pt
 %           \end{itemize}
-%           \item $\tau \sim 0.4~\ps$
+%           \item $\tau \sim 0.4\ps$
 %           \begin{itemize}
 %           \item[\ding{70}] L $\sim 0.4 \cm$ $\to$ smaller IP
 %           \end{itemize}
@@ -899,7 +992,95 @@
 \begin{frame}\frametitle{VeloUT: Wrong side tracks}
 \medskip
 \centering
-\includegraphics[width=0.5\textwidth]{figs/upstream-tracking-upgrade/wrong_side_hits.pdf}
+\includegraphics[width=0.4\textwidth]{figs/upstream-tracking-upgrade/wrong_side_hits.pdf}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{VeloTT: Optimised peformance}
+
+\begin{columns}
+\begin{column}{0.65\textwidth}
+\begin{itemize}
+  \item Large improvement in the efficiency ($+5$\%)
+  \begin{itemize}
+    \item[\ding{70}] Now flat in \ptot
+  \end{itemize}
+  \item Huge reduction in the execution time ($\times$65!)
+  \item Slight increase in the ghost rate ($+4$\%)
+  \begin{itemize}
+    \item[\ding{70}] Can be reduced in offline analysis
+  \end{itemize}
+\end{itemize}
+
+\bigskip
+
+\begin{mdframed}[linecolor=barcolor]
+\begin{center}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{c|c|c|c}
+  \velott & Efficiency [\%] & Ghost rate [\%] & Timing [ms] \\ 
+  \hline
+  Run I  &  92.74  &  7.21  &  32.50  \\
+  Run II  &  97.77  &  11.60  &  \hphantom{0}0.50   \\
+ \end{tabular}
+ }
+\end{center}
+\end{mdframed}
+\end{column}
+
+\begin{column}{0.35\textwidth}
+\centering
+\begin{figure}
+\vspace*{-1cm}
+\includegraphics[height=0.475\textheight]{figs/upstream-tracking-run2/VeloTT-eff-p.pdf}\\
+\includegraphics[height=0.475\textheight]{figs/upstream-tracking-run2/VeloTT-gr-p.pdf}
+\end{figure}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{VeloTT-Forward: Optimised peformance}
+
+\begin{columns}
+\begin{column}{0.65\textwidth}
+\begin{itemize}
+  \item Significant reduction in the execution time ($\times$3)
+  \item Large reduction in the ghost rate ($\times$3)
+  \item Some loss of efficiency ($-4$\%)
+\end{itemize}
+
+\bigskip
+
+\begin{mdframed}[linecolor=barcolor]
+\begin{center}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{c|c|c|c}
+    & Efficiency [\%] & Ghost rate [\%] & Timing [ms] \\
+   \hline
+  Velo-Forward  & 93.15  & 46.86  &  13.71 \\
+  VeloTT-Forward  & 89.23  & 17.13  &  0.50+4.08 \\
+ \end{tabular}
+ }
+\end{center}
+\end{mdframed}
+\end{column}
+
+\begin{column}{0.35\textwidth}
+\centering
+\begin{figure}
+\vspace*{-1cm}
+\includegraphics[height=0.475\textheight]{figs/upstream-tracking-run2/Forward-eff-p.pdf}\\
+\includegraphics[height=0.475\textheight]{figs/upstream-tracking-run2/Forward-gr-p.pdf}
+\end{figure}
+\end{column}
+\end{columns}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -910,6 +1091,53 @@
 \begin{mdframed}[linecolor=barcolor]
 \includegraphics[width=0.5\textwidth]{figs/kpimm/angular-distribution/angles_bzb.pdf}
 \includegraphics[width=0.5\textwidth]{figs/kpimm/angular-distribution/angles_bz.pdf}
+\end{mdframed}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\BdToKpimm: Expected resonant contributions}
+
+\begin{center}
+\begin{tabular}{c|c|c|c|r}
+Resonance & ${\rm J}^{P}$ & Mass [$\mathrm{Me\kern -0.1em V\!/}c^2$] & Full width [$\mathrm{Me\kern -0.1em V\!/}c^2$]  & $\mathcal{B}(K\pi)~[\%]$ \\
+\hline
+$K^\ast(1410)^0$ & $1^{-}$& $\hphantom{0.}1414 \pm 15\hphantom{.}$& $232 \pm 21\hphantom{0}$  & $6.6 \pm 1.3$ \\
+$K^\ast_0(1430)^0$ & $0^{+}$ & $\hphantom{0.}1425 \pm 50\hphantom{.}$ & $270 \pm 80\hphantom{0}$ & $\hphantom{.}93 \pm 10\hphantom{.}$ \\
+$K^\ast_2(1430)^0$ & $2^{+}$ & $1432.4\pm 1.3$ & $109 \pm 5\hphantom{00}$ & $49.9 \pm 1.2$ \\
+$K^\ast(1680)^0$ & $1^{-}$ & $\hphantom{0.}1717 \pm 27\hphantom{.}$ & $322 \pm 110$ & $38.7 \pm 2.5$ \\
+$K^\ast_3(1780)^0$ & $3^{-}$ & $\hphantom{0.}1776 \pm 7\hphantom{0.}$ & $159 \pm 21\hphantom{0}$ & $18.8 \pm 1.0$ \\
+$K^\ast_4(2045)^0$ & $4^{+}$ & $\hphantom{0.}2045 \pm 9\hphantom{0.}$ & $198 \pm 30\hphantom{0}$ & $9.9 \pm 1.2$ \\
+\end{tabular}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\BdToKpimm: Systematic uncertainties}
+
+\begin{itemize}
+  \item Systematics uncertainties are small ($<30\%$ of statistical uncertainty)
+  \item Dominant systematic uncertainty on $\deriv\BF/\deriv\qsq$ due to uncertainty on \mbox{\BF(\BdToJPsiKstP)}
+\end{itemize}
+
+\bigskip
+
+\begin{mdframed}[linecolor=barcolor]
+\begin{center}
+\begin{tabular}{l|cc}
+\multicolumn{1}{c|}{Source} & $d\BF/d\qsq \times 10^{-8}~[c^{4}/\gev^{2}]$ & $\overline{\Gamma}_{i}$ \\
+\hline
+Acceptance stat.\! uncertainty & 0.006--0.030 & 0.003--0.013 \\
+Data-simulation differences & 0.001--0.014 & 0.001--0.007 \\
+Peaking backgrounds & 0.013--0.026 & 0.001--0.040 \\
+\hline
+$\BF(\BdToJPsiKstP)$ & 0.033--0.110 & -- \\
+\end{tabular}
+\end{center}
 \end{mdframed}
 \end{frame}
 
