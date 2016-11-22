@@ -8,6 +8,7 @@
 \usepackage[super]{nth}
 \usepackage{relsize}
 \usepackage{amsmath}
+\usepackage{bm}
 
 \setbeamertemplate{section page}{
   \begin{centering}
@@ -123,7 +124,7 @@
 \begin{frame}{The \lhcb experiment}
   \begin{itemize}
   \item LHCb is the dedicated heavy flavour physics experiment at the LHC
-  \item Its primary goal is to look for indirect evidence of new physics in \CP violation and rare decays of beauty and charm hadrons
+  \item Its primary goal is to look for indirect evidence of new physics in CP violation and rare decays of beauty and charm hadrons
   \item This requires:
     \begin{enumerate}
     \item Excellent tracking 
@@ -206,7 +207,7 @@
 \begin{columns}
 \begin{column}{0.5\textwidth}
 \begin{itemize}
-\item Track reconstruction in \lhcb is performed by several different algorithms
+\item Track reconstruction at \lhcb is performed by several different algorithms
 \item Two standalone algorithms 
   \begin{itemize}
     \item[\ding{70}] \velo tracking and T track seeding
@@ -240,14 +241,11 @@
 \begin{frame}{The \lhcb trigger in Run 1}
 
 \begin{columns}
-\begin{column}{0.3\textwidth}
-\includegraphics[width=\textwidth]{figs/detector/trigger-run1.pdf}
-\end{column}
 \begin{column}{0.7\textwidth}
-  % \begin{itemize}
-  %   \item Plays important role in selecting interesting events and rejecting background
-  % \end{itemize}
-%\vspace{-0.4cm}
+   \begin{itemize}
+     \item Plays important role in selecting interesting events and rejecting background
+   \end{itemize}
+\vspace{-0.3cm}
 \begin{myenv}{Level 0 Trigger}[linecolor=barcolor]
   \begin{itemize}
     \setlength{\itemindent}{0.5em}
@@ -256,12 +254,12 @@
     \item 1 MHz detector readout
   \end{itemize}
 \end{myenv}
-%\vspace{-0.3cm}
+\vspace{-0.2cm}
 \begin{myenv}{Higher Level Trigger}[linecolor=barcolor]
   \begin{itemize}
     \setlength{\itemindent}{0.5em}
       \item Flexible software triggers
-      \item Two stages (HLT1 and HLT2)
+%      \item Two stages (HLT1 and HLT2)
       \item Track reconstruction and PV finding performed
         \begin{itemize}
         \item[\ding{70}] Simplified reconstruction w.r.t offline 
@@ -271,6 +269,9 @@
       \item Combination of inclusive and exclusive selections
       \end{itemize}
 \end{myenv}
+\end{column}
+\begin{column}{0.3\textwidth}
+\includegraphics[width=\textwidth]{figs/detector/trigger-run1.pdf}
 \end{column}
 \end{columns}
 
@@ -325,10 +326,7 @@
 \begin{columns}
 \begin{column}{0.6\textwidth}
   \begin{itemize}
-    \item \lhcb  will undergo upgrade during LS1 (2018-2019)
-    \begin{itemize}
-      \item[\ding{70}] $\sqs=14\tev$ and $\lum=2\times10^{33}\cm^{-2}\sec^{-1}$
-    \end{itemize}
+    \item \lhcb  will undergo upgrade during LS1 (2018-2019) to allow data taking at \mbox{$\sqs=14\tev$ and $\lum=2\times10^{33}\cm^{-2}\sec^{-1}$}
   \end{itemize}
 
   \begin{itemize}
@@ -341,6 +339,7 @@
       \end{itemize}
       \item Full software trigger
       \begin{itemize}
+        \item[\ding{70}] Full event reconstruction
         \item[\ding{70}] Offers great flexibility for designing selections
         \item[\ding{70}] Increases trigger efficiency for many physics channels
         \item[\ding{80}] Strict requirements on execution time of tracking algorithms
@@ -603,12 +602,40 @@
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{VeloUT: Summary}
+
+\begin{itemize}
+  \item Vast improvements in the performance of the \velout algorithm
+  \item Leads to subsequent improvement to the overall tracking sequence
+  \begin{itemize}
+    \item[\ding{80}] Adopted into the default tracking sequence for the \lhcb Upgrade
+  \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+  \item[\ding{70}] \lhcb will become first hadron collider experiment to operate a software-only trigger at the full event rate
+\end{itemize}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Upstream tracking for Run 2}
+
+\begin{itemize}
+  \item Following improved performance achieved using VeloUT tracks similar strategy developed for Run 2
+  \item New VeloTT algorithm created based on the optimised VeloUT algorithm
+  \begin{itemize}
+    \item[\ding{70}] Similar improvements achieved
+    \item[\ding{80}] Adopted into the default tracking sequence for the first stage of the HLT
+  \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+  \item[\ding{70}] Greatly improved signal efficiency for charm physics
+  \item[\ding{70}] Lifetime unbiased triggering on hadronic final states for first time
+\end{itemize}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -624,7 +651,7 @@
         \end{itemize}
       \item New, heavy particles in SM extensions can enter the loop and modify observables 
       \begin{itemize}
-        \item e.g. enhance/suppress \BF, alter angular distributions, new sources of \CP violation
+        \item e.g. enhance/suppress \BF, alter angular distributions, new sources of CP violation
       \end{itemize}
       \end{itemize}
     \end{column}
@@ -733,6 +760,54 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Previous measurements: Differential branching fractions}
+
+\begin{itemize}
+  \item Large LHCb datasets allows for precise measurements of the $\deriv\BF/\deriv\qsq$ of $\decay{\bquark}{\squark\mup\mun}$ processes
+  \item Results hint towards lower rates than predicted by theory
+\end{itemize}
+
+\bigskip
+
+\begin{center}
+\begin{tikzpicture}
+ \centering
+ \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[height=0.33\textheight]{figs/BFs/BdKstmm.pdf}};
+ \begin{scope}[x={(image.south east)},y={(image.north west)}]
+  %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+  \node[draw=none] at (0.45,0.8) {\tiny $\boldsymbol{B^{0}\rightarrow K^{*0}\mu^{\tiny +}\mu^{-}}$};
+ \end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+ \centering
+ \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[height=0.33\textheight]{figs/BFs/BsPhiMM.pdf}};
+ \begin{scope}[x={(image.south east)},y={(image.north west)}]
+  %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+  %\node[draw=none] at (0.33,0.25) {\tiny $\boldsymbol{B^{0}_{s}\rightarrow \phi\mu^{+}\mu^{-}}$};
+ \end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+ \centering
+ \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[height=0.33\textheight]{figs/BFs/kmumu_BF.pdf}};
+ \begin{scope}[x={(image.south east)},y={(image.north west)}]
+  %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+  %\node[draw=none] at (0.45,0.85) {\tiny \BsTophimm};
+ \end{scope}
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Previous measurements: Angular analysis of \BdToKstmm}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Intepretation}
 \begin{columns}
 \begin{column}{0.5\textwidth}
@@ -757,11 +832,13 @@
 
 \bigskip
 
-{\bf Possible intepretation}
+\begin{myenv}{Possible intepretation}[linecolor=barcolor]
 \begin{itemize}
+\setlength{\itemindent}{0.5em}
 \item NP physics scenario, e.g. new vector $Z^{'}$, leptoquarks, etc
 \item Problem with our understanding of QCD, e.g. not properly estimating contribution from charm loops
 \end{itemize}
+\end{myenv}
 
 \end{column}
 \end{columns}
