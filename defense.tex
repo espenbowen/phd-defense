@@ -124,7 +124,7 @@
 \begin{frame}{The \lhcb experiment}
   \begin{itemize}
   \item LHCb is the dedicated heavy flavour physics experiment at the LHC
-  \item Its primary goal is to look for indirect evidence of new physics in CP violation and rare decays of beauty and charm hadrons
+  \item Its primary goal is to look for indirect evidence of new physics in $CP$ violation and rare decays of beauty and charm hadrons
   \item This requires:
     \begin{enumerate}
     \item Excellent tracking 
@@ -651,7 +651,7 @@
         \end{itemize}
       \item New, heavy particles in SM extensions can enter the loop and modify observables 
       \begin{itemize}
-        \item e.g. enhance/suppress \BF, alter angular distributions, new sources of CP violation
+        \item e.g. enhance/suppress \BF, alter angular distributions, new sources of $CP$ violation
       \end{itemize}
       \end{itemize}
     \end{column}
@@ -701,7 +701,7 @@
       \node[draw=none,bostonuniversityred] at (0.5,0.97) {\small ?};
       \node[draw=none,bostonuniversityred] at (0.25,0.6) {\small ?};
       \node[draw=none,bostonuniversityred] at (0.8,0.6) {\small ?};
-      \node[draw=none,bostonuniversityred] at (0.5,0.47) {\small ?};
+      \node[draw=none,bostonuniversityred] at (0.5,0.49) {\small ?};
       \end{scope}
       \end{tikzpicture}
     \begin{tikzpicture}
@@ -764,7 +764,7 @@
 
 \begin{itemize}
   \item Large LHCb datasets allows for precise measurements of the $\deriv\BF/\deriv\qsq$ of $\decay{\bquark}{\squark\mup\mun}$ processes
-  \item Results hint towards lower rates than predicted by theory
+  \item Results point towards lower rates than predicted by theory
 \end{itemize}
 
 \bigskip
@@ -802,6 +802,99 @@
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Previous measurements: Angular analysis of \BdToKstmm}
+\begin{itemize}
+ \item Decay fully described by \qsq, \mkpi and three angles $\vec{\Omega}=(\ctl,\ctk,\phi)$
+ \end{itemize}
+
+  \begin{columns}
+   \begin{column}{0.6\textwidth}
+  \scalebox{0.8}{\parbox{.5\linewidth}{%
+  \begin{align*}
+   \frac{1}{\deriv(\Gamma+\bar{\Gamma})/\deriv q^2} & \left. \frac{\deriv^3(\Gamma+\bar{\Gamma})}{\deriv\vec{\Omega}}\right|_{\rm P-wave} = \\
+    \frac{9}{32\pi} \Big[& 
+     \tfrac{3}{4} (1-\textcolor{cobalt}{{F_{\rm L}}})\sin^2\thetak + \textcolor{cobalt}{{F_{\rm L}}}\cos^2\thetak\\
+     &+ \tfrac{1}{4}(1-\textcolor{cobalt}{{F_{\rm L}}})\sin^2\thetak\cos 2\thetal \\
+     &- \textcolor{cobalt}{{F_{\rm L}}} \cos^2\thetak\cos 2\thetal + \textcolor{cobalt}{{S_3}}\sin^2\thetak \sin^2\thetal \cos 2\phi\nonumber\\
+     &+ \textcolor{cobalt}{{S_4}} \sin 2\thetak \sin 2\thetal \cos\phi + \textcolor{cobalt}{{S_5}}\sin 2\thetak \sin \thetal \cos \phi\nonumber\\
+     &+ \tfrac{4}{3} \textcolor{cobalt}{{A_{\rm FB}}} \sin^2\thetak \cos\thetal + \textcolor{cobalt}{{S_7}} \sin 2\thetak \sin\thetal \sin\phi\nonumber\\
+     &+ \textcolor{cobalt}{{S_8}} \sin 2\thetak \sin 2\thetal \sin\phi + \textcolor{cobalt}{{S_9}}\sin^2\thetak \sin^2\thetal \sin 2\phi  \Big]
+  \end{align*}
+  }}
+   \end{column}
+   \begin{column}{0.4\textwidth}
+    \resizebox{\columnwidth}{!}{
+    \begin{tikzpicture}
+    %\draw[step=1cm,gray,very thin] (0,0) grid (7,4);
+    %planes
+    \draw[thick,gray] (0.2,3.5)--(2,3.5)--(5,0.5)--(3.2,0.5)--cycle;
+    \draw[thick,gray] (3.,3.75)--(4.,0.25)--(6.25,0.25)--(5.25,3.75)--cycle;
+    %axis
+    \draw[ultra thick,->] (0.2,2.0) -- (6.8,2.0);
+    %B
+    \draw[fill] (3.5,2) circle (0.1);
+    \node[draw=none] at (3.7,2.3){\tiny \Bz};
+    %mumu
+    \draw[fill,red] (2.5,2) circle (0.05);
+    \draw[thick,->,red,>=stealth] (2.5,2) -- (1.5,3);
+    \draw[thick,->,red,>=stealth] (2.5,2) -- (3.5,1);
+    \node[draw=none,red] at (1.5,2.65){\tiny \mup};
+    \node[draw=none,red] at (3.1,1.1){\tiny \mun};
+    \draw[thick,red,->,>=stealth] ([shift=(0:0.45)]2.5,2) arc (0:132:0.45);
+    \node[draw=none,red] at (2.6,2.2){\tiny $\theta_{\ell}$};
+
+    %kpi
+    \draw[fill,blue] (4.75,2) circle (0.05);
+    \draw[thick,->,blue,>=stealth] (4.75,2) -- (4.375,3.25);
+    \draw[thick,->,blue,>=stealth] (4.75,2) -- (5.125,0.75);
+    \node[draw=none,blue] at (4.85,2.95){\tiny \Kp};
+    \node[draw=none,blue] at (5.30,1.3){\tiny \pim};
+    \draw[thick,blue,->,>=stealth] ([shift=(0:0.45)]4.75,2) arc (0:105:0.45);
+    \node[draw=none,blue] at (4.92,2.22){\tiny $\theta_{K}$};
+
+    \draw[thick,->,>=stealth] ([shift=(115:1.)]3.5,2.5) arc (115:155:1.);
+    \node[draw=none] at (2.9,3.1){\tiny $\phi$};
+    \end{tikzpicture}
+    }
+   \end{column}
+  \end{columns}
+
+  \begin{itemize}
+  \item $\textcolor{cobalt}{{F_{\rm L}}}$, $\textcolor{cobalt}{{A_{\rm FB}}}$, $\textcolor{cobalt}{{S_i}}$ combinations of \Kstarz amplitudes which depend on the Wilson coefficients and the form factors
+  %\item Pollution from \Kp\pim in S-wave configuration also taken into account
+  \item Additional sets of observables, for which the leading form-factor uncertainties cancel, can be built from $\textcolor{cobalt}{{F_{\rm L}}}$ and $\textcolor{cobalt}{{S_3}}$ to $\textcolor{cobalt}{{S_9}}$
+    \begin{itemize}
+    \item[\ding{70}] e.g. $P'_{4,5} = \textcolor{cobalt}{S_{4,5}}/\sqrt{ \textcolor{cobalt}{F_{\rm L}}(1 -  \textcolor{cobalt}{F_{\rm L}})}$
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Previous measurements: Angular analysis of \BdToKstmm}
+
+\begin{itemize}
+  \item Full set of $CP$-averaged and $CP$-asymmetric observables measured
+  \begin{itemize}
+    \item[\ding{70}] Deviation in $P'_{5}$ at level of 2.9$\sigma$ in both bins [4.0,\,6.0] and [6.0,\,8.0] \gevgevcccc
+  \end{itemize}
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.45\textwidth]{figs/kpimm/introduction/AFB.pdf}
+\begin{tikzpicture}
+    \centering
+    \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.45\textwidth]{figs/kpimm/introduction/P5prime.pdf}};
+    \begin{scope}[x={(image.south east)},y={(image.north west)}]
+      %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+      \node[draw,ellipse,darkpastelred,minimum width=40pt,minimum height=50pt,thick,dashed] at (0.41,0.35) {};
+    \end{scope}
+  \end{tikzpicture}
+\end{center}
+
+\begin{itemize}
+  \item Global analysis of $CP$-averaged observables indicates tension with SM predictions at 3.4$\sigma$
+\end{itemize}
 
 \end{frame}
 
@@ -1067,9 +1160,14 @@
 % %Slide
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}\frametitle{VeloUT: Wrong side tracks}
-\medskip
-\centering
+
+\begin{itemize}
+  \item Fraction of truth matched tracks with at least one hit on the opposite side of the extrapolated \velo track in the $x$-$z$ plane
+\end{itemize}
+
+\begin{center}
 \includegraphics[width=0.4\textwidth]{figs/upstream-tracking-upgrade/wrong_side_hits.pdf}
+\end{center}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
