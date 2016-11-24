@@ -92,10 +92,21 @@
 \definecolor{darkorchid}{rgb}{0.6, 0.2, 0.8}
 \definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
 \definecolor{darkpastelred}{rgb}{0.76, 0.23, 0.13}
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
 
+\def\KstarP  {\ensuremath{\kaon^{*}(892)^{0}}\xspace}
 \def\Kstarfourteenthirty  {{\ensuremath{\kaon^{*}_{0,2}(1430)^{0}}}\xspace}
 \DeclareRobustCommand{\orderof}{\ensuremath{\mathcal{O}}}
 \usepackage[export]{adjustbox}
+
+\tikzset{
+  every overlay node/.style={
+    draw=white,anchor=north west,
+  },
+}
+\def\tikzoverlay{%
+   \tikz[baseline,overlay]\node[every overlay node]
+}%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Begin document
@@ -940,7 +951,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\BdToKpimm in the \Kstarfourteenthirty region}
+\begin{frame}{\BdToKpimm in the \Kstarfourteenthirty region \hspace{0pt plus 1 filll} {\small \bf \textcolor{black}{[arXiv:1609.04736]}}}
 \begin{itemize}
 \item Analyses of \BdToKpimm at \lhcb have focused on the \KstP
 \item Region of \mkpi $\sim$1430\mevcc contains contributions from $K^\ast(1410)^0$, $K^\ast_0(1430)^0$ and $K^\ast_2(1430)^0$
@@ -963,7 +974,245 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Summary}
+\begin{frame}{\BdToKpimm in the \Kstarfourteenthirty region \hspace{0pt plus 1 filll} {\small \bf \textcolor{black}{[arXiv:1609.04736]}}}
+\begin{itemize}
+\item[$\blacktriangleright$] Measurements performed in the $1330<\mkpi<1530\mevcc$ region at low \qsq
+\item[]
+\item[\ding{182}] Differential branching fraction as a function of \qsq
+  \begin{itemize}
+    \item[\ding{70}] 5 \qsq bins: [0.1,\,0.98], [1.1,\,2.5], [2.5,\,4.0], [4.0,\,6.0], [6.0,\,8.0]~\gevgevcccc
+    \item[\ding{70}] Normalised to \BdToJPsiKstP
+  \end{itemize}
+\item[\ding{183}] Angular analysis
+  \begin{itemize}
+    \item[\ding{70}] Single \qsq bin: [1.1,\,6.0]~\gevgevcccc
+    \item[\ding{70}] S-, P- and D-wave contributions considered for first time
+    \item[\ding{70}] Requires new orthonormal basis of angular functions 
+  \end{itemize}
+  
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Selection of signal candidates}
+
+\begin{itemize}
+ \item[\ding{80}] Analysis performed using the full \lhcb Run I data sample (3\invfb)
+\end{itemize}
+
+\begin{itemize}
+  \item Candidates are required to haved `fired' trigger at each of the three stages
+  \item Common, cut based selection applied to select candidates of the form $\decay{\Bz}{X\mumu}$
+  \item Multivariate classifier used to reduce combinatorial background
+  \item Exclusive backgrounds removed by specific vetoes
+  \begin{itemize}
+  \item \BdToKpimm ($\kaon \leftrightarrow \pion$) 
+  \item \BdToJPsiKpi ($\pion \leftrightarrow \muon$, $\kaon \leftrightarrow \muon$) 
+  \item \BdToPsitwosKpi ($\pion \leftrightarrow \muon$, $\kaon \leftrightarrow \muon$) 
+  \item \LbTopKmm ($\proton \to \pion$, $\proton \to \kaon~\&~\kaon \to \pion$) 
+  \item \BuToKmm (random \pion) 
+  \end{itemize}
+\end{itemize}
+
+\tikzoverlay at (9.5cm,3cm) {
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=4cm]{figs/kpimm/selection/jpsi_pimu_fit.pdf}};
+\end{tikzpicture} 
+};
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Acceptance correction}
+
+\begin{itemize}
+  \item Triggering, reconstruction and selection of signal candidates distorts their kinematic distributions
+  \item Acceptance modelled using Legendre polynomial paramerisation
+\end{itemize}
+\vspace{0.1cm}
+\begin{equation*}
+\begin{split}
+\varepsilon(\qsqp,\ctl,&\ctk,\phip,\mkpip) = \\
+& \sum_{hijkl} c_{hijkl}~L_{h}(\qsqp)L_{i}(\ctl)L_{j}(\ctk)L_{k}(\phip)L_{l}(\mkpip)
+ \end{split}
+\end{equation*}
+\begin{itemize}
+  \item Coefficients determined from moment analysis of simulated phase-space \BdToKpimm decays
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.32\textwidth]{figs/kpimm/acceptance/Fig3a.pdf}
+\includegraphics[width=0.32\textwidth]{figs/kpimm/acceptance/Fig3b.pdf}
+\includegraphics[width=0.32\textwidth]{figs/kpimm/acceptance/Fig3c.pdf}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\mkpimm invariant mass distribution}
+
+\begin{columns}
+\begin{column}{0.6\textwidth}
+\begin{itemize}
+  \item Signal modelled with sum of two Gaussians with power-law tail on the low-mass side
+  \begin{itemize}
+    \item Parameters determined from a fit to \BdToJPsiKst
+    %\begin{itemize}
+    %  \item $796<\mkpi<996\mevcc$, $9.22<\qsq<9.96\gevgevcccc$
+    %\end{itemize}
+    \item Scaling factor to account for different \mkpi, \qsq determined from simulation
+  \end{itemize}
+  \item Combinatorial background is modelled using an exponential function
+  \item $\sim 350$ signal candidates in $0.1<\qsq<8.0\gevgevcccc$
+\end{itemize}
+
+\end{column}
+\begin{column}{0.4\textwidth}
+\includegraphics[width=\textwidth]{figs/kpimm/massfit/fit_jpsi_log.pdf}\\
+\includegraphics[width=\textwidth]{figs/kpimm/massfit/fitKpimumu_q2_1p1_6p0.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Differential branching fraction}
+ 
+\begin{mdframed}[linecolor=barcolor]
+\resizebox{.95\linewidth}{!}{
+\begin{minipage}{\linewidth}
+\begin{equation*}
+\begin{split}
+\frac{\deriv\BF(\BdToKpimm)}{\deriv\qsq} = &\frac{1}{(q^{2}_{\text{max}} - q^{2}_{\text{min}})}~f_{\KstarP}~\BF(\BdToJPsiKstP)\BF(\decay{\jpsi}{\mumu}) \\
+\times&~\BF(\decay{\KstarP}{\Kp\pim})\frac{N_{\kpimm}}{(1-F_{\rm S}^{\jpsi\Kstarz})N_{\jpsi\Kstarz}} \frac{\varepsilon_{\jpsi\Kstarz}}{\varepsilon_{\kpimm}}
+\end{split}
+\end{equation*}
+\end{minipage}
+}
+\end{mdframed}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item {\bf First} $\deriv\BF/\deriv\qsq$ measurement of \BdToKpimm in this region of \mkpi 
+\end{itemize}
+\begin{itemize}
+\item \BdToJPsiKstP yield measured in $796<\mkpi<996$\mevcc
+\begin{itemize}
+  \item $f_{\KstarP}$ accounts for \mkpi window
+  \item $F_{\rm S}^{\jpsi\Kstarz}$ corrects for S-wave fraction
+\end{itemize}
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\centering
+\vspace{0.5cm}
+\includegraphics[width=\textwidth]{figs/kpimm/bf/dbfdq2.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Angular moments analysis}
+\begin{itemize}
+\item \CP-averaged differential decay rate of \BdToKpimm decays with the \kaon\pion system in a S-, P- or D-wave configuration is expanded in an orthonormal basis of angular functions, $f_i(\Omega)$, {\scriptsize \bf \href{http://journals.aps.org/prd/abstract/10.1103/PhysRevD.92.033013}{[PRD92(2015)033013]}}
+
+\begin{equation*}
+\frac{\deriv\Gamma }{\deriv\qsq \deriv\Omega} = \mathcal{C} \times \left\{ \displaystyle \sum^{41}_{i=1} f_i (\Omega) \Gamma_i(\qsq) \right\} 
+ \quad\mbox{with}\quad
+\Gamma_i(\qsq) = \Gamma^L_i(\qsq) + \eta^{L\to R}_i\; \Gamma^R_i(\qsq)
+\end{equation*}
+
+\item Orthonomal angular basis constructed from spherical harmonics $Y^m_\ell \equiv Y^m_\ell (\thetal,\phi)$ and reduced spherical harmonics ${P^m_\ell \equiv \sqrt{2 \pi}Y^m_\ell(\thetak,0)}$
+\item $\Gamma_i(\qsq)$ combinations of \KstarJ amplitudes with $\Gamma_{1}(\qsq)$ corresponding to the total rate
+\item Define 40 normalised angular moments which forms set of observables
+\end{itemize}
+\begin{equation*}
+\overline{\Gamma}_i(\qsq) = \frac{\Gamma_{i}(\qsq)}{\Gamma_{1}(\qsq)}
+\end{equation*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Angular moments analysis}
+
+\begin{itemize}
+  \item Observables measured using an angular moments analysis
+  \begin{itemize}
+    \item Likelihood fit impossible due to complicated angular expression and limited statistics
+  \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+  \item Distributions of the decays angles within $\pm$50\mevcc of the nominal \Bz mass
+  \begin{itemize}
+    \item Blue: estimated signal distribution obtained from the angular moments model
+    \item Red: projected background from upper mass sideband
+  \end{itemize}
+\end{itemize}
+
+\medskip
+
+\centering
+\includegraphics[width=0.32\textwidth]{figs/kpimm/angular-analysis/costhetal.pdf}
+\includegraphics[width=0.32\textwidth]{figs/kpimm/angular-analysis/costhetak.pdf}
+\includegraphics[width=0.32\textwidth]{figs/kpimm/angular-analysis/phi.pdf}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Angular moments analysis}
+\begin{columns}
+\begin{column}{0.55\textwidth}
+\begin{itemize}
+  \item Specific moments point towards large interference between S- and P-wave states 
+  \item Evidence for a supressed D-wave contribution
+  \begin{itemize}
+    \item $F_{\rm D} <$ 0.29 @ 95\% C.L.
+    \item Low w.r.t expectation from amplitude analysis of \BdToJPsiKpi%~{\scriptsize \bf \href{http://journals.aps.org/prd/abstract/10.1103/PhysRevD.90.112009}{[PRD90(2014)112009]}} 
+  \end{itemize}
+\end{itemize}
+\begin{itemize}
+  \item Access to full information, including extraction of Wilson coefficients requires form-factor predictions
+  \begin{itemize}
+    \item[\ding{70}] Only very preliminary predictions exist 
+    \item[\ding{72}] Hope measurement will stimulate futher theory effort
+  \end{itemize}
+\end{itemize}
+\end{column}
+\begin{column}{0.45\textwidth}
+\centering
+\includegraphics[height=0.44\textheight]{figs/kpimm/angular-analysis/mom_results_2_21.pdf}\\
+\includegraphics[height=0.44\textheight]{figs/kpimm/angular-analysis/mom_results_22_41.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Summary: \BdToKpimm in the \Kstarfourteenthirty region}
+
+\begin{itemize}
+  \item[\ding{80}] First measurements of the differential branching fraction and angular moments of \BdToKpimm in $K^{*}_{0,2}(1430)^{0}$ region
+  \item[\ding{80}] With additional input from theory, results could provide further complementary measurements of \decay{\bquark}{\squark\mup\mun} transitions
+  \begin{itemize}
+    \item[\ding{70}] Improve understanding of the observed pattern of deviations with respect to SM predictions
+  \end{itemize}
+\end{itemize}
 
 \end{frame}
 
@@ -1261,13 +1510,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\BdToKpimm: Decay angle convention}
+% \begin{frame}{\BdToKpimm: Decay angle convention}
 
-\begin{mdframed}[linecolor=barcolor]
-\includegraphics[width=0.5\textwidth]{figs/kpimm/angular-distribution/angles_bzb.pdf}
-\includegraphics[width=0.5\textwidth]{figs/kpimm/angular-distribution/angles_bz.pdf}
-\end{mdframed}
-\end{frame}
+% \begin{mdframed}[linecolor=barcolor]
+% \includegraphics[width=0.5\textwidth]{figs/kpimm/angular-distribution/angles_bzb.pdf}
+% \includegraphics[width=0.5\textwidth]{figs/kpimm/angular-distribution/angles_bz.pdf}
+% \end{mdframed}
+% \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
@@ -1287,6 +1536,38 @@ $K^\ast_4(2045)^0$ & $4^{+}$ & $\hphantom{0.}2045 \pm 9\hphantom{0.}$ & $198 \pm
 \end{tabular}
 \end{center}
 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}\frametitle {Angular analysis - Orthonormal basis}
+ 
+\begin{itemize}
+\item The transversity-basis moments of the first 10 (of 41) orthonormal angular functions
+ 
+ \medskip
+ 
+ \resizebox{0.9\textwidth}{!}{
+   \begin{tabular}{c|c|c|c}
+     $i$    &   $f_i(\Omega)$             & $\mathrm{\Gamma}^{L, {\rm tr}}_i(\qsq)$ & $\eta^{L\to R}_i$  \\ \hline \hline
+     1   &   $P^0_0 Y^0_0$     &  $\left[ \hzsq + \hpasq + \hpesq + \ssq + \dzsq + \dpasq + \dpesq\right]$ & + ($L \to R$)\\ \hline
+     2   &   $P^0_1 Y^0_0$     &  $2\left[\frac{2}{\sqrt{5}} \rhzdz + \rshz + \sqrt{\frac{3}{5}}  \rel( H^L_\parallel D^{L\ast}_\parallel + H^L_\perp D^{L\ast}_\perp  )\right]$ & " \\ \hline
+     3   &   $P^0_2 Y^0_0$     &  $\frac{\sqrt{5}}{7}$ (\dpasq + \dpesq) - $\frac{1}{\sqrt{5}}$ (\hpasq + \hpesq) + $\frac{2}{\sqrt{5}}$ \hzsq  + $\frac{10}{7\sqrt{5}}$ \dzsq + $2$ \rsdz & " \\  \hline
+     4   &   $P^0_3 Y^0_0$     &  $\frac{6}{\sqrt{35}} \left[ - \rel(H^L_\parallel D^{L\ast}_\parallel +  H^L_\perp D^{L\ast}_\perp)  + \sqrt{3} \rhzdz  \right]$ & "\\  \hline
+     5   &   $P^0_4 Y^0_0$     &  $\frac{2}{7} \left[ -2 (\dpasq + \dpesq) + 3 \dzsq \right] $ & "\\  \hline
+     6   &   $P^0_0 Y^0_2$     &  $\frac{1}{2 \sqrt{5}} \left[ (\dpasq + \dpesq) + (\hpasq + \hpesq) - 2 \ssq - 2 \dzsq - 2 \hzsq \right]$ & " \\  \hline
+     7   &   $P^0_1 Y^0_2$     &  $\left[ \frac{\sqrt{3}}{5} \rel(H^L_\parallel D^{L\ast}_\parallel  + H^L_\perp D^{L\ast}_\perp) - \frac{2}{\sqrt{5}} \rel(S^L H^{L\ast}_0)  - \frac{4}{5} \rel(H^L_0 D^{L\ast}_0)\right] $ & "  \\ \hline
+     8   &   $P^0_2 Y^0_2$     &  $ \left[ \frac{1}{14} (\dpasq + \dpesq) - \frac{2}{7} \dzsq - \frac{1}{10} (\hpasq + \hpesq) - \frac{2}{5} \hzsq - \frac{2}{\sqrt{5}} \rsdz \right]$ & "  \\  \hline
+     9   &   $P^0_3 Y^0_2$     &  $ - \frac{3}{5 \sqrt{7}} \left[ \rel( H^L_\parallel D^{L \ast}_\parallel + H^L_\perp D^{L \ast}_\perp) + 2 \sqrt{3} \rel(H^L_0 D^{L \ast}_0 ) \right] $ & "\\  \hline
+     10  &   $P^0_4 Y^0_2$     &  $ -\frac{2}{7 \sqrt{5}}  \left[ \dpasq + \dpesq + 3 \dzsq \right] $ & "  \\
+   \end{tabular}
+ }
+ 
+\medskip
+ 
+\item The S-, P- and D-wave transversity amplitudes are denoted as $S^{\{L,R\}}$, $H^{\{L,R\}}_{\{0,\parallel,\perp\}}$ and $D^{\{L,R\}}_{\{0,\parallel,\perp\}}$, respectively.
+\end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
