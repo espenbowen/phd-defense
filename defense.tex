@@ -108,6 +108,8 @@
    \tikz[baseline,overlay]\node[every overlay node]
 }%
 
+\renewcommand\mathfamilydefault{\rmdefault}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Begin document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -134,8 +136,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{The \lhcb experiment}
   \begin{itemize}
-  \item LHCb is the dedicated heavy flavour physics experiment at the LHC
-  \item Its primary goal is to look for indirect evidence of new physics in $CP$ violation and rare decays of beauty and charm hadrons
+  \item LHCb is the dedicated heavy flavour physics experiment at the LHC 
+  \item Its primary goal is to look for indirect evidence of new physics in \CP violation and rare decays of beauty and charm hadrons
   \item This requires:
     \begin{enumerate}
     \item Excellent tracking 
@@ -662,7 +664,7 @@
         \end{itemize}
       \item New, heavy particles in SM extensions can enter the loop and modify observables 
       \begin{itemize}
-        \item e.g. enhance/suppress \BF, alter angular distributions, new sources of $CP$ violation
+        \item e.g. enhance/suppress \BF, alter angular distributions, new sources of \CP violation
       \end{itemize}
       \end{itemize}
     \end{column}
@@ -774,11 +776,9 @@
 \begin{frame}{Previous measurements: Differential branching fractions}
 
 \begin{itemize}
-  \item Large LHCb datasets allows for precise measurements of the $\deriv\BF/\deriv\qsq$ of $\decay{\bquark}{\squark\mup\mun}$ processes
+  \item Large LHCb datasets allow for precise measurements of the $\deriv\BF/\deriv\qsq$ of \btosll processes
   \item Results point towards lower rates than predicted by theory
 \end{itemize}
-
-\bigskip
 
 \begin{center}
 \begin{tikzpicture}
@@ -786,7 +786,7 @@
  \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[height=0.33\textheight]{figs/BFs/BdKstmm.pdf}};
  \begin{scope}[x={(image.south east)},y={(image.north west)}]
   %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
-  \node[draw=none] at (0.45,0.8) {\tiny $\boldsymbol{B^{0}\rightarrow K^{*0}\mu^{\tiny +}\mu^{-}}$};
+  \node[draw=none] at (0.55,0.98) {\tiny \BdToKstmm};
  \end{scope}
 \end{tikzpicture}
 \begin{tikzpicture}
@@ -794,12 +794,36 @@
  \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[height=0.33\textheight]{figs/BFs/BsPhiMM.pdf}};
  \begin{scope}[x={(image.south east)},y={(image.north west)}]
   %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
-  %\node[draw=none] at (0.33,0.25) {\tiny $\boldsymbol{B^{0}_{s}\rightarrow \phi\mu^{+}\mu^{-}}$};
+  \node[draw=none] at (0.55,1.01) {\tiny \BsTophimm};
+ \end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+ \centering
+ \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[height=0.33\textheight]{figs/BFs/LbLMM.pdf}};
+ \begin{scope}[x={(image.south east)},y={(image.north west)}]
+  %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+  \node[draw=none] at (0.55,1.01) {\tiny \decay{\Lb}{\Lz\mumu}};
  \end{scope}
 \end{tikzpicture}
 \begin{tikzpicture}
  \centering
  \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[height=0.33\textheight]{figs/BFs/kmumu_BF.pdf}};
+ \begin{scope}[x={(image.south east)},y={(image.north west)}]
+  %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+  %\node[draw=none] at (0.45,0.85) {\tiny \BsTophimm};
+ \end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+ \centering
+ \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[height=0.33\textheight]{figs/BFs/ksmumu_BF.pdf}};
+ \begin{scope}[x={(image.south east)},y={(image.north west)}]
+  %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+  %\node[draw=none] at (0.45,0.85) {\tiny \BsTophimm};
+ \end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+ \centering
+ \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[height=0.33\textheight]{figs/BFs/bukst_BF.pdf}};
  \begin{scope}[x={(image.south east)},y={(image.north west)}]
   %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
   %\node[draw=none] at (0.45,0.85) {\tiny \BsTophimm};
@@ -885,7 +909,7 @@
 \begin{frame}{Previous measurements: Angular analysis of \BdToKstmm}
 
 \begin{itemize}
-  \item Full set of $CP$-averaged and $CP$-asymmetric observables measured
+  \item Full set of \CP-averaged and \CP-asymmetric observables measured
   \begin{itemize}
     \item[\ding{70}] Deviation in $P'_{5}$ at level of 2.9$\sigma$ in both bins [4.0,\,6.0] and [6.0,\,8.0] \gevgevcccc
   \end{itemize}
@@ -904,7 +928,7 @@
 \end{center}
 
 \begin{itemize}
-  \item Global analysis of $CP$-averaged observables indicates tension with SM predictions at 3.4$\sigma$
+  \item Global analysis of \CP-averaged observables indicates tension with SM predictions at 3.4$\sigma$
 \end{itemize}
 
 \end{frame}
@@ -955,7 +979,7 @@
 \begin{itemize}
 \item Analyses of \BdToKpimm at \lhcb have focused on the \KstP
 \item Region of \mkpi $\sim$1430\mevcc contains contributions from $K^\ast(1410)^0$, $K^\ast_0(1430)^0$ and $K^\ast_2(1430)^0$
-\item Allows for a complementary measurement of $\decay{\bquark}{\squark\mup\mun}$ transitions
+\item Allows for a complementary measurement of \btosll transitions
 \end{itemize}
 
 \bigskip
@@ -996,29 +1020,31 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Selection of signal candidates}
+\begin{frame}{Selection of \BdToKpimm signal candidates}
+
+\vspace{-0.5cm}
 
 \begin{itemize}
  \item[\ding{80}] Analysis performed using the full \lhcb Run I data sample (3\invfb)
 \end{itemize}
 
 \begin{itemize}
-  \item Candidates are required to haved `fired' trigger at each of the three stages
-  \item Common, cut based selection applied to select candidates of the form $\decay{\Bz}{X\mumu}$
-  \item Multivariate classifier used to reduce combinatorial background
-  \item Exclusive backgrounds removed by specific vetoes
+  \item[$\blacktriangleright$] Candidates are required to haved `fired' trigger at each of the three stages
+  \item[$\blacktriangleright$] Common, cut based selection applied to select candidates of the form $\decay{\Bz}{X\mumu}$
+  \item[$\blacktriangleright$] Multivariate classifier used to reduce combinatorial background
+  \item[$\blacktriangleright$] Exclusive backgrounds removed by specific vetoes
   \begin{itemize}
-  \item \BdToKpimm ($\kaon \leftrightarrow \pion$) 
-  \item \BdToJPsiKpi ($\pion \leftrightarrow \muon$, $\kaon \leftrightarrow \muon$) 
-  \item \BdToPsitwosKpi ($\pion \leftrightarrow \muon$, $\kaon \leftrightarrow \muon$) 
-  \item \LbTopKmm ($\proton \to \pion$, $\proton \to \kaon~\&~\kaon \to \pion$) 
-  \item \BuToKmm (random \pion) 
+  \item[\ding{70}] \BdToKpimm ($\kaon \leftrightarrow \pion$) 
+  \item[\ding{70}] \BdToJPsiKpi ($\pion \leftrightarrow \muon$, $\kaon \leftrightarrow \muon$) 
+  \item[\ding{70}] \BdToPsitwosKpi ($\pion \leftrightarrow \muon$, $\kaon \leftrightarrow \muon$) 
+  \item[\ding{70}] \LbTopKmm ($\proton \to \pion$, $\proton \to \kaon~\&~\kaon \to \pion$) 
+  \item[\ding{70}] \BuToKmm (random \pion) 
   \end{itemize}
 \end{itemize}
 
-\tikzoverlay at (9.5cm,3cm) {
+\tikzoverlay at (9cm,3cm) {
 \begin{tikzpicture}
-\node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=4cm]{figs/kpimm/selection/jpsi_pimu_fit.pdf}};
+\node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=4.5cm]{figs/kpimm/selection/jpsi_pimu_fit.pdf}};
 \end{tikzpicture} 
 };
 
@@ -1062,11 +1088,8 @@
 \begin{itemize}
   \item Signal modelled with sum of two Gaussians with power-law tail on the low-mass side
   \begin{itemize}
-    \item Parameters determined from a fit to \BdToJPsiKst
-    %\begin{itemize}
-    %  \item $796<\mkpi<996\mevcc$, $9.22<\qsq<9.96\gevgevcccc$
-    %\end{itemize}
-    \item Scaling factor to account for different \mkpi, \qsq determined from simulation
+    \item[\ding{70}] Parameters determined from a fit to \BdToJPsiKst
+    \item[\ding{70}] Scaling factor to account for different \mkpi, \qsq determined from simulation
   \end{itemize}
   \item Combinatorial background is modelled using an exponential function
   \item $\sim 350$ signal candidates in $0.1<\qsq<8.0\gevgevcccc$
@@ -1085,23 +1108,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Differential branching fraction}
  
-\begin{mdframed}[linecolor=barcolor]
 \resizebox{.95\linewidth}{!}{
 \begin{minipage}{\linewidth}
 \begin{equation*}
 \begin{split}
-\frac{\deriv\BF(\BdToKpimm)}{\deriv\qsq} = &\frac{1}{(q^{2}_{\text{max}} - q^{2}_{\text{min}})}~f_{\KstarP}~\BF(\BdToJPsiKstP)\BF(\decay{\jpsi}{\mumu}) \\
-\times&~\BF(\decay{\KstarP}{\Kp\pim})\frac{N_{\kpimm}}{(1-F_{\rm S}^{\jpsi\Kstarz})N_{\jpsi\Kstarz}} \frac{\varepsilon_{\jpsi\Kstarz}}{\varepsilon_{\kpimm}}
+\frac{\deriv\BF}{\deriv\qsq} = \frac{1}{(q^{2}_{\text{max}} - q^{2}_{\text{min}}) }&f_{\KstP}\BF(\BdToJPsiKstP)\BF(\decay{\jpsi}{\mumu}) \\
+\times&\BF(\decay{\KstP}{\Kp\pim})\frac{N'_{\kpimm}}{(1-F_{\rm S}^{\jpsi\Kstarz})N'_{\jpsi\Kstarz}}
 \end{split}
 \end{equation*}
 \end{minipage}
 }
-\end{mdframed}
 
 \begin{columns}
 \begin{column}{0.5\textwidth}
 \begin{itemize}
-\item {\bf First} $\deriv\BF/\deriv\qsq$ measurement of \BdToKpimm in this region of \mkpi 
+\item First $\deriv\BF/\deriv\qsq$ measurement of \BdToKpimm in this region of \mkpi 
 \end{itemize}
 \begin{itemize}
 \item \BdToJPsiKstP yield measured in $796<\mkpi<996$\mevcc
@@ -1124,13 +1145,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Angular moments analysis}
 \begin{itemize}
-\item \CP-averaged differential decay rate of \BdToKpimm decays with the \kaon\pion system in a S-, P- or D-wave configuration is expanded in an orthonormal basis of angular functions, $f_i(\Omega)$, {\scriptsize \bf \href{http://journals.aps.org/prd/abstract/10.1103/PhysRevD.92.033013}{[PRD92(2015)033013]}}
+\item \CP-averaged differential decay rate of \BdToKpimm decays with the \Kp\pim system in a S-, P- or D-wave configuration is expanded in an orthonormal basis of angular functions, $f_i(\Omega)$, %{\scriptsize \bf \href{http://journals.aps.org/prd/abstract/10.1103/PhysRevD.92.033013}{[PRD92(2015)033013]}}
 
 \begin{equation*}
-\frac{\deriv\Gamma }{\deriv\qsq \deriv\Omega} = \mathcal{C} \times \left\{ \displaystyle \sum^{41}_{i=1} f_i (\Omega) \Gamma_i(\qsq) \right\} 
- \quad\mbox{with}\quad
-\Gamma_i(\qsq) = \Gamma^L_i(\qsq) + \eta^{L\to R}_i\; \Gamma^R_i(\qsq)
+\frac{\deriv\Gamma }{\deriv\qsq\,\deriv\Omega} \propto \sum^{41}_{i=1} f_i (\Omega) \Gamma_i(\qsq)
+\quad\mbox{with}\quad
+\int f_i(\Omega) f_j(\Omega) \deriv\Omega = \delta_{ij}
 \end{equation*}
+
+\medskip
 
 \item Orthonomal angular basis constructed from spherical harmonics $Y^m_\ell \equiv Y^m_\ell (\thetal,\phi)$ and reduced spherical harmonics ${P^m_\ell \equiv \sqrt{2 \pi}Y^m_\ell(\thetak,0)}$
 \item $\Gamma_i(\qsq)$ combinations of \KstarJ amplitudes with $\Gamma_{1}(\qsq)$ corresponding to the total rate
@@ -1208,7 +1231,7 @@
 
 \begin{itemize}
   \item[\ding{80}] First measurements of the differential branching fraction and angular moments of \BdToKpimm in $K^{*}_{0,2}(1430)^{0}$ region
-  \item[\ding{80}] With additional input from theory, results could provide further complementary measurements of \decay{\bquark}{\squark\mup\mun} transitions
+  \item[\ding{80}] With additional input from theory, results could provide further complementary measurements of \btosll transitions
   \begin{itemize}
     \item[\ding{70}] Improve understanding of the observed pattern of deviations with respect to SM predictions
   \end{itemize}
