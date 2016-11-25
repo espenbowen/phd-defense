@@ -838,14 +838,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Previous measurements: Angular analysis of \BdToKstmm}
 \begin{itemize}
- \item Decay fully described by \qsq, \mkpi and three angles $\vec{\Omega}=(\ctl,\ctk,\phi)$
+ \item Decay fully described by \qsq, \mkpi and three angles $\Omega=(\ctl,\ctk,\phi)$
  \end{itemize}
 
   \begin{columns}
    \begin{column}{0.6\textwidth}
   \scalebox{0.8}{\parbox{.5\linewidth}{%
   \begin{align*}
-   \frac{1}{\deriv(\Gamma+\bar{\Gamma})/\deriv q^2} & \left. \frac{\deriv^3(\Gamma+\bar{\Gamma})}{\deriv\vec{\Omega}}\right|_{\rm P-wave} = \\
+   \frac{1}{\deriv(\Gamma+\bar{\Gamma})/\deriv q^2} & \left. \frac{\deriv^3(\Gamma+\bar{\Gamma})}{\deriv\Omega}\right|_{\rm P-wave} = \\
     \frac{9}{32\pi} \Big[& 
      \tfrac{3}{4} (1-\textcolor{cobalt}{{F_{\rm L}}})\sin^2\thetak + \textcolor{cobalt}{{F_{\rm L}}}\cos^2\thetak\\
      &+ \tfrac{1}{4}(1-\textcolor{cobalt}{{F_{\rm L}}})\sin^2\thetak\cos 2\thetal \\
@@ -985,12 +985,12 @@
 \bigskip
 \centering
 \includegraphics[width=0.5\textwidth]{figs/kpimm/introduction/full-mkpi.pdf}
-\begin{tikzpicture}[font=\boldmath]
+\begin{tikzpicture}%[font=\boldmath]
  \centering
  \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.5\textwidth]{figs/kpimm/massfit/fitKpimumu_q2_1p1_6p0.pdf}};
  \begin{scope}[x={(image.south east)},y={(image.north west)}]
   %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
-  \node[draw=none] at (0.5,0.97) {\tiny $1330<\mkpi<1530\mevcc$};
+  \node[draw=none] at (0.5,0.97) {\tiny 1330\textless\mkpi\textless1530\mevcc};
  \end{scope}
 \end{tikzpicture}
 \end{frame}
@@ -1084,7 +1084,7 @@
 \begin{frame}{\mkpimm invariant mass distribution}
 
 \begin{columns}
-\begin{column}{0.6\textwidth}
+\begin{column}{0.61\textwidth}
 \begin{itemize}
   \item Signal modelled with sum of two Gaussians with power-law tail on the low-mass side
   \begin{itemize}
@@ -1092,11 +1092,11 @@
     \item[\ding{70}] Scaling factor to account for different \mkpi, \qsq determined from simulation
   \end{itemize}
   \item Combinatorial background is modelled using an exponential function
-  \item $\sim 350$ signal candidates in $0.1<\qsq<8.0\gevgevcccc$
+  \item $\sim230$ signal candidates in $1.1<\qsq<6.0\gevgevcccc$
 \end{itemize}
 
 \end{column}
-\begin{column}{0.4\textwidth}
+\begin{column}{0.39\textwidth}
 \includegraphics[width=\textwidth]{figs/kpimm/massfit/fit_jpsi_log.pdf}\\
 \includegraphics[width=\textwidth]{figs/kpimm/massfit/fitKpimumu_q2_1p1_6p0.pdf}
 \end{column}
@@ -1107,7 +1107,8 @@
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Differential branching fraction}
- 
+
+\begin{mdframed}[linecolor=barcolor] 
 \resizebox{.95\linewidth}{!}{
 \begin{minipage}{\linewidth}
 \begin{equation*}
@@ -1118,6 +1119,7 @@
 \end{equation*}
 \end{minipage}
 }
+\end{mdframed}
 
 \begin{columns}
 \begin{column}{0.5\textwidth}
@@ -1173,24 +1175,56 @@
 \begin{itemize}
   \item Observables measured using an angular moments analysis
   \begin{itemize}
-    \item Likelihood fit impossible due to complicated angular expression and limited statistics
+    \item[\ding{70}] Likelihood fit impossible due to complicated angular expression and limited statistics
   \end{itemize}
 \end{itemize}
 
 \begin{itemize}
-  \item Distributions of the decays angles within $\pm$50\mevcc of the nominal \Bz mass
-  \begin{itemize}
-    \item Blue: estimated signal distribution obtained from the angular moments model
-    \item Red: projected background from upper mass sideband
-  \end{itemize}
+\item Calculate background-subtracted and acceptance-corrected moments
+\end{itemize}
+\begin{equation*}
+  \begin{aligned}
+  \Gamma_i =&  \sum_{k=1}^{n_{\rm sig}} w_{k}f_i(\Omega_k)  - x\sum_{k=1}^{n_{\rm bkg}} w_{k}f_i(\Omega_k)\\
+  C_{ij} =& \sum_{k=1}^{n_{\rm sig}} w^{2}_{k}f_i(\Omega_k)f_j(\Omega_k)   + x^2\sum_{k=1}^{n_{\rm bkg}} w^{2}_{k}f_i(\Omega_k)f_j(\Omega_k)
+  \end{aligned}
+  \label{eqn:mom:sigbkgacc}
+\end{equation*}
+
+\begin{itemize}
+\item $x$ is the ratio $\tilde{n}^{\rm bkg}_{\rm sig}/n_{\rm bkg}$ used to perform the background subtraction
+\item $w_{k}$ is the reciprocal of the efficiency, $1/\varepsilon_{k}$
+% \item Signal region: $5230<\mkpimm<5330$~\mevcc
+% \item Background region: $5350<\mkpimm<5700$~\mevcc
 \end{itemize}
 
-\medskip
+\end{frame}
 
-\centering
-\includegraphics[width=0.32\textwidth]{figs/kpimm/angular-analysis/costhetal.pdf}
-\includegraphics[width=0.32\textwidth]{figs/kpimm/angular-analysis/costhetak.pdf}
-\includegraphics[width=0.32\textwidth]{figs/kpimm/angular-analysis/phi.pdf}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Angular moments analysis}
+
+\begin{itemize}
+\item Normalised moments for $i \in \{2,...,41\}$ defined as
+\end{itemize}
+\begin{equation*}
+\overline{\Gamma}_i(\qsq) = \frac{\Gamma_{i}(\qsq)}{\Gamma_{1}(\qsq)}
+\end{equation*}
+\begin{itemize}
+\item Covariance matrix for $i,j \in \{2,...,41\}$ computed as
+\end{itemize}
+
+\begin{equation*}
+\overline{C}_{ij} = \left[C_{ij} + \frac{\Gamma_i \Gamma_j}{\Gamma_1^2} C_{11} - \frac{\Gamma_i C_{1j} + \Gamma_j C_{1i}}{\Gamma_1}\right] \frac{1}{\Gamma_1^2}
+\end{equation*}
+
+\begin{itemize}
+\item[\ding{80}] Can also estimate D-wave fraction
+\end{itemize}
+
+\begin{equation*}
+F_{\rm D} \equiv  \displaystyle - \frac{7}{18} \left(2\,\overline{\Gamma}_{5} + 5 \sqrt{5}\,\overline{\Gamma}_{10} \right).
+\end{equation*}
 
 \end{frame}
 
@@ -1201,6 +1235,7 @@
 \begin{columns}
 \begin{column}{0.55\textwidth}
 \begin{itemize}
+  %\item Full set of moments and $40\times40$ covariance matrix available on HepData portal
   \item Specific moments point towards large interference between S- and P-wave states 
   \item Evidence for a supressed D-wave contribution
   \begin{itemize}
@@ -1238,6 +1273,7 @@
 \end{itemize}
 
 \end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Backup
@@ -1564,7 +1600,7 @@ $K^\ast_4(2045)^0$ & $4^{+}$ & $\hphantom{0.}2045 \pm 9\hphantom{0.}$ & $198 \pm
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}\frametitle {Angular analysis - Orthonormal basis}
+\begin{frame}\frametitle {Angular moments analysis}
  
 \begin{itemize}
 \item The transversity-basis moments of the first 10 (of 41) orthonormal angular functions
@@ -1591,6 +1627,26 @@ $K^\ast_4(2045)^0$ & $4^{+}$ & $\hphantom{0.}2045 \pm 9\hphantom{0.}$ & $198 \pm
  
 \item The S-, P- and D-wave transversity amplitudes are denoted as $S^{\{L,R\}}$, $H^{\{L,R\}}_{\{0,\parallel,\perp\}}$ and $D^{\{L,R\}}_{\{0,\parallel,\perp\}}$, respectively.
 \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Angular moments analysis}
+\begin{itemize}
+  \item Distributions of the decays angles within $\pm$50\mevcc of the nominal \Bz mass
+  \begin{itemize}
+    \item Blue: estimated signal distribution obtained from the angular moments model
+    \item Red: projected background from upper mass sideband
+  \end{itemize}
+\end{itemize}
+
+\medskip
+
+\centering
+\includegraphics[width=0.32\textwidth]{figs/kpimm/angular-analysis/costhetal.pdf}
+\includegraphics[width=0.32\textwidth]{figs/kpimm/angular-analysis/costhetak.pdf}
+\includegraphics[width=0.32\textwidth]{figs/kpimm/angular-analysis/phi.pdf}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
