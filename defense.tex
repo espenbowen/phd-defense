@@ -42,6 +42,7 @@
 \input{lhcb-symbols-def}
 \input{spd-symbols-def}
 \input{tracking-symbols-def}
+\input{quote}
 
 \def \Cseven {\ensuremath{\mathcal{C}_{7}^{(\ensuremath{\prime})}}\xspace}
 \def \Cnine {\ensuremath{\mathcal{C}_{9}^{(\ensuremath{\prime})}}\xspace}
@@ -355,7 +356,7 @@
       \item Triggerless readout
       \begin{itemize}
         \item[\ding{70}] Remove L0 trigger bottleneck
-        \item[\ding{70}] Read out detector at 40\mhz
+        \item[\ding{70}] Read out full detector at 40\mhz
       \end{itemize}
       \item Full software trigger
       \begin{itemize}
@@ -631,16 +632,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Upstream tracking for the Upgrade: Summary}
 
+\begin{columns}
+\begin{column}{0.75\textwidth}
 \begin{itemize}
-  \item Vast improvements in the performance of the \velout algorithm
-  \item Leads to subsequent improvement to the overall tracking sequence
-  \begin{itemize}
-    \item[\ding{80}] Adopted into the default tracking sequence for the \lhcb Upgrade
-  \end{itemize}
+  \item[$\blacktriangleright$] Vast improvements in the performance of the \velout algorithm
+  \item[$\blacktriangleright$] Leads to subsequent improvement to the overall tracking sequence
+  \item[\ding{80}] Adopted into the default tracking sequence for the \lhcb Upgrade
 \end{itemize}
+\end{column}
+\begin{column}{0.25\textwidth}
+%\centering
+\href{https://cds.cern.ch/record/1624070}{\includegraphics[width=0.48\textwidth]{figs/VELO.pdf}}
+\href{https://cds.cern.ch/record/1624074}{\includegraphics[width=0.48\textwidth]{figs/PID.pdf}}\\
+\href{https://cds.cern.ch/record/1647400}{\includegraphics[width=0.48\textwidth]{figs/Tracking.pdf}}
+\href{https://cds.cern.ch/record/1701361}{\includegraphics[width=0.48\textwidth]{figs/Trigger.pdf}}
+\end{column}
+\end{columns}
+
+\bigskip\bigskip
 
 \begin{itemize}
-  \item[\ding{80}] \lhcb will become first hadron collider experiment to operate a software-only trigger at the full event rate
+\item[\ding{80}] \lhcb will become first hadron collider experiment to operate a software-only trigger at the full event rate
 \end{itemize}
 
 \end{frame}
@@ -706,7 +718,7 @@
       \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.7\textwidth]{figs/theory/btosll_penguin.eps}};
       \begin{scope}[x={(image.south east)},y={(image.north west)}]
       %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
-      \node[draw=none,bleudefrance] at (0.53,0.96) {\scriptsize \Wm};
+      \node[draw=none,bleudefrance] at (0.53,0.98) {\scriptsize \Wm};
       \node[draw=none,bleudefrance] at (0.3,0.6) {\scriptsize \tquark};
       \node[draw=none,bleudefrance] at (0.56,0.27) {\scriptsize {\small\Pgamma},$\Z^{0}$};
       \end{scope}
@@ -805,8 +817,8 @@
 \begin{frame}{Previous measurements: Differential branching fractions}
 
 \begin{itemize}
-  \item Large LHCb datasets allow for precise measurements of the $\deriv\BF/\deriv\qsq$ of \btosll processes
-  \item Results point towards lower rates than predicted by theory
+  \item[$\blacktriangleright$] Large LHCb datasets allow for precise measurements of the $\deriv\BF/\deriv\qsq$ of \btosll processes
+  \item[\ding{80}] Results point towards lower rates than predicted by theory
 \end{itemize}
 
 \begin{center}
@@ -1317,7 +1329,11 @@ F_{\rm D} \equiv  \displaystyle - \frac{7}{18} \left(2\,\overline{\Gamma}_{5} + 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Summary: \BdToKpimm in the \Kstarfourteenthirty region}
+\begin{frame}{Summary: \BdToKpimm in the \Kstarfourteenthirty region \hspace{0pt plus 1 filll} {\small \bf \textcolor{black}{[arXiv:1609.04736]}}}
+
+\begin{overlayarea}{\textwidth}{0.8\textheight}
+
+\bigskip
 
 \begin{itemize}
   \item[\ding{80}] First measurements of the differential branching fraction and angular moments of \BdToKpimm in $K^{*}_{0,2}(1430)^{0}$ region
@@ -1327,6 +1343,14 @@ F_{\rm D} \equiv  \displaystyle - \frac{7}{18} \left(2\,\overline{\Gamma}_{5} + 
   \end{itemize}
 \end{itemize}
 
+\bigskip
+
+\only<2>{
+\begin{fancyquotes}
+...when you have eliminated all the Standard Model explanations, whatever remains, however improbable, must be New Physics.\par\emph{Dr Joaquim Matias}
+\end{fancyquotes}
+}
+\end{overlayarea}
 \end{frame}
 
 
@@ -1352,9 +1376,24 @@ F_{\rm D} \equiv  \displaystyle - \frac{7}{18} \left(2\,\overline{\Gamma}_{5} + 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}\frametitle{\bquark\bquarkbar pair production in \proton\proton collisions}
 
-\centering
-\includegraphics[width=0.4\paperwidth]{figs/detector/gluon_fusion.eps}
-\includegraphics[width=0.4\paperwidth]{figs/detector/quark_antiquark_annihilation.eps}
+\begin{center}
+\begin{tikzpicture}
+ \centering
+ \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.4\paperwidth]{figs/detector/gluon_fusion.eps}};
+ \begin{scope}[x={(image.south east)},y={(image.north west)}]
+  %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+  \node[draw=none] at (0.5,-0.2) {gluon-gluon fusion};
+ \end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+ \centering
+ \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.4\paperwidth]{figs/detector/quark_antiquark_annihilation.eps}};
+ \begin{scope}[x={(image.south east)},y={(image.north west)}]
+  %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+  \node[draw=none] at (0.5,-0.2) {quark-antiquark annihilation};
+ \end{scope}
+\end{tikzpicture}
+\end{center}
 
 \end{frame}
 
