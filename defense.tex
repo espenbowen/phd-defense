@@ -542,11 +542,11 @@
 \begin{columns}
 \begin{column}{0.65\textwidth}
 \begin{itemize}
+  \item Huge reduction in the execution time ($\times$33!)
   \item Large improvement in the efficiency ($+5$\%)
   \begin{itemize}
     \item[\ding{70}] Now flat in \ptot
   \end{itemize}
-  \item Huge reduction in the execution time ($\times$33!)
   \item Slight increase in the ghost rate ($+0.8$\%)
   \begin{itemize}
     \item[\ding{70}] Can be reduced in offline analysis
@@ -590,7 +590,7 @@
 \begin{column}{0.65\textwidth}
 
 \begin{itemize}
-  \item Most interesting in effect on full tracking sequence (\velo $\to$ Upstream $\to$ Forward)
+  \item Most interesting in effect on full tracking sequence (\velo $\to$ [Upstream] $\to$ Forward)
 \end{itemize}
 
 \begin{itemize}
@@ -663,7 +663,7 @@
 \begin{frame}{Upstream tracking for Run 2}
 
 \begin{itemize}
-  \item Following improved performance achieved using upstream tracks similar strategy developed for Run 2
+  \item Following improved performance achieved using upstream tracks, similar strategy developed for Run 2
   \item New VeloTT algorithm created based on the optimised VeloUT algorithm
   \begin{itemize}
     \item[\ding{80}] Similar improvements achieved
@@ -728,7 +728,7 @@
       \begin{scope}[x={(image.south east)},y={(image.north west)}]
       %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
       \node[draw=none,bleudefrance] at (0.5,0.95) {\scriptsize \tquark};
-      \node[draw=none,bleudefrance] at (0.25,0.6) {\scriptsize \Wm};
+      \node[draw=none,bleudefrance] at (0.23,0.6) {\scriptsize \Wm};
       \node[draw=none,bleudefrance] at (0.8,0.6) {\scriptsize \Wp};
       \node[draw=none,bleudefrance] at (0.5,0.45) {\scriptsize \Pnu};
       \end{scope}
@@ -1034,14 +1034,14 @@
 \bigskip
 \centering
 \includegraphics[width=0.5\textwidth]{figs/kpimm/introduction/full-mkpi.pdf}
-\begin{tikzpicture}%[font=\boldmath]
- \centering
- \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.5\textwidth]{figs/kpimm/massfit/fitKpimumu_q2_1p1_6p0.pdf}};
- \begin{scope}[x={(image.south east)},y={(image.north west)}]
-  %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
-  \node[draw=none] at (0.55,0.97) {\tiny 1330\textless\mkpi\textless1530\mevcc};
- \end{scope}
-\end{tikzpicture}
+% \begin{tikzpicture}%[font=\boldmath]
+%  \centering
+%  \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.5\textwidth]{figs/kpimm/massfit/fitKpimumu_q2_1p1_6p0.pdf}};
+%  \begin{scope}[x={(image.south east)},y={(image.north west)}]
+%   %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+%   \node[draw=none] at (0.55,0.97) {\tiny 1330\textless\mkpi\textless1530\mevcc};
+%  \end{scope}
+% \end{tikzpicture}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1062,7 +1062,7 @@
     \item[\ding{70}] Single \qsq bin: [1.1,\,6.0]~\gevgevcccc
     \item[\ding{70}] S-, P- and D-wave contributions considered for first time
     \item[\ding{70}] Requires new orthonormal basis of angular functions 
-    \item[\ding{70}] 40 normalised moments ($\overline{\Gamma}_{2}$-$\overline{\Gamma}_{41}$)
+    % \item[\ding{70}] 40 normalised moments ($\overline{\Gamma}_{2}$-$\overline{\Gamma}_{41}$)
   \end{itemize}
   
 \end{itemize}
@@ -1080,7 +1080,7 @@
 \end{itemize}
 
 \begin{itemize}
-  \item[$\blacktriangleright$] Candidates are required to haved `fired' trigger at each of the three stages
+  \item[$\blacktriangleright$] Candidates are required to haved `fired' trigger at each stage
   \item[$\blacktriangleright$] Cut based selection applied to select candidates of the form $\decay{\Bz}{X\mumu}$
   \item[$\blacktriangleright$] Multivariate classifier used to reduce combinatorial background
   \begin{itemize}
@@ -1329,7 +1329,7 @@ F_{\rm D} \equiv  \displaystyle - \frac{7}{18} \left(2\,\overline{\Gamma}_{5} + 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Summary: \BdToKpimm in the \Kstarfourteenthirty region \hspace{0pt plus 1 filll} {\small \bf \textcolor{black}{[arXiv:1609.04736]}}}
+\begin{frame}{\BdToKpimm in the \Kstarfourteenthirty region: Summary}
 
 \begin{overlayarea}{\textwidth}{0.8\textheight}
 
@@ -1663,13 +1663,17 @@ F_{\rm D} \equiv  \displaystyle - \frac{7}{18} \left(2\,\overline{\Gamma}_{5} + 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{\BdToKpimm: Decay angle convention}
+\begin{frame}{Operators}
 
-% \begin{mdframed}[linecolor=barcolor]
-% \includegraphics[width=0.5\textwidth]{figs/kpimm/angular-distribution/angles_bzb.pdf}
-% \includegraphics[width=0.5\textwidth]{figs/kpimm/angular-distribution/angles_bz.pdf}
-% \end{mdframed}
-% \end{frame}
+\begin{alignat*}{2}
+&\order_{7} = \frac{e}{g^{2}}m_{\bquark}(\squarkbar\sigma_{\mu\nu}P_{R}\bquark)F^{\mu\nu},~~~~~&&\order_{7}^{\prime} = \frac{e}{g^{2}}m_{\bquark}(\squarkbar\sigma_{\mu\nu}P_{L}\bquark)F^{\mu\nu}, \nonumber \\
+&\order_{9} = \frac{e^{2}}{g^{2}}(\squarkbar\gamma_{\mu}P_{L}\bquark)(\ellbar\gamma^{\mu}\ell), &&\order_{9}^{\prime} = \frac{e^{2}}{g^{2}}(\squarkbar\gamma_{\mu}P_{R}\bquark)(\ellbar\gamma^{\mu}\ell), \nonumber \\
+&\order_{10} = \frac{e^{2}}{g^{2}}(\squarkbar\gamma_{\mu}P_{L}\bquark)(\ellbar\gamma^{\mu}\gamma_{5}\ell), &&\order_{10}^{\prime} = \frac{e^{2}}{g^{2}}(\squarkbar\gamma_{\mu}P_{R}\bquark)(\ellbar\gamma^{\mu}\gamma_{5}\ell), \\
+&\order_{S} = \frac{e^{2}}{16\pi^{2}}m_{\bquark}(\squarkbar P_{R}\bquark)(\ellbar\ell), &&\order_{S}^{\prime} = \frac{e^{2}}{16\pi^{2}}m_{\bquark}(\squarkbar P_{L}\bquark)(\ellbar\ell), \nonumber\\
+&\order_{P} = \frac{e^{2}}{16\pi^{2}}m_{\bquark}(\squarkbar P_{R}\bquark)(\ellbar\gamma_{5}\ell), &&\order_{P}^{\prime} = \frac{e^{2}}{16\pi^{2}}m_{\bquark}(\squarkbar P_{L}\bquark)(\ellbar\gamma_{5}\ell), \nonumber
+\end{alignat*}
+
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
