@@ -259,12 +259,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{The \lhcb trigger in Run 1}
+\begin{frame}{The \lhcb trigger in Run 1 (2010-2013)}
 
 \begin{columns}
 \begin{column}{0.7\textwidth}
    \begin{itemize}
-     \item Plays important role in selecting interesting events and rejecting background
+     \item Plays important role in selecting interesting events and reducing the data rate to disk 
    \end{itemize}
 \vspace{-0.3cm}
 \begin{myenv}{Level 0 Trigger}[linecolor=barcolor]
@@ -301,43 +301,43 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\lhcb Run 2 (2015-2018)}
+% \begin{frame}{\lhcb Run 2 (2015-2018)}
 
-\begin{columns}
-\begin{column}{0.7\textwidth}
-\begin{itemize}
-  \item \lhcb taking data at $\sqs=13\tev$ and $\lum=4\times10^{32}\cm^{-2}\sec^{-1}$
-\end{itemize}
+% \begin{columns}
+% \begin{column}{0.7\textwidth}
+% \begin{itemize}
+%   \item \lhcb taking data at $\sqs=13\tev$ and $\lum=4\times10^{32}\cm^{-2}\sec^{-1}$
+% \end{itemize}
 
-\begin{itemize}
-  \item Trigger redesigned with two key objectives
-  \begin{enumerate}
-      \item Perform full event reconstruction within the trigger
-      \item Achieve offline-quality alignment and calibration online
-    \end{enumerate}
-\end{itemize}
+% \begin{itemize}
+%   \item Trigger redesigned with two key objectives
+%   \begin{enumerate}
+%       \item Perform full event reconstruction within the trigger
+%       \item Achieve offline-quality alignment and calibration
+%     \end{enumerate}
+% \end{itemize}
 
-\begin{itemize}
-  \item Can perform physics analysis directly on trigger output
-  \begin{itemize}
-      \item[\ding{70}] Large saving in storage space
-      \begin{itemize}
-        \item Ideal for analysis of channels with large yield 
-      \end{itemize}
-      \item[\ding{70}] Allows rapid turn around from data taking to physics analysis
-      \begin{itemize}
-        \item \orderof(few weeks)
-      \end{itemize}
-    \end{itemize}
-\end{itemize}
+% \begin{itemize}
+%   \item Can perform physics analysis directly on trigger output
+%   \begin{itemize}
+%       \item[\ding{70}] Large saving in storage space
+%       \begin{itemize}
+%         \item Ideal for analysis of channels with large yield 
+%       \end{itemize}
+%       \item[\ding{70}] Allows rapid turn around from data taking to physics analysis
+%       \begin{itemize}
+%         \item \orderof(few weeks)
+%       \end{itemize}
+%     \end{itemize}
+% \end{itemize}
 
-\end{column}
-\begin{column}{0.3\textwidth}
-\includegraphics[width=\textwidth]{figs/detector/trigger-run2.pdf}
-\end{column}
-\end{columns}
+% \end{column}
+% \begin{column}{0.3\textwidth}
+% \includegraphics[width=\textwidth]{figs/detector/trigger-run2.pdf}
+% \end{column}
+% \end{columns}
 
-\end{frame}
+% \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
@@ -503,7 +503,7 @@
 \begin{myenv}{Execution time much too slow for use in trigger}[linecolor=barcolor]
   \begin{itemize}
     \setlength{\itemindent}{0.5em}
-    \item[\ding{70}] Replaced `detector regions' with hit sorting and binary searches
+    \item[\ding{70}] Introduced hit sorting and binary searches
     \item[\ding{70}] Removed Kalman filter, simple $\chi^{2}$ fit is sufficient
     \item[\ding{70}] Numerous \cpp optimisations/changes to the logic
   \end{itemize}
@@ -523,7 +523,7 @@
   \item[\ding{80}] Form doublets of hits in the first two layers
   \item[\ding{80}] Extrapolate doublets to third/fourth layers and search for compatible hits
   \item[\ding{80}] If no four hit candidates found, repeat starting from last two layers
-  \item[$\blacktriangleright$] Fit each track candidate with a $\chi^{2}$ fit and estimate $q/p$ ($\delta p/p \sim 15 \%$)
+  \item[$\blacktriangleright$] Fit each track candidate with a $\chi^{2}$ fit% and estimate $q/p$ ($\delta p/p \sim 15 \%$)
   \item[$\blacktriangleright$] Choose best candidate track based on \mbox{\# layers} fired and $\chi^{2}$
   \end{itemize}
 \end{column}
@@ -660,7 +660,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Upstream tracking for Run 2}
+\begin{frame}{Upstream tracking for \lhcb Run 2 (2015-2018)}
 
 \begin{itemize}
   \item Following improved performance achieved using upstream tracks, similar strategy developed for Run 2
@@ -675,7 +675,10 @@
 \begin{itemize}
   \item[\ding{80}] Greatly improved signal efficiency for charm physics
   \item[\ding{80}] Lifetime unbiased triggering on hadronic final states for first time
-  \item[\ding{80}] First HEP experiment to implement fully automatic tracking system alignment, PID calibration and track reconstruction online
+\end{itemize}
+
+\begin{itemize}
+\item[\ding{80}] First HEP experiment to implement fully automatic tracking system alignment, PID calibration and track reconstruction online
 \end{itemize}
 
 \end{frame}
@@ -935,9 +938,9 @@
   \end{columns}
 
   \begin{itemize}
-  \item $\textcolor{cobalt}{{F_{\rm L}}}$, $\textcolor{cobalt}{{A_{\rm FB}}}$, $\textcolor{cobalt}{{S_i}}$ combinations of \KstarP amplitudes which depend on the Wilson coefficients and the form factors
+  \item $\textcolor{cobalt}{{F_{\rm L}}}$, $\textcolor{cobalt}{{A_{\rm FB}}}$, $\textcolor{cobalt}{{S_i}}$ combinations of \KstarP amplitudes which depend on the Wilson coefficients and hadronic form factors
   %\item Pollution from \Kp\pim in S-wave configuration also taken into account
-  \item Additional sets of observables, for which the leading form-factor uncertainties cancel, can be built from $\textcolor{cobalt}{{F_{\rm L}}}$ and $\textcolor{cobalt}{{S_3}}$ to $\textcolor{cobalt}{{S_9}}$
+  \item Additional sets of observables, for which the leading form factor uncertainties cancel, can be built from $\textcolor{cobalt}{{F_{\rm L}}}$ and $\textcolor{cobalt}{{S_3}}$ to $\textcolor{cobalt}{{S_9}}$
     \begin{itemize}
     \item[\ding{70}] e.g. $P'_{4,5} = \textcolor{cobalt}{S_{4,5}}/\sqrt{ \textcolor{cobalt}{F_{\rm L}}(1 -  \textcolor{cobalt}{F_{\rm L}})}$
     \end{itemize}
@@ -976,9 +979,10 @@
   \end{tikzpicture}
 \end{center}
 
-\begin{itemize}
-  \item Global analysis of \CP-averaged observables indicates tension with SM predictions at 3.4$\sigma$
-\end{itemize}
+%\begin{itemize}
+  %\item Global analysis of \CP-averaged observables indicates tension with SM predictions at 3.4$\sigma$
+  %\item $P'_{5}$ anomaly recently confirmed by the Belle collaboration
+%\end{itemize}
 
 \end{frame}
 
@@ -1080,7 +1084,7 @@
 \end{itemize}
 
 \begin{itemize}
-  \item[$\blacktriangleright$] Candidates are required to haved `fired' trigger at each stage
+  \item[$\blacktriangleright$] Candidates are required to have `fired' trigger at each stage
   \item[$\blacktriangleright$] Cut based selection applied to select candidates of the form $\decay{\Bz}{X\mumu}$
   \item[$\blacktriangleright$] Multivariate classifier used to reduce combinatorial background
   \begin{itemize}
