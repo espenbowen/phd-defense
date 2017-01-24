@@ -257,7 +257,7 @@
 \begin{itemize}
 \item Decays such as \Bsmm proceed via loop level processes
 \item Virtual particles can ``borrow'' energy for a short time due to the Heisenberg uncertainty principle
-\item If new particles exist, they can also appear in the loop
+\item If new particles exist, in NP models, they can also appear in the loop
 \item As decays such as \Bsmm are suppressed in the SM, NP can contribute at the same level and change the decay properties
 \end{itemize}
 
@@ -356,6 +356,7 @@
 %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
 \fill[white] (0.22,0.58) rectangle (0.29,0.62);
 \node at (0.25,0.6) {\footnotesize {\fontfamily{cmss}\selectfont TT}};
+\node at (0.55,0.1) {\footnotesize {\fontfamily{cmss}\selectfont Magnet}};
 \end{scope}
 \end{tikzpicture} 
 \end{column}
@@ -535,7 +536,7 @@
   \item Can using upstream tracks speed up the full tracking sequence? \mbox{(\velo $\to$ [Upstream] $\to$ Forward)}
 \end{itemize}
 \begin{itemize}
-  \item Advantages over using VELO tracks
+  \item Advantages of using upstream (VeloUT) tracks over just VELO tracks
     \begin{itemize}
       \item Charge and momentum of track segment ($\delta \ptot/\ptot \sim 15 \%$)
       \begin{itemize}
@@ -669,7 +670,7 @@
   \end{itemize}
 \end{myenv}
 
-\begin{myenv}{Efficiency too low/falls off with increasing momentum}[linecolor=barcolor]
+\begin{myenv}{Efficiency too low/decreasing with increasing momentum}[linecolor=barcolor]
   \begin{itemize}
     \setlength{\itemindent}{0.5em}
     \item[$\blacktriangleright$] Tracked down to poor assumptions made when associating hits to \velo tracks
@@ -917,7 +918,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Previous measurements: Differential branching fractions}
+\begin{frame}{Previous measurements: Differential branching fractions ($\deriv\BF/\deriv\qsq$)}
 
 \begin{itemize}
   \item[$\blacktriangleright$] Large LHCb datasets allow for precise measurements of the differential branching fractions of \btosll processes
@@ -1074,8 +1075,8 @@
 \end{center}
 
 \begin{itemize}
-  \item[\ding{80}] Results form a {\bf consistent pattern} with the discrepancies in $\deriv\BF/\deriv\qsq$ measurements
-  \item[\ding{80}] Two possible interpretations that can explain both discrepancies simultaneously
+  \item[\ding{80}] Results form a {\bf consistent pattern} with the deviations in $\deriv\BF/\deriv\qsq$ measurements
+  \item[\ding{80}] Two possible interpretations that can explain this pattern are:
   \begin{itemize}
     \item[\ding{182}] Contribution of NP, e.g. a new vector Z' boson
     \item[\ding{183}] Underestimation of the QCD (charm loop) effects 
@@ -1139,9 +1140,9 @@
 \begin{frame}{Efficiency studies}
 
 \begin{itemize}
-  \item The efficiency of the signal candidate selection varies over the distributions of the decay angles $\thetal,\thetak,\phi$
+  \item The selection efficiency of the signal candidates varies over the distributions of the decay angles $\thetal,\thetak,\phi$
   \item In order to perform an angular analysis, need to carefully understand this effect
-  \item In this analysis the efficiency shape is modelled using a Legendre polynomial paramerisation
+  \item In this analysis the efficiency distribution is modelled using a Legendre polynomial paramerisation
   \begin{itemize}
     \item Requires 1764 legendre coefficients!
   \end{itemize}
@@ -1185,14 +1186,14 @@
 \begin{frame}{Angular moments analysis}
 
 \begin{itemize}
-\item Angular distribution for \BdToKpimm decays for decays encompassing S-, P- and D-wave \Kstar states can be expressed in an orthonormal basis of angular functions, $f_i(\thetal,\thetak,\phi)$,
+\item Angular distribution for \BdToKpimm decays encompassing S-, P- and D-wave \Kstar states can be expressed in an orthonormal basis of angular functions, $f_i(\thetal,\thetak,\phi)$,
 \begin{equation*}
 \frac{\deriv\Gamma }{\deriv\qsq\,\deriv\Omega} \propto \sum^{41}_{i=1} f_i (\thetal,\thetak,\phi) \Gamma_i(\qsq)
 %\quad\mbox{with}\quad
 %\int f_if_j\deriv\costhetal\deriv\costhetak\deriv\phi = \delta_{ij}
 \end{equation*}
 \item 41 angular terms compared to 11 for \BdToKstmmP!
-\item Define 40 normalised angular moments which forms set of observables
+\item Define 40 normalised angular moments which forms the set of observables that are measured
 \end{itemize}
 \begin{equation*}
 \overline{\Gamma}_i(\qsq) = \frac{\Gamma_{i}(\qsq)}{\Gamma_{1}(\qsq)}
@@ -1249,7 +1250,7 @@
 \begin{columns}
 \begin{column}{0.55\textwidth}
 \begin{itemize}
-  \item Currently no SM predictions for the moments 
+  \item Currently no SM predictions for the angular moments 
   \begin{itemize}
     \item[\ding{80}] Hope measurement will stimulate futher theory effort
   \end{itemize}
