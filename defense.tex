@@ -498,20 +498,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{VeloUT: Improvements}
 
-\begin{myenv}{Efficiency too low/falls off with increasing \boldmath{\ptot}}[linecolor=barcolor]
-  \begin{itemize}
-    \setlength{\itemindent}{0.5em}
-    \item[$\blacktriangleright$] Tracked down to poor assumptions made when associating hits to \velo tracks
-    \item[\ding{70}] Developed new hit clustering sequence 
-  \end{itemize}
-\end{myenv}
-
 \begin{myenv}{Execution time much too slow for use in trigger}[linecolor=barcolor]
   \begin{itemize}
     \setlength{\itemindent}{0.5em}
     \item[\ding{70}] Introduced hit sorting and binary searches
     \item[\ding{70}] Removed Kalman filter, simple $\chi^{2}$ fit is sufficient
     \item[\ding{70}] Numerous \cpp optimisations/changes to the logic
+  \end{itemize}
+\end{myenv}
+
+\begin{myenv}{Efficiency too low/falls off with increasing \boldmath{\ptot}}[linecolor=barcolor]
+  \begin{itemize}
+    \setlength{\itemindent}{0.5em}
+    \item[$\blacktriangleright$] Tracked down to poor assumptions made when associating hits to \velo tracks
+    \item[\ding{70}] Developed new hit clustering sequence 
   \end{itemize}
 \end{myenv}
 
