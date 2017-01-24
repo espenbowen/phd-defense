@@ -95,8 +95,10 @@
 \definecolor{darkpastelred}{rgb}{0.76, 0.23, 0.13}
 \definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
 
-\def\KstarP  {\ensuremath{\kaon^{*}(892)^{0}}\xspace}
-\def\Kstarfourteenthirty  {{\ensuremath{\kaon^{*}_{0,2}(1430)^{0}}}\xspace}
+%\def\KstarP  {\ensuremath{\kaon^{*}(892)^{0}}\xspace}
+\def\KstarP  {\ensuremath{\kaon^{*}(892)}\xspace}
+%\def\Kstarfourteenthirty  {{\ensuremath{\kaon^{*}_{0,2}(1430)^{0}}}\xspace}
+\def\Kstarfourteenthirty  {{\ensuremath{\kaon^{*}(1430)}}\xspace}
 \DeclareRobustCommand{\orderof}{\ensuremath{\mathcal{O}}}
 \usepackage[export]{adjustbox}
 
@@ -175,7 +177,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{New Physics}
 \begin{itemize}
-\item These limitations have led physicists to look for extensions to the SM in the form of New Physics (NP) models
+\item These limitations have led particle physicists to look for extensions to the SM in the form of New Physics (NP) models
 \end{itemize}
 
 \begin{columns}
@@ -199,8 +201,8 @@
 \begin{itemize}
 \item Can search for these NP particles through {\bf direct} and {\bf indirect} approaches
    \begin{itemize}
-     \item Direct \to produce new particles `on-shell'
-     \item Indirect \to study the effect of `off-shell' (virtual) particles within quantum loop
+     \item Direct \to produce new particles that can be directly detected
+     \item Indirect \to study the effect of `virtual' particles within quantum loops
    \end{itemize}
 \end{itemize}
 
@@ -253,10 +255,10 @@
 \bigskip
 
 \begin{itemize}
-\item Rare decays such as \Bsmm proceed via loop level diagrams
+\item Decays such as \Bsmm proceed via loop level processes
 \item Virtual particles can ``borrow'' energy for a short time due to the Heisenberg uncertainty principle
 \item If new particles exist, they can also appear in the loop
-\item As flavour changing neutral currents such as \Bsmm are suppressed in the SM, NP can contribute at the same level and change the decay properties
+\item As decays such as \Bsmm are suppressed in the SM, NP can contribute at the same level and change the decay properties
 %\begin{itemize}
 %  \item e.g. enhance/suppress branching fractions, alter angular distributions, new sources of \CP violation
 %\end{itemize}
@@ -836,10 +838,10 @@
   \begin{columns}
     \begin{column}{0.6\textwidth}
       \begin{itemize}
-      \item Rare flavour-changing-neutral-current processes such as \btosll are only possible via loop diagrams in SM
-        \begin{itemize}
-        \item Highly suppressed
-        \end{itemize}
+      \item The decay \BdToKpimm is an example of a flavour-changing-neutral-current \btosll processes that proceeds via loop diagrams in SM
+        % \begin{itemize}
+        % \item Highly suppressed
+        % \end{itemize}
       \item New, heavy particles in SM extensions can enter the loop and modify observables 
       \begin{itemize}
         \item e.g. enhance/suppress branching fractions, alter angular distributions, new sources of \CP violation
@@ -973,9 +975,12 @@
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Previous measurements: Angular analysis of $\decay{\Bd}{\KstP\mup\mun}$}
+
 \begin{itemize}
- \item Decay fully described by \qsq, and three angles $\Omega=(\ctl,\ctk,\phi)$
- \end{itemize}
+\item \KstP is a P-wave (spin-1) state which decays to $\Kp\pim$
+\item Decay fully described by $\qsq\equiv m_{\mu\mu}^{2}$ and three angles: $\thetal,\thetak,\phi$
+\item Expression for angular distribution depends on the spin of the \Kstar meson
+\end{itemize}
 
   \begin{columns}
    \begin{column}{0.6\textwidth}
@@ -1030,7 +1035,10 @@
   \end{columns}
 
   \begin{itemize}
-  \item $\textcolor{cobalt}{{F_{\rm L}}}$, $\textcolor{cobalt}{{A_{\rm FB}}}$, $\textcolor{cobalt}{{S_i}}$ are observables which are measured
+  \item $\textcolor{cobalt}{{F_{\rm L}}}$, $\textcolor{cobalt}{{A_{\rm FB}}}$, $\textcolor{cobalt}{{S_i}}$ are the angular observables which are measured
+  \begin{itemize}
+    \item[\ding{70}] Can be compared with SM predictions
+    \end{itemize}
   \item Often useful to measure ratios of observables
     \begin{itemize}
     \item[\ding{70}] e.g. $P'_{4,5} = \textcolor{cobalt}{S_{4,5}}/\sqrt{ \textcolor{cobalt}{F_{\rm L}}(1 -  \textcolor{cobalt}{F_{\rm L}})}$
@@ -1060,9 +1068,12 @@
 \end{center}
 
 \begin{itemize}
-  \item[\ding{80}] Results for a {\bf consistent pattern} with the discrepancies in $\deriv\BF/\deriv\qsq$ measurements
-  \item[\ding{80}] Possible contribution of NP, e.g. a new Z' boson
-  \item[\ding{80}] Another hypothesis is the underestimation of the QCD (charm loop) effects 
+  \item[\ding{80}] Results form a {\bf consistent pattern} with the discrepancies in $\deriv\BF/\deriv\qsq$ measurements
+  \item[\ding{80}] Two possible interpretations that can explain both discrepancies simultaneously
+  \begin{itemize}
+    \item[\ding{182}] Contribution of NP, e.g. a new vector Z' boson
+    \item[\ding{183}] Underestimation of the QCD (charm loop) effects 
+  \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -1072,25 +1083,62 @@
 \begin{frame}{\BdToKpimm in the \Kstarfourteenthirty region \hspace{0pt plus 1 filll} {\small \bf \textcolor{black}{[JHEP 12 (2016) 065]}}}
 
 \begin{itemize}
-\item Analyses of \BdToKpimm at \lhcb have focused on the (P-wave) $K^\ast_{1}(892)^0$
-\item Region of \mkpi $\sim$1430\mevcc contains contributions from $K^\ast$ states in \mbox{S$-$, P$-$ and D$-$wave} configurations
-\item Allows for a complementary measurement of \btosll transitions
-\item Have performed a measurement of the differential branching fraction and angular analysis in this new \mkpi region
+\item Analyses of \BdToKpimm at \lhcb have focused on the (P-wave) \KstarP
+\item Region of \mkpi $\sim$1430\mevcc contains contributions from S-, P- and D-wave $K^\ast$ states (spin-0,1,2)
+\begin{itemize}
+  \item Leads to a very complicated angular expression!
+\end{itemize}
 \end{itemize}
 
-\centering
-\includegraphics[width=0.5\textwidth]{figs/kpimm/introduction/full-mkpi.pdf}
+\begin{center}
+\begin{tikzpicture}
+ \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.5\textwidth]{figs/kpimm/introduction/full-mkpi.pdf}};
+ \begin{scope}[x={(image.south east)},y={(image.north west)}]
+  %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+  \node[draw=none] at (0.25,0.75) {\footnotesize \color{red}{\KstarP}};
+  \draw[->,thick,red] (0.25, 0.7) -- (0.35,0.4);
+  \node[draw=none] at (0.75,0.6) {\footnotesize \color{blue}{New region}};
+  \draw[->,thick,blue] (0.75, 0.55) -- (0.75,0.35);
+ \end{scope}
+\end{tikzpicture}
+\end{center}
+
+\begin{itemize}
+  \item Will present the first measurements of the differential branching fraction and angular analysis in this new \mkpi region
+\end{itemize}
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Acceptance correction}
+\begin{frame}{\mkpimm invariant mass distribution}
 
 \begin{itemize}
-  \item Triggering, reconstruction and selection of signal candidates distorts their kinematic distributions
-  \item Acceptance modelled using Legendre polynomial paramerisation
+  \item Fit to invariant mass distribution required to separate signal from background contribution
+  \item Signal modelled with sum of two Gaussians with power-law tail on the low-mass side
+  \item Combinatorial background is modelled using an exponential function
+  \item $\sim230$ signal candidates in $1.1<\qsq<6.0\gevgevcccc$
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.6\textwidth]{figs/kpimm/massfit/fitKpimumu_q2_1p1_6p0.pdf}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Efficiency studies}
+
+\begin{itemize}
+  \item The efficiency of the signal candidate selection varies over the distributions of the decay angles $\thetal,\thetak,\phi$
+  \item In order to perform an angular analysis, need to carefully understand this effect
+  \item In this analysis the efficiency shape is modelled using a Legendre polynomial paramerisation
+  \begin{itemize}
+    \item Requires 1764 legendre coefficients!
+  \end{itemize}
 \end{itemize}
 
 \bigskip
@@ -1106,45 +1154,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\mkpimm invariant mass distribution}
-
-\begin{columns}
-\begin{column}{0.61\textwidth}
-\begin{itemize}
-  \item Signal modelled with sum of two Gaussians with power-law tail on the low-mass side
-  \begin{itemize}
-    \item[\ding{70}] Parameters determined from a fit to \BdToJPsiKst
-    %\item[\ding{70}] Scaling factor to account for different \mkpi, \qsq determined from simulation
-  \end{itemize}
-  \item Combinatorial background is modelled using an exponential function
-  \item $\sim230$ signal candidates in $1.1<\qsq<6.0\gevgevcccc$
-\end{itemize}
-
-\end{column}
-\begin{column}{0.39\textwidth}
-\includegraphics[width=\textwidth]{figs/kpimm/massfit/fit_jpsi_log.pdf}\\
-\includegraphics[width=\textwidth]{figs/kpimm/massfit/fitKpimumu_q2_1p1_6p0.pdf}
-\end{column}
-\end{columns}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Slide
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Differential branching fraction}
-
-% \begin{mdframed}[linecolor=barcolor] 
-% \resizebox{.95\linewidth}{!}{
-% \begin{minipage}{\linewidth}
-% \begin{equation*}
-% \begin{split}
-% \frac{\deriv\BF}{\deriv\qsq} = \frac{1}{(q^{2}_{\text{max}} - q^{2}_{\text{min}}) }&f_{\KstP}\BF(\BdToJPsiKstP)\BF(\decay{\jpsi}{\mumu}) \\
-% \times&\BF(\decay{\KstP}{\Kp\pim})\frac{N'_{\kpimm}}{(1-F_{\rm S}^{\jpsi\Kstarz})N'_{\jpsi\Kstarz}}
-% \end{split}
-% \end{equation*}
-% \end{minipage}
-% }
-% \end{mdframed}
+\begin{frame}{Differential branching fraction ($\deriv\BF/\deriv\qsq$)}
 
 \begin{itemize}
 \item First $\deriv\BF/\deriv\qsq$ measurement of \BdToKpimm in this region of \mkpi 
@@ -1154,6 +1164,13 @@
 \includegraphics[width=0.7\textwidth]{figs/kpimm/bf/dbfdq2.pdf}
 \end{center}
 
+\begin{itemize}
+\item Currently no SM prediction
+\begin{itemize}
+\item[\ding{80}] Hope this analysis stimulates further theory effort in this area
+\end{itemize}
+\end{itemize}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1162,18 +1179,13 @@
 \begin{frame}{Angular moments analysis}
 
 \begin{itemize}
-\item \CP-averaged differential decay rate of \BdToKpimm decays with the \Kp\pim system in a S-, P- or D-wave configuration is expanded in an orthonormal basis of angular functions, $f_i(\Omega)$, %{\scriptsize \bf \href{http://journals.aps.org/prd/abstract/10.1103/PhysRevD.92.033013}{[PRD92(2015)033013]}}
-
+\item Angular distribution for \BdToKpimm decays for decays encompassing S-, P- and D-wave \Kstar states can be expressed in an orthonormal basis of angular functions, $f_i(\thetal,\thetak,\phi)$,
 \begin{equation*}
-\frac{\deriv\Gamma }{\deriv\qsq\,\deriv\Omega} \propto \sum^{41}_{i=1} f_i (\Omega) \Gamma_i(\qsq)
-\quad\mbox{with}\quad
-\int f_i(\Omega) f_j(\Omega) \deriv\Omega = \delta_{ij}
+\frac{\deriv\Gamma }{\deriv\qsq\,\deriv\Omega} \propto \sum^{41}_{i=1} f_i (\thetal,\thetak,\phi) \Gamma_i(\qsq)
+%\quad\mbox{with}\quad
+%\int f_if_j\deriv\costhetal\deriv\costhetak\deriv\phi = \delta_{ij}
 \end{equation*}
-
-\medskip
-
-%\item Orthonomal angular basis constructed from spherical harmonics $Y^m_\ell \equiv Y^m_\ell (\thetal,\phi)$ and reduced spherical harmonics ${P^m_\ell \equiv \sqrt{2 \pi}Y^m_\ell(\thetak,0)}$
-\item $\Gamma_i(\qsq)$ combinations of \KstarJ amplitudes with $\Gamma_{1}(\qsq)$ corresponding to the total rate
+\item 41 angular terms compared to 11 for \BdToKstmmP!
 \item Define 40 normalised angular moments which forms set of observables
 \end{itemize}
 \begin{equation*}
@@ -1220,8 +1232,6 @@
 \begin{itemize}
 \item $x$ is the ratio $\tilde{n}^{\rm bkg}_{\rm sig}/n_{\rm bkg}$ used to perform the background subtraction
 \item $w_{k}$ is the reciprocal of the efficiency, $1/\varepsilon_{k}$
-% \item Signal region: $5230<\mkpimm<5330$~\mevcc
-% \item Background region: $5350<\mkpimm<5700$~\mevcc
 \end{itemize}
 
 \end{frame}
@@ -1233,20 +1243,18 @@
 \begin{columns}
 \begin{column}{0.55\textwidth}
 \begin{itemize}
-  %\item Full set of moments and $40\times40$ covariance matrix available on HepData portal
-  \item Specific moments point towards large interference between S- and P-wave states 
-  \item Evidence for a supressed D-wave contribution
+  \item Currently no SM predictions for the moments 
   \begin{itemize}
-    \item $F_{\rm D} <$ 0.29 @ 95\% C.L.
-    \item Low w.r.t expectation from amplitude analysis of \BdToJPsiKpi%~{\scriptsize \bf \href{http://journals.aps.org/prd/abstract/10.1103/PhysRevD.90.112009}{[PRD90(2014)112009]}} 
+    \item[\ding{80}] Hope measurement will stimulate futher theory effort
   \end{itemize}
 \end{itemize}
 \begin{itemize}
-  \item Access to full information, including extraction of Wilson coefficients requires form-factor predictions
+  \item Specific moments point towards large interference between S- and P-wave states 
+  \item Can also estimate D-wave fraction
   \begin{itemize}
-    \item[\ding{70}] Only very preliminary predictions exist 
-    \item[\ding{80}] Hope measurement will stimulate futher theory effort
-  \end{itemize}
+    \item $F_{\rm D} <$ 0.29 @ 95\% C.L.
+    \item Low w.r.t expectation from previous measurement of \decay{\Bd}{\jpsi(\to\mumu) \Kp\pim}
+\end{itemize}
 \end{itemize}
 \end{column}
 \begin{column}{0.45\textwidth}
@@ -1260,13 +1268,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\BdToKpimm in the \Kstarfourteenthirty region: Summary \hspace{0pt plus 1 filll} {\small \bf \textcolor{black}{[JHEP 12 (2016) 065]}}}
+\begin{frame}{Summary \& Outlook}
 
-\begin{overlayarea}{\textwidth}{0.8\textheight}
+\begin{overlayarea}{\textwidth}{0.9\textheight}
 
 \bigskip
 
 \begin{itemize}
+  \item[\ding{72}] Novel idea to use upstream tracking to speed up the Upgrade trigger a success!
+  \item[\ding{72}] New algorithm adopted into the default tracking sequence
+\end{itemize}
+  \begin{itemize}
   \item[\ding{80}] First measurements of the differential branching fraction and angular moments of \BdToKpimm in $K^{*}_{0,2}(1430)^{0}$ region
   \item[\ding{80}] With additional input from theory, results could provide further complementary measurements of \btosll transitions
   \begin{itemize}
