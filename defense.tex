@@ -160,15 +160,15 @@
 \begin{frame}{Not the whole story...}
 
 \begin{center}
-\includegraphics[height=0.45\textheight]{figs/matter-antimatter.jpg}
-\includegraphics[height=0.45\textheight]{figs/darkmatter.jpg}
-\includegraphics[height=0.45\textheight]{figs/13_oscill.jpeg}
+\includegraphics[height=0.5\textheight]{figs/matter-antimatter.jpg}
+\includegraphics[height=0.5\textheight]{figs/darkmatter.jpg}
+\includegraphics[height=0.5\textheight]{figs/13_oscill.jpeg}
 \end{center}
 
 \begin{itemize}
   \item There is an observed asymmetry between matter and antimatter in our Universe
   \item Dark matter, which is believed to be 5 times as abundant as ordinary matter, is not accounted for
-  \item In the SM neutrinos are only left-handed and massless, but we know they have a small but non-zero mass
+  \item SM neutrinos are only left-handed and massless, but we know they have a small but non-zero mass
 \end{itemize}
 \end{frame}
 
@@ -259,9 +259,6 @@
 \item Virtual particles can ``borrow'' energy for a short time due to the Heisenberg uncertainty principle
 \item If new particles exist, they can also appear in the loop
 \item As decays such as \Bsmm are suppressed in the SM, NP can contribute at the same level and change the decay properties
-%\begin{itemize}
-%  \item e.g. enhance/suppress branching fractions, alter angular distributions, new sources of \CP violation
-%\end{itemize}
 \end{itemize}
 
 \end{frame}
@@ -272,31 +269,21 @@
 \begin{frame}{The \lhcb experiment}
   \begin{itemize}
   \item LHCb is the dedicated heavy flavour physics experiment at the LHC 
-  \item Its primary goal is to search for indirect evidence of New Physics in \CP violation and rare decays of beauty and charm hadrons
-  % \item This requires:
-  %   \begin{enumerate}
-  %   \item Excellent tracking 
-  %     \begin{itemize}
-  %     \item momentum resolution ($\delta p/p \sim 0.4\% - 0.6\%$)
-  %     \item impact parameter resolution ($\sigma_{\rm IP} \sim 20\mum$)
-  %     \item primary vertex resolution (13 \mum in $x$ and $y$ and 71\mum in $z$)
-  %     \end{itemize}
-  %   \item Excellent decay time resolution ($\sigma_{\tau}$ $\sim$ 45\fs)
-  %   \item Excellent particle identification
-  %   \end{enumerate}
+  \item Its primary goal is to search for {\bf indirect} evidence of New Physics in \CP violation and rare decays of beauty and charm hadrons
+  \item Takes advantage of large production of \bquark\bquarkbar pairs in the \proton\proton collisions
   \end{itemize}
 
-   \bigskip\bigskip
+   \bigskip
     
    \begin{columns}
-   \begin{column}{0.5\textwidth}
+   \begin{column}{0.4\textwidth}
     \begin{itemize}
       \item Single arm forward spectrometer
       \item Excellent particle identification \mbox{(e.g. $\pi \to \mu <0.5\%$)}
       \item Excellent momentum resolution \mbox{(e.g. $\delta\ptot/\ptot \sim 0.5\%$)}
     \end{itemize}
     \end{column}
-   \begin{column}{0.5\textwidth}
+   \begin{column}{0.6\textwidth}
       \includegraphics[width=\textwidth]{figs/lhcb/lhcb2.png}
     \end{column}
    \end{columns}
@@ -387,7 +374,7 @@
 \end{itemize}
 
 \begin{itemize}
- \item For \lhcb Run I, this consisted of two stages:
+ \item During Run I, this consisted of two stages:
  \begin{enumerate}
     \item Hardware trigger
     \begin{itemize}
@@ -468,8 +455,17 @@
 \end{column}
 \begin{column}{0.4\textwidth}
 \centering
-\includegraphics[width=0.9\textwidth]{figs/detector/UT.pdf}\\~\\
-\includegraphics[width=0.9\textwidth]{figs/need-for-speed.png}
+\includegraphics[width=0.9\textwidth]{figs/detector/UT.pdf}\\~\\~\\
+\begin{tikzpicture}
+      \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.9\textwidth]{figs/need-for-speed.png}};
+      \begin{scope}[x={(image.south east)},y={(image.north west)}]
+      %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+      \node[draw=none] at (0.65,-0.1) {\bf LHCb Upgrade};
+      %\node[draw=none,bleudefrance] at (0.3,0.6) {\scriptsize \tquark};
+      %\node[draw=none,bleudefrance] at (0.56,0.27) {\scriptsize {\small\Pgamma},$\Z^{0}$};
+      \end{scope}
+      \end{tikzpicture}
+%\includegraphics[width=0.9\textwidth]{figs/need-for-speed.png}
 \end{column}
 
 \end{columns}
@@ -585,16 +581,26 @@
 \begin{frame}{Track reconstruction: Performance}
 
 \begin{itemize}
-  \item Three important figures of merit used to evaluate the performance of tracking algorithms are:
+  \item Three important figures of merit used to evaluate the performance of tracking algorithms
 \end{itemize}
 \begin{itemize}
   \item[\ding{182}] Reconstruction efficiency
+  \begin{itemize}
+    \item[\ding{70}] N(reconstructible \& reconstructed)/N(reconstructible)
+    \item[\ding{70}] Reconstructible means having left sufficient hits in the tracking stations
+    \item[\ding{70}] Determined using simulation
+  \end{itemize}
 \end{itemize}
 \begin{itemize}
   \item[\ding{183}] Ghost rate
+  \begin{itemize}
+  \item[\ding{70}] N(ghost tracks)/N(tracks)
+  \item[\ding{70}] A ghost track is one which has no matching simulated particle
+  \item[\ding{70}] Determined using simulation
+  \end{itemize}
 \end{itemize}
 \begin{itemize}
-  \item[\ding{184}] Execution time per event
+  \item[\ding{184}] Average execution time per event
 \end{itemize}
 
 \end{frame}
@@ -838,7 +844,7 @@
   \begin{columns}
     \begin{column}{0.6\textwidth}
       \begin{itemize}
-      \item The decay \BdToKpimm is an example of a flavour-changing-neutral-current \btosll processes that proceeds via loop diagrams in SM
+      \item The decay \BdToKpimm is an example of a \btosll flavour-changing-neutral-current processes that proceeds via loop diagrams in SM
         % \begin{itemize}
         % \item Highly suppressed
         % \end{itemize}
@@ -1098,7 +1104,7 @@
   \node[draw=none] at (0.25,0.75) {\footnotesize \color{red}{\KstarP}};
   \draw[->,thick,red] (0.25, 0.7) -- (0.35,0.4);
   \node[draw=none] at (0.75,0.6) {\footnotesize \color{blue}{New region}};
-  \draw[->,thick,blue] (0.75, 0.55) -- (0.75,0.35);
+  \draw[->,thick,blue] (0.75, 0.55) -- (0.78,0.37);
  \end{scope}
 \end{tikzpicture}
 \end{center}
@@ -1161,11 +1167,11 @@
 \end{itemize}
 
 \begin{center}
-\includegraphics[width=0.7\textwidth]{figs/kpimm/bf/dbfdq2.pdf}
+\includegraphics[width=0.6\textwidth]{figs/kpimm/bf/dbfdq2.pdf}
 \end{center}
 
 \begin{itemize}
-\item Currently no SM prediction
+\item Currently no SM predictions
 \begin{itemize}
 \item[\ding{80}] Hope this analysis stimulates further theory effort in this area
 \end{itemize}
@@ -1279,7 +1285,7 @@
   \item[\ding{72}] New algorithm adopted into the default tracking sequence
 \end{itemize}
   \begin{itemize}
-  \item[\ding{80}] First measurements of the differential branching fraction and angular moments of \BdToKpimm in $K^{*}_{0,2}(1430)^{0}$ region
+  \item[\ding{80}] First measurements of the differential branching fraction and angular moments of \BdToKpimm in \Kstarfourteenthirty region
   \item[\ding{80}] With additional input from theory, results could provide further complementary measurements of \btosll transitions
   \begin{itemize}
     \item[\ding{70}] Improve understanding of the observed pattern of deviations with respect to SM predictions
