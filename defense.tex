@@ -135,47 +135,169 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{The Standard Model of particle physics}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\includegraphics[width=\textwidth]{figs/theory/SM.pdf}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item The Standard Model describes our current understanding of elementary particles and their interactions
+\item[]
+\item All particles predicted by the Standard Model have been observed experimentally
+\item[]
+\item It has been very successful in predicting cross-sections of interaction processes with great precision
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Not the whole story...}
+
+\begin{center}
+\includegraphics[height=0.45\textheight]{figs/matter-antimatter.jpg}
+\includegraphics[height=0.45\textheight]{figs/darkmatter.jpg}
+\includegraphics[height=0.45\textheight]{figs/13_oscill.jpeg}
+\end{center}
+
+\begin{itemize}
+  \item There is an observed asymmetry between matter and antimatter in our Universe
+  \item Dark matter, which is believed to be 5 times as abundant as ordinary matter, is not accounted for
+  \item In the SM neutrinos are only left-handed and massless, but we know they have a small but non-zero mass
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{New Physics}
+\begin{itemize}
+\item These limitations have led physicists to look for extensions to the SM in the form of New Physics (NP) models
+\end{itemize}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+  \item e.g. Supersymmetry (SUSY)
+\begin{itemize}
+  \item Doubles the amount of particles
+  \item Introduces fermionic partner to every boson and bosonic partner to every fermion
+  \item Lightest supersymmetric particle provides dark matter candidate
+\end{itemize}
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\includegraphics[width=\textwidth]{figs/supersymmetry.jpg}
+\end{column}
+\end{columns}
+
+\bigskip
+
+\begin{itemize}
+\item Can search for these NP particles through {\bf direct} and {\bf indirect} approaches
+   \begin{itemize}
+     \item Direct \to produce new particles `on-shell'
+     \item Indirect \to study the effect of `off-shell' (virtual) particles within quantum loop
+   \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Direct searches for NP}
+
+% \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Rare decays as indirect searches for NP}
+\vspace{-0.2cm}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{myenv}{\color{bleudefrance}{SM}}[linecolor=bleudefrance]
+\centering
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.9\textwidth]{figs/Bsmm-1.pdf}};
+\begin{scope}[x={(image.south east)},y={(image.north west)}]
+%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+% \node[draw=none,bleudefrance] at (0.53,0.98) {\scriptsize \Wm};
+% \node[draw=none,bleudefrance] at (0.3,0.6) {\scriptsize \tquark};
+% \node[draw=none,bleudefrance] at (0.56,0.27) {\scriptsize {\small\Pgamma},$\Z^{0}$};
+\end{scope}
+\end{tikzpicture}
+\end{myenv}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{myenv}{\color{bostonuniversityred}{NP}}[linecolor=bostonuniversityred]
+\centering
+\begin{tikzpicture}
+\centering
+\node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.9\textwidth]{figs/Bsmm-2.pdf}};
+      \begin{scope}[x={(image.south east)},y={(image.north west)}]
+      %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+      % \node[draw=none,bostonuniversityred] at (0.5,0.96) {\small ?};
+      % \node[draw=none,bostonuniversityred] at (0.3,0.6) {\small ?};
+      % \node[draw=none,bostonuniversityred] at (0.58,0.27) {\small ?};
+      \end{scope}
+\end{tikzpicture}
+\end{myenv}
+\end{column}
+\end{columns}
+
+\bigskip
+
+\begin{itemize}
+\item Rare decays such as \Bsmm proceed via loop level diagrams
+\item Virtual particles can ``borrow'' energy for a short time due to the Heisenberg uncertainty principle
+\item If new particles exist, they can also appear in the loop
+\item As flavour changing neutral currents such as \Bsmm are suppressed in the SM, NP can contribute at the same level and change the decay properties
+%\begin{itemize}
+%  \item e.g. enhance/suppress branching fractions, alter angular distributions, new sources of \CP violation
+%\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{The \lhcb experiment}
   \begin{itemize}
   \item LHCb is the dedicated heavy flavour physics experiment at the LHC 
   \item Its primary goal is to search for indirect evidence of New Physics in \CP violation and rare decays of beauty and charm hadrons
-  \item This requires:
-    \begin{enumerate}
-    \item Excellent tracking 
-      \begin{itemize}
-      \item momentum resolution ($\delta p/p \sim 0.4\% - 0.6\%$)
-      \item impact parameter resolution ($\sigma_{\rm IP} \sim 20\mum$)
-      \item primary vertex resolution (13 \mum in $x$ and $y$ and 71\mum in $z$)
-      \end{itemize}
-    \item Excellent decay time resolution ($\sigma_{\tau}$ $\sim$ 45\fs)
-    \item Excellent particle identification
-    \end{enumerate}
+  % \item This requires:
+  %   \begin{enumerate}
+  %   \item Excellent tracking 
+  %     \begin{itemize}
+  %     \item momentum resolution ($\delta p/p \sim 0.4\% - 0.6\%$)
+  %     \item impact parameter resolution ($\sigma_{\rm IP} \sim 20\mum$)
+  %     \item primary vertex resolution (13 \mum in $x$ and $y$ and 71\mum in $z$)
+  %     \end{itemize}
+  %   \item Excellent decay time resolution ($\sigma_{\tau}$ $\sim$ 45\fs)
+  %   \item Excellent particle identification
+  %   \end{enumerate}
   \end{itemize}
 
-  \bigskip
+   \bigskip\bigskip
     
-  \begin{columns}
-    \begin{column}{0.29\textwidth}
-      \centering
-      \begin{tikzpicture}
-        \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[height=3.5cm]{figs/lhcb/massres.pdf}};
-        \node[draw=none,barcolor!80!black] at (1.4,0.15) {\tiny \href{http://link.springer.com/article/10.1007\%2FJHEP06(2013)064}{JHEP 06 (2013) 064}};
-      \end{tikzpicture}
+   \begin{columns}
+   \begin{column}{0.5\textwidth}
+    \begin{itemize}
+      \item Single arm forward spectrometer
+      \item Excellent particle identification \mbox{(e.g. $\pi \to \mu <0.5\%$)}
+      \item Excellent momentum resolution \mbox{(e.g. $\delta\ptot/\ptot \sim 0.5\%$)}
+    \end{itemize}
     \end{column}
-    \begin{column}{0.36\textwidth}
-      \centering
-      \begin{tikzpicture}
-        \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[height=3.5cm]{figs/lhcb/bsmix.pdf}};
-        \node[draw=none,barcolor!80!black] at (2.2,0.15) {\tiny \href{http://iopscience.iop.org/1367-2630/15/5/053021/}{New~J.~Phys. 15 (2013) 053021}};
-      \end{tikzpicture}
+   \begin{column}{0.5\textwidth}
+      \includegraphics[width=\textwidth]{figs/lhcb/lhcb2.png}
     \end{column}
-    \begin{column}{0.36\textwidth}
-      \begin{tikzpicture}
-        \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[height=3.5cm]{figs/lhcb/RICH.png}};
-        \node[draw=none,barcolor!80!black] at (1.4,0.15) {\tiny \href{http://epjc.epj.org/articles/epjc/abs/2013/05/10052_2013_Article_2431/10052_2013_Article_2431.html}{Eur. Phys. J. C (2013) 73}};
-        \end{tikzpicture}
-    \end{column}
-  \end{columns}
+   \end{columns}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -221,7 +343,11 @@
 \begin{columns}
 \begin{column}{0.5\textwidth}
 \begin{itemize}
-\item Track reconstruction at \lhcb is performed by several different algorithms
+\item Track reconstruction is used to determine the momentum of charged particles
+\end{itemize}
+
+\begin{itemize}
+\item At \lhcb this is performed by several different software algorithms
 \end{itemize}
 \begin{itemize}
 \item Two standalone algorithms 
@@ -231,15 +357,6 @@
 \item Other algorithms use input from these to perform further track reconstruction
   \begin{itemize}
     \item[\ding{70}] e.g. Forward tracking uses \velo tracks
-  \end{itemize}
-\end{itemize}
-\begin{itemize}
-\item Long tracks used for majority of \lhcb analyses
-  \begin{itemize}
-    \item[\ding{70}] Traverse the full tracking system
-    \begin{itemize}
-    \item[$\blacktriangleright$] Best momentum resolution
-    \end{itemize}
   \end{itemize}
 \end{itemize}
 \end{column}
@@ -261,83 +378,30 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{The \lhcb trigger in Run 1 (2010-2013)}
 
-\begin{columns}
-\begin{column}{0.7\textwidth}
-   \begin{itemize}
-     \item Plays important role in selecting interesting events and reducing the data rate to disk 
-   \end{itemize}
-\vspace{-0.3cm}
-\begin{myenv}{Level 0 Trigger}[linecolor=barcolor]
-  \begin{itemize}
-    \setlength{\itemindent}{0.5em}
-    \item Implemented in hardware
-    \item High $p_{T}$ and $E_{T}$ signatures in muon and calorimeter systems
-    \item 1 MHz detector readout
-  \end{itemize}
-\end{myenv}
-\vspace{-0.2cm}
-\begin{myenv}{Higher Level Trigger}[linecolor=barcolor]
-  \begin{itemize}
-    \setlength{\itemindent}{0.5em}
-      \item Flexible software triggers
-%      \item Two stages (HLT1 and HLT2)
-      \item Track reconstruction and PV finding performed
-        \begin{itemize}
-        \item[\ding{70}] Simplified reconstruction w.r.t offline (IP cuts applied)
-        \item[\ding{70}] Preliminary alignment and calibration
-        \item[\ding{70}] No RICH PID used
-        \end{itemize}
-      \item Combination of inclusive and exclusive selections
-      \end{itemize}
-\end{myenv}
-\end{column}
-\begin{column}{0.3\textwidth}
-\includegraphics[width=\textwidth]{figs/detector/trigger-run1.pdf}
-\end{column}
-\end{columns}
+\begin{itemize}
+  \item The data rate from every \proton\proton collision is too high for all of it to be stored
+  \item Moreover, many of the collisions are not of interest for physics analyses
+  \item The \lhcb trigger plays important role in selecting interesting events and reducing the data rate to disk 
+\end{itemize}
+
+\begin{itemize}
+ \item For \lhcb Run I, this consisted of two stages:
+ \begin{enumerate}
+    \item Hardware trigger
+    \begin{itemize}
+      \item Decision based on information from muon system and calorimeters 
+      \item Reduces data rate from $40\mhz\rightarrow1\mhz$
+    \end{itemize}
+    \item Software trigger 
+    \begin{itemize}
+      \item Track reconstruction performed
+      \item Decision based on multivariate classifier
+      \item Reduces data rate from 1\mhz $\rightarrow$ 5\khz, which is stored for offline analysis
+    \end{itemize}
+ \end{enumerate}
+\end{itemize}
 
 \end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Slide
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{\lhcb Run 2 (2015-2018)}
-
-% \begin{columns}
-% \begin{column}{0.7\textwidth}
-% \begin{itemize}
-%   \item \lhcb taking data at $\sqs=13\tev$ and $\lum=4\times10^{32}\cm^{-2}\sec^{-1}$
-% \end{itemize}
-
-% \begin{itemize}
-%   \item Trigger redesigned with two key objectives
-%   \begin{enumerate}
-%       \item Perform full event reconstruction within the trigger
-%       \item Achieve offline-quality alignment and calibration
-%     \end{enumerate}
-% \end{itemize}
-
-% \begin{itemize}
-%   \item Can perform physics analysis directly on trigger output
-%   \begin{itemize}
-%       \item[\ding{70}] Large saving in storage space
-%       \begin{itemize}
-%         \item Ideal for analysis of channels with large yield 
-%       \end{itemize}
-%       \item[\ding{70}] Allows rapid turn around from data taking to physics analysis
-%       \begin{itemize}
-%         \item \orderof(few weeks)
-%       \end{itemize}
-%     \end{itemize}
-% \end{itemize}
-
-% \end{column}
-% \begin{column}{0.3\textwidth}
-% \includegraphics[width=\textwidth]{figs/detector/trigger-run2.pdf}
-% \end{column}
-% \end{columns}
-
-% \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
@@ -347,31 +411,48 @@
 \begin{columns}
 \begin{column}{0.6\textwidth}
   \begin{itemize}
-    \item \lhcb  will undergo upgrade during LS1 (2018-2019) to allow data taking at \mbox{$\sqs=14\tev$ and $\lum=2\times10^{33}\cm^{-2}\sec^{-1}$}
+    \item \lhcb  will undergo upgrade during 2018-2019 to allow data taking at higher energy and intensity
+    \item Many existing subdetectors will be replaced
+    \begin{itemize}
+      \item[\ding{80}] e.g. TT replaced by UT
+    \end{itemize}
   \end{itemize}
 
   \begin{itemize}
-    \item Two key features
-    \begin{enumerate}
-      \item Triggerless readout
-      \begin{itemize}
-        \item[\ding{70}] Remove L0 trigger bottleneck
-        \item[\ding{70}] Read out full detector at 40\mhz
-        \item[\ding{80}] Front end electronics need to be replaced
-        \item[\ding{80}] Many existing sub-detectors will be upgraded
-        %\begin{itemize}
-        %  \item[\ding{80}] e.g. TT replaced by UT
-        %\end{itemize}
-      \end{itemize}
-      \item Full software trigger
-      \begin{itemize}
-        \item[\ding{70}] Full event reconstruction
-        \item[\ding{70}] Offers great flexibility for designing selections
-        \item[\ding{70}] Increases trigger efficiency for many physics channels
-        \item[\ding{80}] Strict requirements on execution time of tracking algorithms
-        \item[\ding{80}] Existing tracking sequence {\bf unable to meet timing budget!}
-      \end{itemize}
-    \end{enumerate}
+    \item Key feature: Full software trigger
+    \begin{itemize}
+      \item[\ding{70}] Remove hardware trigger stage
+      \item[\ding{70}] Improved trigger efficiency for many physics channels
+      \item[\ding{80}] Strict requirements placed on execution time of tracking algorithms
+      \item[\ding{80}] Existing tracking sequence (\velo \to Forward) {\bf unable to meet timing budget!}
+    \end{itemize}
+    %     \item[\ding{70}] Read out full detector at 40\mhz
+    %     \item[\ding{80}] Front end electronics need to be replaced
+    %     \item[\ding{80}] Many existing sub-detectors will be upgraded
+    %     %\begin{itemize}
+    %     %  \item[\ding{80}] e.g. TT replaced by UT
+    %     %\end{itemize}
+    %   \end{itemize}
+    % \begin{enumerate}
+    %   \item Triggerless readout
+    %   \begin{itemize}
+    %     \item[\ding{70}] Remove hardware trigger 
+    %     \item[\ding{70}] Read out full detector at 40\mhz
+    %     \item[\ding{80}] Front end electronics need to be replaced
+    %     \item[\ding{80}] Many existing sub-detectors will be upgraded
+    %     %\begin{itemize}
+    %     %  \item[\ding{80}] e.g. TT replaced by UT
+    %     %\end{itemize}
+    %   \end{itemize}
+    %   \item Full software trigger
+    %   \begin{itemize}
+    %     \item[\ding{70}] Full event reconstruction
+    %     \item[\ding{70}] Offers great flexibility for designing selections
+    %     \item[\ding{70}] Increases trigger efficiency for many physics channels
+    %     \item[\ding{80}] Strict requirements on execution time of tracking algorithms
+    %     \item[\ding{80}] Existing tracking sequence {\bf unable to meet timing budget!}
+    %   \end{itemize}
+    % \end{enumerate}
   \end{itemize}
 
   % \begin{itemize}
@@ -385,21 +466,75 @@
 \end{column}
 \begin{column}{0.4\textwidth}
 \centering
-\vspace{-1cm}
-\adjincludegraphics[width=\textwidth,trim={{.3\width} {.575\height} {.28\width} {.1\height}},clip]{figs/detector/upgrade-motivation.pdf}
-\includegraphics[width=0.8\textwidth]{figs/detector/UT.pdf}
+\includegraphics[width=0.9\textwidth]{figs/detector/UT.pdf}\\~\\
+\includegraphics[width=0.9\textwidth]{figs/need-for-speed.png}
 \end{column}
 
 \end{columns}
 
 \end{frame}
 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %Slide
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{The \lhcb Upgrade (2020+)}
+
+% \begin{columns}
+% \begin{column}{0.6\textwidth}
+%   \begin{itemize}
+%     \item \lhcb  will undergo upgrade during 2018-2019 to allow data taking at \mbox{$\sqs=14\tev$ and $\lum=2\times10^{33}\cm^{-2}\sec^{-1}$}
+%   \end{itemize}
+
+%   \begin{itemize}
+%     \item Two key features
+%     \begin{enumerate}
+%       \item Triggerless readout
+%       \begin{itemize}
+%         \item[\ding{70}] Remove L0 trigger bottleneck
+%         \item[\ding{70}] Read out full detector at 40\mhz
+%         \item[\ding{80}] Front end electronics need to be replaced
+%         \item[\ding{80}] Many existing sub-detectors will be upgraded
+%         %\begin{itemize}
+%         %  \item[\ding{80}] e.g. TT replaced by UT
+%         %\end{itemize}
+%       \end{itemize}
+%       \item Full software trigger
+%       \begin{itemize}
+%         \item[\ding{70}] Full event reconstruction
+%         \item[\ding{70}] Offers great flexibility for designing selections
+%         \item[\ding{70}] Increases trigger efficiency for many physics channels
+%         \item[\ding{80}] Strict requirements on execution time of tracking algorithms
+%         \item[\ding{80}] Existing tracking sequence {\bf unable to meet timing budget!}
+%       \end{itemize}
+%     \end{enumerate}
+%   \end{itemize}
+
+%   % \begin{itemize}
+%   %   \item Front end electronics need to be replaced
+%   %   \item Many existing sub-detectors will be upgraded
+%   %   \begin{itemize}
+%   %       \item[\ding{70}] e.g. TT replaced by UT
+%   %     \end{itemize}
+%   % \end{itemize}
+
+% \end{column}
+% \begin{column}{0.4\textwidth}
+% \centering
+% \vspace{-1cm}
+% \adjincludegraphics[width=\textwidth,trim={{.3\width} {.575\height} {.28\width} {.1\height}},clip]{figs/detector/upgrade-motivation.pdf}
+% \includegraphics[width=0.8\textwidth]{figs/detector/UT.pdf}
+% \end{column}
+
+% \end{columns}
+
+% \end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Novel idea: Upstream tracking for the Upgrade}
+\begin{frame}{Novel idea}
 \begin{itemize}
-  \item Upstream tracks could speed up the tracking sequence of the Upgrade software trigger (\velo $\to$ [Upstream] $\to$ Forward)
+  \item Can using upstream tracks speed up the full tracking sequence? \mbox{(\velo $\to$ [Upstream] $\to$ Forward)}
 \end{itemize}
 \begin{itemize}
   \item Advantages over using VELO tracks
@@ -419,7 +554,7 @@
   \end{center}
 
   \begin{itemize}
-  \item Upstream tracking algorithm needs to be both fast and efficient
+    \item Upstream tracking algorithm needs to be both fast and efficient
   \end{itemize}
 \end{frame}
 
@@ -437,7 +572,7 @@
   \end{itemize}
   \item[$\blacktriangleright$] Fit each track candidate with a simple $\chi^{2}$ fit
   \item[$\blacktriangleright$] Choose best candidate track based on \mbox{\# layers} fired and $\chi^{2}$
-  \item[\ding{80}] Fit track with full Kalman filter
+  \item[\ding{80}] Fit track with full Kalman filter (slow)
   \end{itemize}
   \input{figs/tikz/tracking-velott}
 \end{frame}
@@ -445,7 +580,26 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{VeloUT: Initial peformance}
+\begin{frame}{Track reconstruction: Performance}
+
+\begin{itemize}
+  \item Three important figures of merit used to evaluate the performance of tracking algorithms are:
+\end{itemize}
+\begin{itemize}
+  \item[\ding{182}] Reconstruction efficiency
+\end{itemize}
+\begin{itemize}
+  \item[\ding{183}] Ghost rate
+\end{itemize}
+\begin{itemize}
+  \item[\ding{184}] Execution time per event
+\end{itemize}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{VeloUT: Initial performance}
 
 \begin{columns}
 \begin{column}{0.65\textwidth}
@@ -462,7 +616,7 @@
   \item Reconstruction efficiency {\bf too low}
   \begin{itemize}
     \item[\ding{70}] Any inefficiency will be propagated to next step
-    \item[\ding{70}] Decreases as a function of \ptot
+    \item[\ding{70}] Decreases as a function of momentum
   \end{itemize}
 \end{itemize}
 
@@ -507,7 +661,7 @@
   \end{itemize}
 \end{myenv}
 
-\begin{myenv}{Efficiency too low/falls off with increasing \boldmath{\ptot}}[linecolor=barcolor]
+\begin{myenv}{Efficiency too low/falls off with increasing momentum}[linecolor=barcolor]
   \begin{itemize}
     \setlength{\itemindent}{0.5em}
     \item[$\blacktriangleright$] Tracked down to poor assumptions made when associating hits to \velo tracks
@@ -658,33 +812,7 @@
 \bigskip\bigskip
 
 \begin{itemize}
-\item[\ding{80}] \lhcb will become first hadron collider experiment to operate a software-only trigger at the full event rate
-\end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Slide
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Upstream tracking for \lhcb Run 2 (2015-2018)}
-
-\begin{itemize}
-  \item[$\blacktriangleright$] Following improved performance achieved using upstream tracks, similar strategy developed for Run 2
-  \item[$\blacktriangleright$]   New VeloTT algorithm created based on the optimised VeloUT algorithm
-  \begin{itemize}
-    \item[\ding{80}] Similar improvements achieved
-    \item[\ding{80}] Allows IP requirements to be removed
-    \item[\ding{80}] Adopted into the default tracking sequence for the first stage of the HLT
-  \end{itemize}
-\end{itemize}
-
-\begin{itemize}
-  \item[\ding{80}] Greatly improved signal efficiency for charm physics
-  \item[\ding{80}] Lifetime unbiased triggering on hadronic final states for first time
-\end{itemize}
-
-\begin{itemize}
-\item[\ding{80}] First HEP experiment to implement fully automatic tracking system alignment, PID calibration and track reconstruction online
+\item[\ding{80}] \lhcb will become first hadron collider experiment to operate a software-only trigger
 \end{itemize}
 
 \end{frame}
@@ -704,17 +832,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Rare decays as a probe for New Physics}
+\begin{frame}{Reminder: Rare decays as a probe for NP}
   \begin{columns}
     \begin{column}{0.6\textwidth}
       \begin{itemize}
-      \item Rare FCNC processes such as \btosll are only possible via loop diagrams in SM
+      \item Rare flavour-changing-neutral-current processes such as \btosll are only possible via loop diagrams in SM
         \begin{itemize}
         \item Highly suppressed
         \end{itemize}
       \item New, heavy particles in SM extensions can enter the loop and modify observables 
       \begin{itemize}
-        \item e.g. enhance/suppress \BF, alter angular distributions, new sources of \CP violation
+        \item e.g. enhance/suppress branching fractions, alter angular distributions, new sources of \CP violation
       \end{itemize}
       \end{itemize}
     \end{column}
@@ -781,52 +909,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Theoretical formalism}
-
-\begin{itemize}
-  \item Rare \bquark-hadron decays are a multi-scale problem: $m_{W} \gg m_{\bquark} > \Lambda_{\rm QCD}$
-  \item Measurements intepreted in Operator Product Expansion framework
-  \begin{itemize}
-  \item[\ding{70}] All degrees of freedom above a given energy scale are integrated out
-  \item[\ding{70}] Introduce set of Wilson coefficients, $\mathcal{C}_{i}$, and local operators, $\mathcal{O}_{i}$, encoding coupling strength and Lorentz structure
-  \end{itemize}
-\end{itemize}
-\begin{equation*}
-\mathcal{H}_{\rm eff} = - \frac{4G_{F}}{\sqrt{2}}V_{tb}V^{*}_{ts}\sum_{i}(\mathcal{C}_{i}^{\rm SM}+\mathcal{C}_{i}^{\rm NP})\mathcal{O}_{i}
-\end{equation*}
-  
-\begin{itemize}
-\item \btosll transitions sensitive to $\mathcal{C}_{7}$, $\mathcal{C}_{9}$, $\mathcal{C}_{10}$
-\end{itemize}
-
-\medskip
-
-\centering
-\begin{tikzpicture}
-\node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.3\textwidth]{figs/theory/btosll_penguin.eps}};
-\begin{scope}[x={(image.south east)},y={(image.north west)}]
-%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
-\node[draw=none] at (0.53,0.96) {\scriptsize \Wm};
-\node[draw=none] at (0.3,0.6) {\scriptsize \tquark};
-\node[draw=none] at (0.56,0.27) {\scriptsize {\small\color{bleudefrance}{\Pgamma}}\color{black}{,} \color{bostonuniversityred}{$\Z^{0}$}};
-\end{scope}
-\end{tikzpicture}
-\begin{tikzpicture}
-\node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.3\textwidth]{figs/theory/btosll_effective.eps}};
-\begin{scope}[x={(image.south east)},y={(image.north west)}]
-%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
-\node[draw=none] at (0.53,0.58) {\scriptsize \color{bleudefrance}{$\mathcal{C}_{7}$}\color{black}{,} \color{bostonuniversityred}{$\mathcal{C}_{9,10}$}};
-\end{scope}
-\end{tikzpicture}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Slide
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Previous measurements: Differential branching fractions}
 
 \begin{itemize}
-  \item[$\blacktriangleright$] Large LHCb datasets allow for precise measurements of the $\deriv\BF/\deriv\qsq$ of \btosll processes
+  \item[$\blacktriangleright$] Large LHCb datasets allow for precise measurements of the differential branching fractions of \btosll processes
   \item[\ding{80}] Results point towards lower rates than predicted by theory
 \end{itemize}
 
@@ -886,7 +972,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Previous measurements: Angular analysis of \BdToKstmmP}
+\begin{frame}{Previous measurements: Angular analysis of $\decay{\Bd}{\KstP\mup\mun}$}
 \begin{itemize}
  \item Decay fully described by \qsq, and three angles $\Omega=(\ctl,\ctk,\phi)$
  \end{itemize}
@@ -944,9 +1030,8 @@
   \end{columns}
 
   \begin{itemize}
-  \item $\textcolor{cobalt}{{F_{\rm L}}}$, $\textcolor{cobalt}{{A_{\rm FB}}}$, $\textcolor{cobalt}{{S_i}}$ combinations of \KstarP amplitudes which depend on the Wilson coefficients and hadronic form factors
-  %\item Pollution from \Kp\pim in S-wave configuration also taken into account
-  \item Additional sets of observables, for which the leading form factor uncertainties cancel, can be built from $\textcolor{cobalt}{{F_{\rm L}}}$ and $\textcolor{cobalt}{{S_3}}$ to $\textcolor{cobalt}{{S_9}}$
+  \item $\textcolor{cobalt}{{F_{\rm L}}}$, $\textcolor{cobalt}{{A_{\rm FB}}}$, $\textcolor{cobalt}{{S_i}}$ are observables which are measured
+  \item Often useful to measure ratios of observables
     \begin{itemize}
     \item[\ding{70}] e.g. $P'_{4,5} = \textcolor{cobalt}{S_{4,5}}/\sqrt{ \textcolor{cobalt}{F_{\rm L}}(1 -  \textcolor{cobalt}{F_{\rm L}})}$
     \end{itemize}
@@ -959,25 +1044,13 @@
 \begin{frame}{Previous measurements: Angular analysis of \BdToKstmmP}
 
 \begin{itemize}
-  \item Full set of \CP-averaged and \CP-asymmetric observables measured
-  \begin{itemize}
-    \item[\ding{70}] General good agreement with SM predictions
     \item[\ding{80}] Deviation in $P'_{5}$ at level of 2.9$\sigma$ in both bins [4.0,\,6.0] and [6.0,\,8.0] \gevgevcccc
-  \end{itemize}
 \end{itemize}
 
 \begin{center}
 \begin{tikzpicture}
     \centering
-    \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.45\textwidth]{figs/kpimm/introduction/AFB.pdf}};
-    \begin{scope}[x={(image.south east)},y={(image.north west)}]
-      %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
-      %\node[draw=none] at (0.4,0.875) {\tiny [JHEP 02 (2016) 104]};
-    \end{scope}
-  \end{tikzpicture}
-\begin{tikzpicture}
-    \centering
-    \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.45\textwidth]{figs/kpimm/introduction/P5prime.pdf}};
+    \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.5\textwidth]{figs/kpimm/introduction/P5prime.pdf}};
     \begin{scope}[x={(image.south east)},y={(image.north west)}]
       %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
       \node[draw,ellipse,darkpastelred,minimum width=40pt,minimum height=50pt,thick,dashed] at (0.41,0.35) {};
@@ -986,133 +1059,27 @@
   \end{tikzpicture}
 \end{center}
 
-%\begin{itemize}
-  %\item Global analysis of \CP-averaged observables indicates tension with SM predictions at 3.4$\sigma$
-  %\item $P'_{5}$ anomaly recently confirmed by the Belle collaboration
-%\end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Slide
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Intepretation}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-
-\begin{tikzpicture}
- \centering
- \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[trim={2.5cm 20cm 10.7cm 2.4cm},clip,width=1.0\textwidth]{figs/kpimm/introduction/c9c10.pdf}};
- \begin{scope}[x={(image.south east)},y={(image.north west)}]
- %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
-  \node[draw=none] at (0.32,0.94) {\bf \scriptsize [arXiv:1503.06199]};
-\end{scope}
-\end{tikzpicture}
-\centering
-
-{\color{applegreen}{Branching fractions}}, {\color{antiquebrass}{angular observables}}, {\color{airforceblue}{combined}} 
-\end{column}
-\begin{column}{0.5\textwidth}
 \begin{itemize}
-\item Several attempts to interpret LHCb data by performing global fits
-\item Consistent picture, data favours modified vector coupling ($\mathcal{C}_{9}^{\rm NP}$) at $\sim[3,4]\sigma$
+  \item[\ding{80}] Results for a {\bf consistent pattern} with the discrepancies in $\deriv\BF/\deriv\qsq$ measurements
+  \item[\ding{80}] Possible contribution of NP, e.g. a new Z' boson
+  \item[\ding{80}] Another hypothesis is the underestimation of the QCD (charm loop) effects 
 \end{itemize}
-
-\bigskip
-
-\begin{myenv}{Possible intepretation}[linecolor=barcolor]
-\begin{itemize}
-\setlength{\itemindent}{0.5em}
-\item NP physics scenario, e.g. new vector $Z^{'}$, leptoquarks, etc
-\item Problem with our understanding of QCD, e.g. not properly estimating contribution from charm loops
-\end{itemize}
-\end{myenv}
-
-\end{column}
-\end{columns}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\BdToKpimm in the \Kstarfourteenthirty region \hspace{0pt plus 1 filll} {\small \bf \textcolor{black}{[JHEP 12 (2016) 065]}}}
+
 \begin{itemize}
-\item Analyses of \BdToKpimm at \lhcb have focused on the \KstP
-\item Region of \mkpi $\sim$1430\mevcc contains contributions from $K^\ast(1410)^0$, $K^\ast_0(1430)^0$ and $K^\ast_2(1430)^0$
+\item Analyses of \BdToKpimm at \lhcb have focused on the (P-wave) $K^\ast_{1}(892)^0$
+\item Region of \mkpi $\sim$1430\mevcc contains contributions from $K^\ast$ states in \mbox{S$-$, P$-$ and D$-$wave} configurations
 \item Allows for a complementary measurement of \btosll transitions
+\item Have performed a measurement of the differential branching fraction and angular analysis in this new \mkpi region
 \end{itemize}
 
-\bigskip
 \centering
 \includegraphics[width=0.5\textwidth]{figs/kpimm/introduction/full-mkpi.pdf}
-% \begin{tikzpicture}%[font=\boldmath]
-%  \centering
-%  \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.5\textwidth]{figs/kpimm/massfit/fitKpimumu_q2_1p1_6p0.pdf}};
-%  \begin{scope}[x={(image.south east)},y={(image.north west)}]
-%   %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
-%   \node[draw=none] at (0.55,0.97) {\tiny 1330\textless\mkpi\textless1530\mevcc};
-%  \end{scope}
-% \end{tikzpicture}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Slide
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\BdToKpimm in the \Kstarfourteenthirty region \hspace{0pt plus 1 filll} {\small \bf \textcolor{black}{[JHEP 12 (2016) 065]}}}
-\begin{itemize}
-\item[$\blacktriangleright$] Measurements performed in $1330<\mkpi<1530\mevcc$ region at low \qsq
-\item[]
-\item[\ding{182}] Differential branching fraction as a function of \qsq
-  \begin{itemize}
-    \item[\ding{70}] 5 \qsq bins: [0.1,\,0.98], [1.1,\,2.5], [2.5,\,4.0], [4.0,\,6.0], [6.0,\,8.0]~\gevgevcccc
-    \item[\ding{70}] Normalised to \BdToJPsiKstP
-    \item[\ding{70}] Never previously measured
-  \end{itemize}
-\item[\ding{183}] Angular analysis
-  \begin{itemize}
-    \item[\ding{70}] Single \qsq bin: [1.1,\,6.0]~\gevgevcccc
-    \item[\ding{70}] S-, P- and D-wave contributions considered for first time
-    \item[\ding{70}] Requires new orthonormal basis of angular functions 
-    % \item[\ding{70}] 40 normalised moments ($\overline{\Gamma}_{2}$-$\overline{\Gamma}_{41}$)
-  \end{itemize}
-  
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Slide
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Selection of \BdToKpimm signal candidates}
-
-\vspace{-0.5cm}
-
-\begin{itemize}
- \item[\ding{80}] Analysis performed using the full \lhcb Run I data sample (3\invfb)
-\end{itemize}
-
-\begin{itemize}
-  \item[$\blacktriangleright$] Candidates are required to have `fired' trigger at each stage
-  \item[$\blacktriangleright$] Cut based selection applied to select candidates of the form $\decay{\Bz}{X\mumu}$
-  \item[$\blacktriangleright$] Multivariate classifier used to reduce combinatorial background
-  \begin{itemize}
-  \item[\ding{70}] Kinematic, isolation and PID variables used as input
-  \end{itemize}
-  \item[$\blacktriangleright$] Exclusive backgrounds removed by specific vetoes
-  \begin{itemize}
-  \item[\ding{70}] \BdToKpimm ($\kaon \leftrightarrow \pion$) 
-  \item[\ding{70}] \BdToJPsiKpi ($\pion \leftrightarrow \muon$, $\kaon \leftrightarrow \muon$) 
-  \item[\ding{70}] \BdToPsitwosKpi ($\pion \leftrightarrow \muon$, $\kaon \leftrightarrow \muon$) 
-  \item[\ding{70}] \LbTopKmm ($\proton \to \pion$, $\proton \to \kaon~\&~\kaon \to \pion$) 
-  \item[\ding{70}] \BuToKmm (random \pion) 
-  \end{itemize}
-\end{itemize}
-
-\tikzoverlay at (9cm,3cm) {
-\begin{tikzpicture}
-\node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=4.5cm]{figs/kpimm/selection/jpsi_pimu_fit.pdf}};
-\node[draw=none] at (1.15,4.5) {\tiny $\BdToJPsiKpi mis$-$id$};
-\end{tikzpicture} 
-};
 
 \end{frame}
 
@@ -1125,16 +1092,8 @@
   \item Triggering, reconstruction and selection of signal candidates distorts their kinematic distributions
   \item Acceptance modelled using Legendre polynomial paramerisation
 \end{itemize}
-\vspace{0.1cm}
-\begin{equation*}
-\begin{split}
-\varepsilon(\qsqp,\ctl,&\ctk,\phip,\mkpip) = \\
-& \sum_{hijkl} c_{hijkl}~L_{h}(\qsqp)L_{i}(\ctl)L_{j}(\ctk)L_{k}(\phip)L_{l}(\mkpip)
- \end{split}
-\end{equation*}
-\begin{itemize}
-  \item Coefficients determined from a moment analysis of simulated phase-space \BdToKpimm decays
-\end{itemize}
+
+\bigskip
 
 \begin{center}
 \includegraphics[width=0.32\textwidth]{figs/kpimm/acceptance/Fig3a.pdf}
@@ -1174,38 +1133,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Differential branching fraction}
 
-\begin{mdframed}[linecolor=barcolor] 
-\resizebox{.95\linewidth}{!}{
-\begin{minipage}{\linewidth}
-\begin{equation*}
-\begin{split}
-\frac{\deriv\BF}{\deriv\qsq} = \frac{1}{(q^{2}_{\text{max}} - q^{2}_{\text{min}}) }&f_{\KstP}\BF(\BdToJPsiKstP)\BF(\decay{\jpsi}{\mumu}) \\
-\times&\BF(\decay{\KstP}{\Kp\pim})\frac{N'_{\kpimm}}{(1-F_{\rm S}^{\jpsi\Kstarz})N'_{\jpsi\Kstarz}}
-\end{split}
-\end{equation*}
-\end{minipage}
-}
-\end{mdframed}
+% \begin{mdframed}[linecolor=barcolor] 
+% \resizebox{.95\linewidth}{!}{
+% \begin{minipage}{\linewidth}
+% \begin{equation*}
+% \begin{split}
+% \frac{\deriv\BF}{\deriv\qsq} = \frac{1}{(q^{2}_{\text{max}} - q^{2}_{\text{min}}) }&f_{\KstP}\BF(\BdToJPsiKstP)\BF(\decay{\jpsi}{\mumu}) \\
+% \times&\BF(\decay{\KstP}{\Kp\pim})\frac{N'_{\kpimm}}{(1-F_{\rm S}^{\jpsi\Kstarz})N'_{\jpsi\Kstarz}}
+% \end{split}
+% \end{equation*}
+% \end{minipage}
+% }
+% \end{mdframed}
 
-\begin{columns}
-\begin{column}{0.5\textwidth}
 \begin{itemize}
 \item First $\deriv\BF/\deriv\qsq$ measurement of \BdToKpimm in this region of \mkpi 
 \end{itemize}
-\begin{itemize}
-\item \BdToJPsiKstP yield measured in $796<\mkpi<996$\mevcc
-\begin{itemize}
-  \item $f_{\KstarP}$ accounts for \mkpi window
-  \item $F_{\rm S}^{\jpsi\Kstarz}$ corrects for S-wave fraction
-\end{itemize}
-\end{itemize}
-\end{column}
-\begin{column}{0.5\textwidth}
-\centering
-\vspace{0.5cm}
-\includegraphics[width=\textwidth]{figs/kpimm/bf/dbfdq2.pdf}
-\end{column}
-\end{columns}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{figs/kpimm/bf/dbfdq2.pdf}
+\end{center}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1224,7 +1172,7 @@
 
 \medskip
 
-\item Orthonomal angular basis constructed from spherical harmonics $Y^m_\ell \equiv Y^m_\ell (\thetal,\phi)$ and reduced spherical harmonics ${P^m_\ell \equiv \sqrt{2 \pi}Y^m_\ell(\thetak,0)}$
+%\item Orthonomal angular basis constructed from spherical harmonics $Y^m_\ell \equiv Y^m_\ell (\thetal,\phi)$ and reduced spherical harmonics ${P^m_\ell \equiv \sqrt{2 \pi}Y^m_\ell(\thetak,0)}$
 \item $\Gamma_i(\qsq)$ combinations of \KstarJ amplitudes with $\Gamma_{1}(\qsq)$ corresponding to the total rate
 \item Define 40 normalised angular moments which forms set of observables
 \end{itemize}
@@ -1275,35 +1223,6 @@
 % \item Signal region: $5230<\mkpimm<5330$~\mevcc
 % \item Background region: $5350<\mkpimm<5700$~\mevcc
 \end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Slide
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Angular moments analysis}
-
-\begin{itemize}
-\item Normalised moments for $i \in \{2,...,41\}$ defined as
-\end{itemize}
-\begin{equation*}
-\overline{\Gamma}_i(\qsq) = \frac{\Gamma_{i}(\qsq)}{\Gamma_{1}(\qsq)}
-\end{equation*}
-\begin{itemize}
-\item Covariance matrix for $i,j \in \{2,...,41\}$ computed as
-\end{itemize}
-
-\begin{equation*}
-\overline{C}_{ij} = \left[C_{ij} + \frac{\Gamma_i \Gamma_j}{\Gamma_1^2} C_{11} - \frac{\Gamma_i C_{1j} + \Gamma_j C_{1i}}{\Gamma_1}\right] \frac{1}{\Gamma_1^2}
-\end{equation*}
-
-\begin{itemize}
-\item[\ding{80}] Can also estimate D-wave fraction
-\end{itemize}
-
-\begin{equation*}
-F_{\rm D} \equiv  \displaystyle - \frac{7}{18} \left(2\,\overline{\Gamma}_{5} + 5 \sqrt{5}\,\overline{\Gamma}_{10} \right)
-\end{equation*}
 
 \end{frame}
 
@@ -1584,6 +1503,32 @@ F_{\rm D} \equiv  \displaystyle - \frac{7}{18} \left(2\,\overline{\Gamma}_{5} + 
 \end{center}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Upstream tracking for \lhcb Run 2 (2015-2018)}
+
+\begin{itemize}
+  \item[$\blacktriangleright$] Following improved performance achieved using upstream tracks, similar strategy developed for Run 2
+  \item[$\blacktriangleright$]   New VeloTT algorithm created based on the optimised VeloUT algorithm
+  \begin{itemize}
+    \item[\ding{80}] Similar improvements achieved
+    \item[\ding{80}] Allows IP requirements to be removed
+    \item[\ding{80}] Adopted into the default tracking sequence for the first stage of the HLT
+  \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+  \item[\ding{80}] Greatly improved signal efficiency for charm physics
+  \item[\ding{80}] Lifetime unbiased triggering on hadronic final states for first time
+\end{itemize}
+
+\begin{itemize}
+\item[\ding{80}] First HEP experiment to implement fully automatic tracking system alignment, PID calibration and track reconstruction online
+\end{itemize}
+
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1675,6 +1620,48 @@ F_{\rm D} \equiv  \displaystyle - \frac{7}{18} \left(2\,\overline{\Gamma}_{5} + 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Theoretical formalism}
+
+\begin{itemize}
+  \item Rare \bquark-hadron decays are a multi-scale problem: $m_{W} \gg m_{\bquark} > \Lambda_{\rm QCD}$
+  \item Measurements interpreted in Operator Product Expansion framework
+  \begin{itemize}
+  \item[\ding{70}] All degrees of freedom above a given energy scale are integrated out
+  \item[\ding{70}] Introduce set of Wilson coefficients, $\mathcal{C}_{i}$, and local operators, $\mathcal{O}_{i}$, encoding coupling strength and Lorentz structure
+  \end{itemize}
+\end{itemize}
+\begin{equation*}
+\mathcal{H}_{\rm eff} = - \frac{4G_{F}}{\sqrt{2}}V_{tb}V^{*}_{ts}\sum_{i}(\mathcal{C}_{i}^{\rm SM}+\mathcal{C}_{i}^{\rm NP})\mathcal{O}_{i}
+\end{equation*}
+  
+\begin{itemize}
+\item \btosll transitions sensitive to $\mathcal{C}_{7}$, $\mathcal{C}_{9}$, $\mathcal{C}_{10}$
+\end{itemize}
+
+\medskip
+
+\centering
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.3\textwidth]{figs/theory/btosll_penguin.eps}};
+\begin{scope}[x={(image.south east)},y={(image.north west)}]
+%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+\node[draw=none] at (0.53,0.96) {\scriptsize \Wm};
+\node[draw=none] at (0.3,0.6) {\scriptsize \tquark};
+\node[draw=none] at (0.56,0.27) {\scriptsize {\small\color{bleudefrance}{\Pgamma}}\color{black}{,} \color{bostonuniversityred}{$\Z^{0}$}};
+\end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=0.3\textwidth]{figs/theory/btosll_effective.eps}};
+\begin{scope}[x={(image.south east)},y={(image.north west)}]
+%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+\node[draw=none] at (0.53,0.58) {\scriptsize \color{bleudefrance}{$\mathcal{C}_{7}$}\color{black}{,} \color{bostonuniversityred}{$\mathcal{C}_{9,10}$}};
+\end{scope}
+\end{tikzpicture}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Operators}
 
 \begin{alignat*}{2}
@@ -1684,6 +1671,106 @@ F_{\rm D} \equiv  \displaystyle - \frac{7}{18} \left(2\,\overline{\Gamma}_{5} + 
 &\order_{S} = \frac{e^{2}}{16\pi^{2}}m_{\bquark}(\squarkbar P_{R}\bquark)(\ellbar\ell) &&\order_{S}^{\prime} = \frac{e^{2}}{16\pi^{2}}m_{\bquark}(\squarkbar P_{L}\bquark)(\ellbar\ell) \nonumber\\
 &\order_{P} = \frac{e^{2}}{16\pi^{2}}m_{\bquark}(\squarkbar P_{R}\bquark)(\ellbar\gamma_{5}\ell) &&\order_{P}^{\prime} = \frac{e^{2}}{16\pi^{2}}m_{\bquark}(\squarkbar P_{L}\bquark)(\ellbar\gamma_{5}\ell) \nonumber
 \end{alignat*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Interpretation}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+
+\begin{tikzpicture}
+ \centering
+ \node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[trim={2.5cm 20cm 10.7cm 2.4cm},clip,width=1.0\textwidth]{figs/kpimm/introduction/c9c10.pdf}};
+ \begin{scope}[x={(image.south east)},y={(image.north west)}]
+ %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+  \node[draw=none] at (0.32,0.94) {\bf \scriptsize [arXiv:1503.06199]};
+\end{scope}
+\end{tikzpicture}
+\centering
+
+{\color{applegreen}{Branching fractions}}, {\color{antiquebrass}{angular observables}}, {\color{airforceblue}{combined}} 
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item Several attempts to interpret LHCb data by performing global fits
+\item Consistent picture, data favours modified vector coupling ($\mathcal{C}_{9}^{\rm NP}$) at $\sim[3,4]\sigma$
+\end{itemize}
+
+\bigskip
+
+\begin{myenv}{Possible interpretation}[linecolor=barcolor]
+\begin{itemize}
+\setlength{\itemindent}{0.5em}
+\item NP physics scenario, e.g. new vector $Z^{'}$, leptoquarks, etc
+\item Problem with our understanding of QCD, e.g. not properly estimating contribution from charm loops
+\end{itemize}
+\end{myenv}
+
+\end{column}
+\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\BdToKpimm in the \Kstarfourteenthirty region \hspace{0pt plus 1 filll} {\small \bf \textcolor{black}{[JHEP 12 (2016) 065]}}}
+\begin{itemize}
+\item[$\blacktriangleright$] Measurements performed in $1330<\mkpi<1530\mevcc$ region at low \qsq
+\item[]
+\item[\ding{182}] Differential branching fraction as a function of \qsq
+  \begin{itemize}
+    \item[\ding{70}] 5 \qsq bins: [0.1,\,0.98], [1.1,\,2.5], [2.5,\,4.0], [4.0,\,6.0], [6.0,\,8.0]~\gevgevcccc
+    \item[\ding{70}] Normalised to \BdToJPsiKstP
+    \item[\ding{70}] Never previously measured
+  \end{itemize}
+\item[\ding{183}] Angular analysis
+  \begin{itemize}
+    \item[\ding{70}] Single \qsq bin: [1.1,\,6.0]~\gevgevcccc
+    \item[\ding{70}] S-, P- and D-wave contributions considered for first time
+    \item[\ding{70}] Requires new orthonormal basis of angular functions 
+    % \item[\ding{70}] 40 normalised moments ($\overline{\Gamma}_{2}$-$\overline{\Gamma}_{41}$)
+  \end{itemize}
+  
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Selection of \BdToKpimm signal candidates}
+
+\vspace{-0.5cm}
+
+\begin{itemize}
+ \item[\ding{80}] Analysis performed using the full \lhcb Run I data sample (3\invfb)
+\end{itemize}
+
+\begin{itemize}
+  \item[$\blacktriangleright$] Candidates are required to have `fired' trigger at each stage
+  \item[$\blacktriangleright$] Cut based selection applied to select candidates of the form $\decay{\Bz}{X\mumu}$
+  \item[$\blacktriangleright$] Multivariate classifier used to reduce combinatorial background
+  \begin{itemize}
+  \item[\ding{70}] Kinematic, isolation and PID variables used as input
+  \end{itemize}
+  \item[$\blacktriangleright$] Exclusive backgrounds removed by specific vetoes
+  \begin{itemize}
+  \item[\ding{70}] \BdToKpimm ($\kaon \leftrightarrow \pion$) 
+  \item[\ding{70}] \BdToJPsiKpi ($\pion \leftrightarrow \muon$, $\kaon \leftrightarrow \muon$) 
+  \item[\ding{70}] \BdToPsitwosKpi ($\pion \leftrightarrow \muon$, $\kaon \leftrightarrow \muon$) 
+  \item[\ding{70}] \LbTopKmm ($\proton \to \pion$, $\proton \to \kaon~\&~\kaon \to \pion$) 
+  \item[\ding{70}] \BuToKmm (random \pion) 
+  \end{itemize}
+\end{itemize}
+
+\tikzoverlay at (9cm,3cm) {
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0](image) at (0,0) {\includegraphics[width=4.5cm]{figs/kpimm/selection/jpsi_pimu_fit.pdf}};
+\node[draw=none] at (1.15,4.5) {\tiny $\BdToJPsiKpi mis$-$id$};
+\end{tikzpicture} 
+};
 
 \end{frame}
 
@@ -1803,6 +1890,35 @@ $[6.00,8.00]$ & 0.49 $\pm$ 0.11 $\pm$ 0.01 $\pm$ 0.03 \\
 $[1.10,6.00]$ & 0.82 $\pm$ 0.09 $\pm$ 0.02 $\pm$ 0.06 \\
 \end{tabular}
 \end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Angular moments analysis}
+
+\begin{itemize}
+\item Normalised moments for $i \in \{2,...,41\}$ defined as
+\end{itemize}
+\begin{equation*}
+\overline{\Gamma}_i(\qsq) = \frac{\Gamma_{i}(\qsq)}{\Gamma_{1}(\qsq)}
+\end{equation*}
+\begin{itemize}
+\item Covariance matrix for $i,j \in \{2,...,41\}$ computed as
+\end{itemize}
+
+\begin{equation*}
+\overline{C}_{ij} = \left[C_{ij} + \frac{\Gamma_i \Gamma_j}{\Gamma_1^2} C_{11} - \frac{\Gamma_i C_{1j} + \Gamma_j C_{1i}}{\Gamma_1}\right] \frac{1}{\Gamma_1^2}
+\end{equation*}
+
+\begin{itemize}
+\item[\ding{80}] Can also estimate D-wave fraction
+\end{itemize}
+
+\begin{equation*}
+F_{\rm D} \equiv  \displaystyle - \frac{7}{18} \left(2\,\overline{\Gamma}_{5} + 5 \sqrt{5}\,\overline{\Gamma}_{10} \right)
+\end{equation*}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
