@@ -166,7 +166,7 @@
 \end{center}
 
 \begin{itemize}
-  \item There is an observed asymmetry between matter and antimatter in our Universe
+  \item The observed asymmetry between matter and antimatter in our Universe cannot be explained
   \item Dark matter, which is believed to be 5 times as abundant as ordinary matter, is not accounted for
   \item SM neutrinos are only left-handed and massless, but we know they have a small but non-zero mass
 \end{itemize}
@@ -258,7 +258,7 @@
 \item Decays such as \Bsmm proceed via loop level processes
 \item Virtual particles can ``borrow'' energy for a short time due to the Heisenberg uncertainty principle
 \item If new particles exist, in NP models, they can also appear in the loop
-\item As decays such as \Bsmm are suppressed in the SM, NP can contribute at the same level and change the decay properties
+\item As decays such as \Bsmm are suppressed in the SM, NP can contribute at the same level and alter the properties of the decay in a measurable way
 \end{itemize}
 
 \end{frame}
@@ -268,8 +268,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{The \lhcb experiment}
   \begin{itemize}
-  \item LHCb is the dedicated heavy flavour physics experiment at the LHC 
-  \item Its primary goal is to search for {\bf indirect} evidence of New Physics the decays of \bquark and \cquark quarks
+  \item LHCb is particle physics detector experiment located at the LHC 
+  \item Its primary goal is to search for {\bf indirect} evidence of New Physics in the decays of \bquark and \cquark quarks
   \item Takes advantage of large production of \bquark\bquarkbar pairs in the \proton\proton collisions
   \end{itemize}
 
@@ -578,8 +578,8 @@
     \item[\ding{80}] Each hit must be on the same side of the linear extrapolation
   \end{itemize}
   \item[$\blacktriangleright$] Fit each track candidate with a simple $\chi^{2}$ fit
-  \item[$\blacktriangleright$] Choose best candidate track based on \mbox{\# layers} fired and $\chi^{2}$
-  \item[\ding{80}] Fit track with full Kalman filter (slow)
+  %\item[$\blacktriangleright$] Choose best candidate track based on \mbox{\# layers} fired and $\chi^{2}$
+  \item[\ding{80}] Fit track with a Kalman filter (slow)
   \end{itemize}
   \input{figs/tikz/tracking-velott}
 \end{frame}
@@ -699,9 +699,9 @@
   \item[$\blacktriangleright$] Select hits within a search window around the extrapolated track
   \item[\ding{80}] Form doublets of hits in the first two layers
   \item[\ding{80}] Extrapolate doublets to third/fourth layers and search for compatible hits
-  \item[\ding{80}] If no four hit candidates found, repeat starting from last two layers
+  %\item[\ding{80}] If no four hit candidates found, repeat starting from last two layers
   \item[$\blacktriangleright$] Fit each track candidate with a simple $\chi^{2}$ fit% and estimate $q/p$ ($\delta p/p \sim 15 \%$)
-  \item[$\blacktriangleright$] Choose best candidate track based on \mbox{\# layers} fired and $\chi^{2}$
+  %\item[$\blacktriangleright$] Choose best candidate track based on \mbox{\# layers} fired and $\chi^{2}$
   \end{itemize}
 \end{column}
 \begin{column}{0.5\textwidth}
@@ -853,14 +853,12 @@
   \begin{columns}
     \begin{column}{0.6\textwidth}
       \begin{itemize}
-      \item The decay \BdToKpimm is an example of a \btosmm flavour-changing-neutral-current processes that proceeds via loop diagrams in SM
-        % \begin{itemize}
-        % \item Highly suppressed
-        % \end{itemize}
-      \item New, heavy particles in SM extensions can enter the loop and modify observables 
+      \item[$\blacktriangleright$] The decay \BdToKpimm is an example of a \btosmm processes that proceeds via loop diagrams in SM
+      \item[$\blacktriangleright$] New, heavy particles in SM extensions can enter the loop and modify observables 
       \begin{itemize}
-        \item e.g. enhance/suppress branching fractions, alter angular distributions%, new sources of \CP violation
+        \item e.g. enhance/suppress branching fractions or alter angular distributions%, new sources of \CP violation
       \end{itemize}
+      \item[\ding{70}] Can compare measurements to SM predictions
       \end{itemize}
     \end{column}
     
@@ -929,8 +927,12 @@
 \begin{frame}{Previous measurements: Differential branching fractions ($\deriv\BF/\deriv\qsq$)}
 
 \begin{itemize}
-  \item[$\blacktriangleright$] Large LHCb datasets allow for precise measurements of the differential branching fractions of \btosmm processes
-  \item[\ding{80}] Results point towards lower rates than predicted by theory
+  \item[$\blacktriangleright$] Differential branching fractions of different \btosmm processes
+  \begin{itemize}
+    \item Measured as a function of $\qsq\equiv m_{\mu\mu}^{2}$
+  \end{itemize}
+  %\item[$\blacktriangleright$] Large LHCb datasets allow for precise measurements of the differential branching fractions of \btosmm processes
+  \item[\ding{80}] Results point towards lower rates than predicted by the SM
 \end{itemize}
 
 \begin{center}
@@ -994,7 +996,10 @@
 \begin{itemize}
 \item \KstP is a P-wave (spin-1) state which decays to $\Kp\pim$
 \item Decay fully described by $\qsq\equiv m_{\mu\mu}^{2}$ and three angles: $\thetal,\thetak,\phi$
-\item Expression for angular distribution depends on the spin of the \Kstar meson
+\item Can write an expression for angular decay distribution 
+  \begin{itemize}
+    \item[\ding{70}] Depends on the spin of the \Kstar meson
+  \end{itemize}
 \end{itemize}
 
   \begin{columns}
@@ -1054,10 +1059,10 @@
   \begin{itemize}
     \item[\ding{70}] Can be compared with SM predictions
     \end{itemize}
-  \item Often useful to measure ratios of observables
-    \begin{itemize}
-    \item[\ding{70}] e.g. $P'_{4,5} = \textcolor{cobalt}{S_{4,5}}/\sqrt{ \textcolor{cobalt}{F_{\rm L}}(1 -  \textcolor{cobalt}{F_{\rm L}})}$
-    \end{itemize}
+  \item Often useful to measure ratios of observables e.g. $P'_{4,5} = \textcolor{cobalt}{S_{4,5}}/\sqrt{ \textcolor{cobalt}{F_{\rm L}}(1 -  \textcolor{cobalt}{F_{\rm L}})}$
+%    \begin{itemize}
+%    \item[\ding{70}] 
+%    \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -1067,7 +1072,7 @@
 \begin{frame}{Previous measurements: Angular analysis of \BdToKstmmP}
 
 \begin{itemize}
-    \item[\ding{80}] Deviation in $P'_{5}$ at level of 2.9$\sigma$ in both bins [4.0,\,6.0] and [6.0,\,8.0] \gevgevcccc
+    \item[\ding{80}] Deviations in $P'_{5}$ at level of 2.9$\sigma$ in two \qsq bins
 \end{itemize}
 
 \begin{center}
@@ -1127,12 +1132,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\mkpimm invariant mass distribution}
+\begin{frame}{Signal extraction}
 
 \begin{itemize}
-  \item Fit to invariant mass distribution required to separate signal from background contribution
-  \item Signal modelled with sum of two Gaussians with power-law tail on the low-mass side
-  \item Combinatorial background is modelled using an exponential function
+  \item Fit to invariant mass distribution required to separate our signal from background contributions
+  %\item Signal modelled with sum of two Gaussians with power-law tail on the low-mass side
+  %\item Combinatorial background is modelled using an exponential function
   \item $\sim230$ signal candidates in $1.1<\qsq<6.0\gevgevcccc$
 \end{itemize}
 
@@ -1148,12 +1153,12 @@
 \begin{frame}{Efficiency studies}
 
 \begin{itemize}
-  \item The selection efficiency of the signal candidates varies over the distributions of the decay angles $\thetal,\thetak,\phi$
+  \item The selection efficiency of the signal candidates varies as a function of the decay angles $\thetal,\thetak,\phi$
   \item In order to perform an angular analysis, need to carefully understand this effect
-  \item In this analysis the efficiency distribution is modelled using a Legendre polynomial paramerisation
-  \begin{itemize}
-    \item Requires 1764 legendre coefficients!
-  \end{itemize}
+  \item In this analysis, the efficiency distribution is modelled using a Legendre polynomial paramerisation
+  %\begin{itemize}
+  %  \item Requires 1764 legendre coefficients!
+  %\end{itemize}
 \end{itemize}
 
 \bigskip
@@ -1172,7 +1177,7 @@
 \begin{frame}{Differential branching fraction ($\deriv\BF/\deriv\qsq$)}
 
 \begin{itemize}
-\item First $\deriv\BF/\deriv\qsq$ measurement of \BdToKpimm in this region of \mkpi 
+\item {\bf First} $\deriv\BF/\deriv\qsq$ measurement of \BdToKpimm in this region of \mkpi 
 \end{itemize}
 
 \begin{center}
@@ -1182,7 +1187,7 @@
 \begin{itemize}
 \item Currently no SM predictions
 \begin{itemize}
-\item[\ding{80}] Hope this analysis stimulates further theory effort in this area
+\item[\ding{80}] Hope this measurement stimulates further theory effort in this area
 \end{itemize}
 \end{itemize}
 
@@ -1191,7 +1196,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Angular moments analysis}
+\begin{frame}{Angular analysis}
 
 \begin{itemize}
 \item Angular distribution for \BdToKpimm decays encompassing S-, P- and D-wave \Kstar states can be expressed in an orthonormal basis of angular functions, $f_i(\thetal,\thetak,\phi)$,
@@ -1212,7 +1217,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Angular moments analysis}
+\begin{frame}{Angular analysis}
 
 \begin{itemize}
   \item Observables measured using an angular moments analysis
@@ -1254,7 +1259,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Angular moments analysis}
+\begin{frame}{Angular analysis}
 \begin{columns}
 \begin{column}{0.55\textwidth}
 \begin{itemize}
@@ -1264,12 +1269,12 @@
   \end{itemize}
 \end{itemize}
 \begin{itemize}
-  \item Specific moments point towards large interference between S- and P-wave states 
-  \item Can also estimate D-wave fraction
-  \begin{itemize}
-    \item $F_{\rm D} <$ 0.29 @ 95\% C.L.
-    \item Low w.r.t expectation from previous measurement of \decay{\Bd}{\jpsi(\to\mumu) \Kp\pim}
-\end{itemize}
+  \item Results point towards large interference between S- and P-wave states 
+  \item Hints of suppressed D-wave contribution% than expected
+%  \begin{itemize}
+    %\item $F_{\rm D} <$ 0.29 @ 95\% C.L.
+%    \item Low w.r.t expectation from previous similar measurement in \decay{\Bd}{\jpsi(\to\mumu) \Kp\pim}
+%\end{itemize}
 \end{itemize}
 \end{column}
 \begin{column}{0.45\textwidth}
@@ -1294,7 +1299,7 @@
   \item[\ding{72}] New algorithm adopted into the default tracking sequence
 \end{itemize}
   \begin{itemize}
-  \item[\ding{80}] First measurements of the differential branching fraction and angular moments of \BdToKpimm in \Kstarfourteenthirty region
+  \item[\ding{80}] First measurements of the differential branching fraction and angular analysis of \BdToKpimm in \Kstarfourteenthirty region
   \item[\ding{80}] With additional input from theory, results could provide further complementary measurements of \btosmm transitions
   \begin{itemize}
     \item[\ding{70}] Improve understanding of the observed pattern of deviations with respect to SM predictions
